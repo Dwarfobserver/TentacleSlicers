@@ -1,0 +1,97 @@
+\hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save}{}\section{Tentacle\+Slicers.\+maps.\+Game\+Save Class Reference}
+\label{class_tentacle_slicers_1_1maps_1_1_game_save}\index{Tentacle\+Slicers.\+maps.\+Game\+Save@{Tentacle\+Slicers.\+maps.\+Game\+Save}}
+
+
+Stocke les sauvegardes existantes et permet de créer et charger des sauvegardes. Les sauvegardes conservent l\textquotesingle{}état de la partie du début du niveau. La création d\textquotesingle{}une sauvegarde est détaillé dans le dossier resources/saves avec le fichier reamde.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save_a49db144314552baaa5cb4b3cf99544c4}{Load} ()
+\begin{DoxyCompactList}\small\item\em Actualise les sauvegardes stockées. \end{DoxyCompactList}\item 
+static void \hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save_ad3b968abab5f585683e076a6d4725d4f}{Add} (string name)
+\begin{DoxyCompactList}\small\item\em Enregistre la sauvegarde correspondant a l\textquotesingle{}état de la partie au début du niveau et lui associe le nom donné. Sauvegarde donc le numéro de carte, le niveau, le nom et les statistiques et sorts de chaque joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a8aeacde66fe4ede7bf84aa2fe9382a5f}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a8aeacde66fe4ede7bf84aa2fe9382a5f}} 
+const string {\bfseries Saves\+Path} = \char`\"{}../../resources/saves/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_ad4600816f1de2ffe075fd14df0198408}\label{class_tentacle_slicers_1_1maps_1_1_game_save_ad4600816f1de2ffe075fd14df0198408}} 
+const string {\bfseries High\+Score\+Path} = Saves\+Path + \char`\"{}highscore\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a214dfb7300233e3edfe25ef328544a6d}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a214dfb7300233e3edfe25ef328544a6d}} 
+const int {\bfseries Nb\+Max} = 9
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_aba1e8c60b3ecb7ff4214fd86460c23cb}\label{class_tentacle_slicers_1_1maps_1_1_game_save_aba1e8c60b3ecb7ff4214fd86460c23cb}} 
+static List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save} $>$ {\bfseries Saves} = Load\+Saves()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a1740a98d093921e1ce5e736c5c98b2fc}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a1740a98d093921e1ce5e736c5c98b2fc}} 
+static int {\bfseries High\+Score}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_ac42f5b34c64236750f18401fa58205d9}\label{class_tentacle_slicers_1_1maps_1_1_game_save_ac42f5b34c64236750f18401fa58205d9}} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_acd907e7b88f5a60f7d0958c77e9ebd3e}\label{class_tentacle_slicers_1_1maps_1_1_game_save_acd907e7b88f5a60f7d0958c77e9ebd3e}} 
+int {\bfseries Num\+Map}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_ada96d19904ff05ce9d74ed80c714b29e}\label{class_tentacle_slicers_1_1maps_1_1_game_save_ada96d19904ff05ce9d74ed80c714b29e}} 
+int {\bfseries Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a6106aa68b87cf9dcb554bd9adcd69692}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a6106aa68b87cf9dcb554bd9adcd69692}} 
+int {\bfseries Score}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a093fb0b919f13cbf7979efd30f6a04b9}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a093fb0b919f13cbf7979efd30f6a04b9}} 
+int {\bfseries Number\+Of\+Players}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_af3eb7851a410dc89c022e5442e8ba817}\label{class_tentacle_slicers_1_1maps_1_1_game_save_af3eb7851a410dc89c022e5442e8ba817}} 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} $>$ {\bfseries Stats}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a81d8f64176f3c6fdc61a668a45fbb193}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a81d8f64176f3c6fdc61a668a45fbb193}} 
+List$<$ List$<$ \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} $>$ $>$ {\bfseries Spells}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stocke les sauvegardes existantes et permet de créer et charger des sauvegardes. Les sauvegardes conservent l\textquotesingle{}état de la partie du début du niveau. La création d\textquotesingle{}une sauvegarde est détaillé dans le dossier resources/saves avec le fichier reamde. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_ad3b968abab5f585683e076a6d4725d4f}\label{class_tentacle_slicers_1_1maps_1_1_game_save_ad3b968abab5f585683e076a6d4725d4f}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Game\+Save@{Tentacle\+Slicers\+::maps\+::\+Game\+Save}!Add@{Add}}
+\index{Add@{Add}!Tentacle\+Slicers\+::maps\+::\+Game\+Save@{Tentacle\+Slicers\+::maps\+::\+Game\+Save}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily static void Tentacle\+Slicers.\+maps.\+Game\+Save.\+Add (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Enregistre la sauvegarde correspondant a l\textquotesingle{}état de la partie au début du niveau et lui associe le nom donné. Sauvegarde donc le numéro de carte, le niveau, le nom et les statistiques et sorts de chaque joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le nom de la sauvegarde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_game_save_a49db144314552baaa5cb4b3cf99544c4}\label{class_tentacle_slicers_1_1maps_1_1_game_save_a49db144314552baaa5cb4b3cf99544c4}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Game\+Save@{Tentacle\+Slicers\+::maps\+::\+Game\+Save}!Load@{Load}}
+\index{Load@{Load}!Tentacle\+Slicers\+::maps\+::\+Game\+Save@{Tentacle\+Slicers\+::maps\+::\+Game\+Save}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily static void Tentacle\+Slicers.\+maps.\+Game\+Save.\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Actualise les sauvegardes stockées. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/maps/Game\+Save.\+cs\end{DoxyCompactItemize}

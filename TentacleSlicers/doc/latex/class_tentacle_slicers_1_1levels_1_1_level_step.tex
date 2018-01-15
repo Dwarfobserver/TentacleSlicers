@@ -1,0 +1,121 @@
+\hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step}{}\section{Tentacle\+Slicers.\+levels.\+Level\+Step Class Reference}
+\label{class_tentacle_slicers_1_1levels_1_1_level_step}\index{Tentacle\+Slicers.\+levels.\+Level\+Step@{Tentacle\+Slicers.\+levels.\+Level\+Step}}
+
+
+Définit une vague du niveau, avec l\textquotesingle{}apparition de plusieurs mobs identiques à un point. Permet de s\textquotesingle{}ajouter à la vague précédente si le délai de ce \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step}{Level\+Step} est nul.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+levels.\+Level\+Step\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1levels_1_1_level_step}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step_af0b20dbe2cbb48bd99c464b4ee49022c}{Level\+Step} (int seconds\+Timer, \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data} mob\+Type, int nb\+Mob, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} spawn)
+\begin{DoxyCompactList}\small\item\em Crée un spawn de plusieurs mobs du type donné pour l\textquotesingle{}endroit donné, après un délai dans le déroulement du niveau. Si ce délai est nul, alors cette étape fera parti de la même vague que l\textquotesingle{}étape précédente. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step_a299c53ae22104c17d82eee1193d8f6a9}{Cooldown} ()
+\begin{DoxyCompactList}\small\item\em Retourne en secondes le temps restant avant le déclenchement de l\textquotesingle{}étape. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step_a3b44842ad8568ede9c2e9ade82b8418b}{Has\+Begun} ()
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}étape a commencé à invoquer ses mobs. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step_ae8f84a9d4deab689789f0630a4c32a69}{Is\+Finished} ()
+\begin{DoxyCompactList}\small\item\em indique si l\textquotesingle{}étape a fini d\textquotesingle{}invoquer ses mmobs. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step_a5f8a74eeee5fbc7bf29ea4ed2a065037}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise l\textquotesingle{}étape, soit en diminuant le temps restant soit en réduisant le délai pour l\textquotesingle{}apparition du prochain mob. Si l\textquotesingle{}un de ces compteurs est consommé, un nouveau mob est invoqué. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Définit une vague du niveau, avec l\textquotesingle{}apparition de plusieurs mobs identiques à un point. Permet de s\textquotesingle{}ajouter à la vague précédente si le délai de ce \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step}{Level\+Step} est nul. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step_af0b20dbe2cbb48bd99c464b4ee49022c}\label{class_tentacle_slicers_1_1levels_1_1_level_step_af0b20dbe2cbb48bd99c464b4ee49022c}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}!Level\+Step@{Level\+Step}}
+\index{Level\+Step@{Level\+Step}!Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}}
+\subsubsection{\texorpdfstring{Level\+Step()}{LevelStep()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+levels.\+Level\+Step.\+Level\+Step (\begin{DoxyParamCaption}\item[{int}]{seconds\+Timer,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data}}]{mob\+Type,  }\item[{int}]{nb\+Mob,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{spawn }\end{DoxyParamCaption})}
+
+
+
+Crée un spawn de plusieurs mobs du type donné pour l\textquotesingle{}endroit donné, après un délai dans le déroulement du niveau. Si ce délai est nul, alors cette étape fera parti de la même vague que l\textquotesingle{}étape précédente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds\+Timer} & Le délai pour lancer l\textquotesingle{}étape, en secondes \\
+\hline
+{\em mob\+Type} & Les données servant à créer les mobs invoqués \\
+\hline
+{\em nb\+Mob} & Le nombre de mobs à invoquer \\
+\hline
+{\em spawn} & L\textquotesingle{}endroit où sont invoqués les mobs \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step_a299c53ae22104c17d82eee1193d8f6a9}\label{class_tentacle_slicers_1_1levels_1_1_level_step_a299c53ae22104c17d82eee1193d8f6a9}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}!Cooldown@{Cooldown}}
+\index{Cooldown@{Cooldown}!Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}}
+\subsubsection{\texorpdfstring{Cooldown()}{Cooldown()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+levels.\+Level\+Step.\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne en secondes le temps restant avant le déclenchement de l\textquotesingle{}étape. 
+
+\begin{DoxyReturn}{Returns}
+Le temps restant en secondes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step_a3b44842ad8568ede9c2e9ade82b8418b}\label{class_tentacle_slicers_1_1levels_1_1_level_step_a3b44842ad8568ede9c2e9ade82b8418b}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}!Has\+Begun@{Has\+Begun}}
+\index{Has\+Begun@{Has\+Begun}!Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}}
+\subsubsection{\texorpdfstring{Has\+Begun()}{HasBegun()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+levels.\+Level\+Step.\+Has\+Begun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}étape a commencé à invoquer ses mobs. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}étape a commencé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step_ae8f84a9d4deab689789f0630a4c32a69}\label{class_tentacle_slicers_1_1levels_1_1_level_step_ae8f84a9d4deab689789f0630a4c32a69}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}!Is\+Finished@{Is\+Finished}}
+\index{Is\+Finished@{Is\+Finished}!Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}}
+\subsubsection{\texorpdfstring{Is\+Finished()}{IsFinished()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+levels.\+Level\+Step.\+Is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+indique si l\textquotesingle{}étape a fini d\textquotesingle{}invoquer ses mmobs. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}étape est finie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_step_a5f8a74eeee5fbc7bf29ea4ed2a065037}\label{class_tentacle_slicers_1_1levels_1_1_level_step_a5f8a74eeee5fbc7bf29ea4ed2a065037}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::levels\+::\+Level\+Step@{Tentacle\+Slicers\+::levels\+::\+Level\+Step}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+levels.\+Level\+Step.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise l\textquotesingle{}étape, soit en diminuant le temps restant soit en réduisant le délai pour l\textquotesingle{}apparition du prochain mob. Si l\textquotesingle{}un de ces compteurs est consommé, un nouveau mob est invoqué. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/levels/Level\+Step.\+cs\end{DoxyCompactItemize}

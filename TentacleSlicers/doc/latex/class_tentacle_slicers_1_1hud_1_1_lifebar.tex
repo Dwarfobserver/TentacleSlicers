@@ -1,0 +1,107 @@
+\hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar}{}\section{Tentacle\+Slicers.\+hud.\+Lifebar Class Reference}
+\label{class_tentacle_slicers_1_1hud_1_1_lifebar}\index{Tentacle\+Slicers.\+hud.\+Lifebar@{Tentacle\+Slicers.\+hud.\+Lifebar}}
+
+
+Indique la vie actuelle possédée par l\textquotesingle{}acteur associé.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+hud.\+Lifebar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1hud_1_1_lifebar}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_lifebar_a3dcac14f3effb59f113af80ade641141}{Lifebar} (Point position, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} owner, bool inverted)
+\begin{DoxyCompactList}\small\item\em Crée la barre de vie qui représente l\textquotesingle{}état de santé du joueur donné. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1hud_1_1_lifebar_aed0dfe55660f68f90a8dd9ff98af0dfa}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche la barre de vie. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1hud_1_1_lifebar_a7c048aa89453e97f85c9b0dbdb3fe86e}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise le pourcentage de vie à afficher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar_a4fb0b8e3c484a595961b507e3ef59f8e}\label{class_tentacle_slicers_1_1hud_1_1_lifebar_a4fb0b8e3c484a595961b507e3ef59f8e}} 
+static readonly int {\bfseries Width} = Empty\+Bar.\+Width
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar_a420306a2cfb1402cc6f3bbbb7bfcc869}\label{class_tentacle_slicers_1_1hud_1_1_lifebar_a420306a2cfb1402cc6f3bbbb7bfcc869}} 
+static readonly int {\bfseries Height} = Empty\+Bar.\+Height
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Indique la vie actuelle possédée par l\textquotesingle{}acteur associé. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar_a3dcac14f3effb59f113af80ade641141}\label{class_tentacle_slicers_1_1hud_1_1_lifebar_a3dcac14f3effb59f113af80ade641141}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}!Lifebar@{Lifebar}}
+\index{Lifebar@{Lifebar}!Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}}
+\subsubsection{\texorpdfstring{Lifebar()}{Lifebar()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+hud.\+Lifebar.\+Lifebar (\begin{DoxyParamCaption}\item[{Point}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}}]{owner,  }\item[{bool}]{inverted }\end{DoxyParamCaption})}
+
+
+
+Crée la barre de vie qui représente l\textquotesingle{}état de santé du joueur donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Le centre de la barre de vie \\
+\hline
+{\em owner} & Le joueur associé \\
+\hline
+{\em inverted} & Indique si la barre de vie s\textquotesingle{}écoule de droite à gauche ou dans l\textquotesingle{}autre sens \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar_aed0dfe55660f68f90a8dd9ff98af0dfa}\label{class_tentacle_slicers_1_1hud_1_1_lifebar_aed0dfe55660f68f90a8dd9ff98af0dfa}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+hud.\+Lifebar.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche la barre de vie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_component}{Tentacle\+Slicers.\+hud.\+Hud\+Component}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_lifebar_a7c048aa89453e97f85c9b0dbdb3fe86e}\label{class_tentacle_slicers_1_1hud_1_1_lifebar_a7c048aa89453e97f85c9b0dbdb3fe86e}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::hud\+::\+Lifebar@{Tentacle\+Slicers\+::hud\+::\+Lifebar}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+hud.\+Lifebar.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise le pourcentage de vie à afficher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_component}{Tentacle\+Slicers.\+hud.\+Hud\+Component}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/hud/Lifebar.\+cs\end{DoxyCompactItemize}

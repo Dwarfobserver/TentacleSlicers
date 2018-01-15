@@ -1,0 +1,60 @@
+\hypertarget{namespace_tentacle_slicers_1_1actors}{}\section{Tentacle\+Slicers.\+actors Namespace Reference}
+\label{namespace_tentacle_slicers_1_1actors}\index{Tentacle\+Slicers.\+actors@{Tentacle\+Slicers.\+actors}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}
+\begin{DoxyCompactList}\small\item\em Classe centrale du jeu, les acteurs sont les seules entités générées dans le monde crée. Ils sont déclinés en sous-\/classes pour représenter les missiles, les joueurs, les ennemis, le décor ou une simple animation. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}
+\begin{DoxyCompactList}\small\item\em Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour les personnages en jeu, des joueurs ou de l\textquotesingle{}ordinateur. Implémente leur déplacements et états. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion}{Explosion}
+\begin{DoxyCompactList}\small\item\em Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour créer une explosion, qui applique son effet et ses dégâts à tous les ennemis de son lanceur dans sa zone d\textquotesingle{}effet, puis s\textquotesingle{}auto-\/détruit et laisse un résidu de mort. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_data}{Explosion\+Data}
+\begin{DoxyCompactList}\small\item\em Permet la création facilitée d\textquotesingle{}explosions. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor}
+\begin{DoxyCompactList}\small\item\em Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} pour créer des personnages vivants pouvant être blessés ou soignés, qui sont retirés du monde lorsque leur vie atteint 0. Leur barre de vie peut être affichée temporairement au-\/dessus d\textquotesingle{}eux lorsque leur niveau de vie est modifiée. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_missile}{Missile}
+\begin{DoxyCompactList}\small\item\em Spécifie la class \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour créer des projectiles dont la direction et la vitesse sont fixées à l\textquotesingle{}avance et dispose d\textquotesingle{}une durée de vie au-\/delà de laquelle le projectile est supprimé. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_missile_data}{Missile\+Data}
+\begin{DoxyCompactList}\small\item\em Permet la création facilitée de projectiles. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob}{Mob}
+\begin{DoxyCompactList}\small\item\em Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor} pour créer un personnage contrôlé par le jeu, à priori hostile au joueur (par défaut dans la Faction opposée Cultists). Le mob peut recevoir une série de points qui vont déterminer son chemin, et une cible qu\textquotesingle{}il va tenter d\textquotesingle{}attaquer si il peut lancer des sorts et que ceux-\/ci ont une portée suffisante. Sa vie et ses dégâts sont augmentés au fil des niveaux. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data}
+\begin{DoxyCompactList}\small\item\em Permet la création facilitée de mobs. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{Passive\+Powerup}
+\begin{DoxyCompactList}\small\item\em Un type de powerup qui aplique un effet au joueur qui le ramasse. Il est donc directement consommé. Il efface les états du joueur qui le prend. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}
+\begin{DoxyCompactList}\small\item\em Représente le personnage d\textquotesingle{}un joueur. Il possède des fonctions appelées par le Player\+Controller de ce personnage lors de la pression, l\textquotesingle{}appui ou le relâchement de touches du clavier. Il peut ramasser des powerups pour les assigner à une des deux touches de sort. Il dispose de statistiques sauvegardes et chargeables qui modifient notamment l\textquotesingle{}impact de ses sorts. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}
+\begin{DoxyCompactList}\small\item\em Stocke les statistiques d\textquotesingle{}un joueur, qui vont augmenter son efficacité. Les statistiques peuvent être enregistrées et chargées depuis une chaîne de caractères. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup}{Powerup}
+\begin{DoxyCompactList}\small\item\em Représente un utilitaire à ramasser pour les joueurs. Il est immobile et disparaît si le joueur passe dessus. Il peut appliquer un effet au joueur lorsqu\textquotesingle{}il est ramassé ou être ensuite assigné à un emplacement de sort pour que le joueur aie une nouvelle compétence. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_data}{Powerup\+Data}
+\begin{DoxyCompactList}\small\item\em Stocke les données permettant de créer un powerup, en lui donnant un sprite puis soit un effet, appliqué lors de son ramassage, soit un sort que le joueur va pouvoir assigner à l\textquotesingle{}une de ses touches. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_residu}{Residu}
+\begin{DoxyCompactList}\small\item\em Un résidu spécifie et simplifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour jouer une unique animation puis se retirer soi-\/même du monde. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_residu_data}{Residu\+Data}
+\begin{DoxyCompactList}\small\item\em Utilisé lors de la mort d\textquotesingle{}un acteur pour vérifier si il peut créer un résidu, et pour fournir le cas échéant les paramètres du résidu. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1actors_1_1_spell_powerup}{Spell\+Powerup}
+\begin{DoxyCompactList}\small\item\em Un type de powerup qui va permettre au joueur qui l\textquotesingle{}a ramassé de l\textquotesingle{}assigner à une touche de sort, ce qui va lui assigner à cet emplacement une nouvelle compétence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_tentacle_slicers_1_1actors_aaae1293c828d51288c24ab9156ff5475}{Faction} \{ {\bfseries Neutral}, 
+{\bfseries Players}, 
+{\bfseries Cultists}
+ \}\begin{DoxyCompactList}\small\item\em Indique la faction d\textquotesingle{}un acteur. Un acteur neutre n\textquotesingle{}est allié ou ennemi avec personne, sinon deux acteurs sont amis si ils sont de la même faction, ou ennemis si leurs factions sont différentes. En règle générale, le décor est neutre, les joueurs appartiennent à la faction Players et les autres personnages appartiennent à la faction Cultists. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_tentacle_slicers_1_1actors_aaae1293c828d51288c24ab9156ff5475}\label{namespace_tentacle_slicers_1_1actors_aaae1293c828d51288c24ab9156ff5475}} 
+\index{Tentacle\+Slicers\+::actors@{Tentacle\+Slicers\+::actors}!Faction@{Faction}}
+\index{Faction@{Faction}!Tentacle\+Slicers\+::actors@{Tentacle\+Slicers\+::actors}}
+\subsubsection{\texorpdfstring{Faction}{Faction}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_tentacle_slicers_1_1actors_aaae1293c828d51288c24ab9156ff5475}{Tentacle\+Slicers.\+actors.\+Faction}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Indique la faction d\textquotesingle{}un acteur. Un acteur neutre n\textquotesingle{}est allié ou ennemi avec personne, sinon deux acteurs sont amis si ils sont de la même faction, ou ennemis si leurs factions sont différentes. En règle générale, le décor est neutre, les joueurs appartiennent à la faction Players et les autres personnages appartiennent à la faction Cultists. 
+

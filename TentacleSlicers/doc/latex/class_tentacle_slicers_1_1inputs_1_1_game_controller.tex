@@ -1,0 +1,123 @@
+\hypertarget{class_tentacle_slicers_1_1inputs_1_1_game_controller}{}\section{Tentacle\+Slicers.\+inputs.\+Game\+Controller Class Reference}
+\label{class_tentacle_slicers_1_1inputs_1_1_game_controller}\index{Tentacle\+Slicers.\+inputs.\+Game\+Controller@{Tentacle\+Slicers.\+inputs.\+Game\+Controller}}
+
+
+Gère les évènements en jeu qui en sont pas traités par les controlleurs des joueurs.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+inputs.\+Game\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1inputs_1_1_game_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller_a7f6f576b5e9dbeb6ffabd2871f4bda49}{Game\+Controller} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} escape\+State)
+\begin{DoxyCompactList}\small\item\em Crée le \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller} associé le menu en jeu à déclencher et la fenêtre de l\textquotesingle{}application. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller_ad2c4462255e76a592937943b437b865a}{Key\+Down} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Retourne vrai \+: ne traite pas les évènements enregistrant l\textquotesingle{}appui d\textquotesingle{}une touche. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller_a5db759b0f19e3f8eaff1f0274c7042a5}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Vérifie si la touche appuyée n\textquotesingle{}est pas la touche echap, auquel cas lance le menu de jeu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller_ab01f8090801509068a02af3ad4ce19a1}{Key\+Up} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Retourne vrai \+: ne traite pas les évènements enregistrant le relâchement d\textquotesingle{}une touche. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère les évènements en jeu qui en sont pas traités par les controlleurs des joueurs. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_game_controller_a7f6f576b5e9dbeb6ffabd2871f4bda49}\label{class_tentacle_slicers_1_1inputs_1_1_game_controller_a7f6f576b5e9dbeb6ffabd2871f4bda49}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}!Game\+Controller@{Game\+Controller}}
+\index{Game\+Controller@{Game\+Controller}!Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}}
+\subsubsection{\texorpdfstring{Game\+Controller()}{GameController()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+inputs.\+Game\+Controller.\+Game\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State}}]{escape\+State }\end{DoxyParamCaption})}
+
+
+
+Crée le \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller} associé le menu en jeu à déclencher et la fenêtre de l\textquotesingle{}application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre de l\textquotesingle{}application \\
+\hline
+{\em escape\+State} & Le menu en jeu \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_game_controller_ad2c4462255e76a592937943b437b865a}\label{class_tentacle_slicers_1_1inputs_1_1_game_controller_ad2c4462255e76a592937943b437b865a}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}!Key\+Down@{Key\+Down}}
+\index{Key\+Down@{Key\+Down}!Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Down()}{KeyDown()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Game\+Controller.\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Retourne vrai \+: ne traite pas les évènements enregistrant l\textquotesingle{}appui d\textquotesingle{}une touche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_game_controller_a5db759b0f19e3f8eaff1f0274c7042a5}\label{class_tentacle_slicers_1_1inputs_1_1_game_controller_a5db759b0f19e3f8eaff1f0274c7042a5}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Game\+Controller.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la touche appuyée n\textquotesingle{}est pas la touche echap, auquel cas lance le menu de jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si la touche echap n\textquotesingle{}a pas été pressée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_key_pressed}{Tentacle\+Slicers.\+interfaces.\+I\+Key\+Pressed}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_game_controller_ab01f8090801509068a02af3ad4ce19a1}\label{class_tentacle_slicers_1_1inputs_1_1_game_controller_ab01f8090801509068a02af3ad4ce19a1}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}!Key\+Up@{Key\+Up}}
+\index{Key\+Up@{Key\+Up}!Tentacle\+Slicers\+::inputs\+::\+Game\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Game\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Up()}{KeyUp()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Game\+Controller.\+Key\+Up (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Retourne vrai \+: ne traite pas les évènements enregistrant le relâchement d\textquotesingle{}une touche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/inputs/Game\+Controller.\+cs\end{DoxyCompactItemize}

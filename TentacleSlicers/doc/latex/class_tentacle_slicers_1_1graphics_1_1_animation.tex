@@ -1,0 +1,82 @@
+\hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation}{}\section{Tentacle\+Slicers.\+graphics.\+Animation Class Reference}
+\label{class_tentacle_slicers_1_1graphics_1_1_animation}\index{Tentacle\+Slicers.\+graphics.\+Animation@{Tentacle\+Slicers.\+graphics.\+Animation}}
+
+
+Charge les images d\textquotesingle{}un dossier et les associe à un type d\textquotesingle{}animation. Les images du dossier doivent être nommées par leur ordre (de 0 au nombre d\textquotesingle{}images -\/ 1) et au format png. De plus, le dossier doit contenir les sous-\/dossiers top, bottom, left et right (avec le même nombre d\textquotesingle{}images) si l\textquotesingle{}animation dépend d\textquotesingle{}une orientation.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_a4534bab47880e19031ce441090405731}{Animation} (string folder, int height\+Shift)
+\begin{DoxyCompactList}\small\item\em Charge et organise l\textquotesingle{}animation contenue dans le dossier indiqué \+: récupère le type de l\textquotesingle{}animation, puis vérifie si l\textquotesingle{}animation dépend ou non de son orientation puis charge toutes les images du dossier. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite}{Basic\+Sprite} \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_a9575afe2c888a8b4edcf44bca95ac934}{Get\+Sprite} (double percent, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{general.\+Point} orientation)
+\begin{DoxyCompactList}\small\item\em Retourne le sprite correspondant au pourcentage de progression de l\textquotesingle{}animation, aninsi que son orientation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_afe5c6298cd213b6e5c86e00798dda3be}\label{class_tentacle_slicers_1_1graphics_1_1_animation_afe5c6298cd213b6e5c86e00798dda3be}} 
+static readonly int {\bfseries Nb\+Types} = Enum.\+Get\+Values(typeof(\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type})).Length
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_a7c93e1a9e7a89bb8703cbde37b5e07ee}\label{class_tentacle_slicers_1_1graphics_1_1_animation_a7c93e1a9e7a89bb8703cbde37b5e07ee}} 
+int {\bfseries Anim\+Length}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_a6b62500cfcb7ef7a425d33a23f66e1be}\label{class_tentacle_slicers_1_1graphics_1_1_animation_a6b62500cfcb7ef7a425d33a23f66e1be}} 
+\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} {\bfseries Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Charge les images d\textquotesingle{}un dossier et les associe à un type d\textquotesingle{}animation. Les images du dossier doivent être nommées par leur ordre (de 0 au nombre d\textquotesingle{}images -\/ 1) et au format png. De plus, le dossier doit contenir les sous-\/dossiers top, bottom, left et right (avec le même nombre d\textquotesingle{}images) si l\textquotesingle{}animation dépend d\textquotesingle{}une orientation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_a4534bab47880e19031ce441090405731}\label{class_tentacle_slicers_1_1graphics_1_1_animation_a4534bab47880e19031ce441090405731}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation@{Tentacle\+Slicers\+::graphics\+::\+Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation@{Tentacle\+Slicers\+::graphics\+::\+Animation}}
+\subsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Animation.\+Animation (\begin{DoxyParamCaption}\item[{string}]{folder,  }\item[{int}]{height\+Shift }\end{DoxyParamCaption})}
+
+
+
+Charge et organise l\textquotesingle{}animation contenue dans le dossier indiqué \+: récupère le type de l\textquotesingle{}animation, puis vérifie si l\textquotesingle{}animation dépend ou non de son orientation puis charge toutes les images du dossier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder} & Le dossier de l\textquotesingle{}animation \\
+\hline
+{\em height\+Shift} & Le décalage en hauteur des sprites \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_a9575afe2c888a8b4edcf44bca95ac934}\label{class_tentacle_slicers_1_1graphics_1_1_animation_a9575afe2c888a8b4edcf44bca95ac934}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation@{Tentacle\+Slicers\+::graphics\+::\+Animation}!Get\+Sprite@{Get\+Sprite}}
+\index{Get\+Sprite@{Get\+Sprite}!Tentacle\+Slicers\+::graphics\+::\+Animation@{Tentacle\+Slicers\+::graphics\+::\+Animation}}
+\subsubsection{\texorpdfstring{Get\+Sprite()}{GetSprite()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite}{Basic\+Sprite} Tentacle\+Slicers.\+graphics.\+Animation.\+Get\+Sprite (\begin{DoxyParamCaption}\item[{double}]{percent,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{general.\+Point}}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Retourne le sprite correspondant au pourcentage de progression de l\textquotesingle{}animation, aninsi que son orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em percent} & Le pourcentage de progression \\
+\hline
+{\em orientation} & L\textquotesingle{}orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le sprite correspondant 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/graphics/Animation.\+cs\end{DoxyCompactItemize}

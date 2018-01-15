@@ -1,0 +1,94 @@
+\hypertarget{class_tentacle_slicers_1_1powerups_1_1_spell_powerup}{}\section{Tentacle\+Slicers.\+powerups.\+Spell\+Powerup Class Reference}
+\label{class_tentacle_slicers_1_1powerups_1_1_spell_powerup}\index{Tentacle\+Slicers.\+powerups.\+Spell\+Powerup@{Tentacle\+Slicers.\+powerups.\+Spell\+Powerup}}
+
+
+Un type de powerup qui va permettre au joueur qui l\textquotesingle{}a ramassé de l\textquotesingle{}assigner à une touche de sort, ce qui va lui assigner à cet emplacement une nouvelle compétence.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+powerups.\+Spell\+Powerup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.010753cm]{class_tentacle_slicers_1_1powerups_1_1_spell_powerup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a31cbd8d21821ff284ba8b66f13903a5c}{Spell\+Powerup} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_data}{Powerup\+Data} data)
+\begin{DoxyCompactList}\small\item\em Crée le powerup avec la position et les données indiquées. Appelé par la méthode statique \hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_a9aecde45bf218c2241b7454235e68050}{Powerup.\+Create}. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a33b18ec95beafbdf151908c1aca562f9}{Apply} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} owner, int arg)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}effet appliqué par le \hyperlink{class_tentacle_slicers_1_1powerups_1_1_spell_powerup}{Spell\+Powerup} est la création d\textquotesingle{}un sort pour son possesseur avec le numéro indiqué. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_ac1193ef31fbde4059684e65cde3db500}{Is\+Automatically\+Consumed} ()
+\begin{DoxyCompactList}\small\item\em Le powerup est consommé lorsqu\textquotesingle{}il est assigné à une touche et non directement à son ramassage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Un type de powerup qui va permettre au joueur qui l\textquotesingle{}a ramassé de l\textquotesingle{}assigner à une touche de sort, ce qui va lui assigner à cet emplacement une nouvelle compétence. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a31cbd8d21821ff284ba8b66f13903a5c}\label{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a31cbd8d21821ff284ba8b66f13903a5c}} 
+\index{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}!Spell\+Powerup@{Spell\+Powerup}}
+\index{Spell\+Powerup@{Spell\+Powerup}!Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}}
+\subsubsection{\texorpdfstring{Spell\+Powerup()}{SpellPowerup()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+powerups.\+Spell\+Powerup.\+Spell\+Powerup (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_data}{Powerup\+Data}}]{data }\end{DoxyParamCaption})}
+
+
+
+Crée le powerup avec la position et les données indiquées. Appelé par la méthode statique \hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_a9aecde45bf218c2241b7454235e68050}{Powerup.\+Create}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position du powerup \\
+\hline
+{\em data} & Les données du powerup \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a33b18ec95beafbdf151908c1aca562f9}\label{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_a33b18ec95beafbdf151908c1aca562f9}} 
+\index{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}!Apply@{Apply}}
+\index{Apply@{Apply}!Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+powerups.\+Spell\+Powerup.\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}}]{owner,  }\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+L\textquotesingle{}effet appliqué par le \hyperlink{class_tentacle_slicers_1_1powerups_1_1_spell_powerup}{Spell\+Powerup} est la création d\textquotesingle{}un sort pour son possesseur avec le numéro indiqué. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le possesseur du powerup \\
+\hline
+{\em arg} & Le numéro du sort \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_a64288aa9b1e9f242082be54f1d73f8ba}{Tentacle\+Slicers.\+powerups.\+Powerup}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_ac1193ef31fbde4059684e65cde3db500}\label{class_tentacle_slicers_1_1powerups_1_1_spell_powerup_ac1193ef31fbde4059684e65cde3db500}} 
+\index{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}!Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}}
+\index{Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}!Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup@{Tentacle\+Slicers\+::powerups\+::\+Spell\+Powerup}}
+\subsubsection{\texorpdfstring{Is\+Automatically\+Consumed()}{IsAutomaticallyConsumed()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+powerups.\+Spell\+Powerup.\+Is\+Automatically\+Consumed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Le powerup est consommé lorsqu\textquotesingle{}il est assigné à une touche et non directement à son ramassage. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le powerup est consommé à son ramassage 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1powerups_1_1_powerup_a52c58d3898d05020220fc317b6f901d9}{Tentacle\+Slicers.\+powerups.\+Powerup}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/powerups/Spell\+Powerup.\+cs\end{DoxyCompactItemize}

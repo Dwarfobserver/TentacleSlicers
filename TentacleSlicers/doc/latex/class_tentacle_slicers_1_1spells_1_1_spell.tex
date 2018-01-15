@@ -1,0 +1,198 @@
+\hypertarget{class_tentacle_slicers_1_1spells_1_1_spell}{}\section{Tentacle\+Slicers.\+spells.\+Spell Class Reference}
+\label{class_tentacle_slicers_1_1spells_1_1_spell}\index{Tentacle\+Slicers.\+spells.\+Spell@{Tentacle\+Slicers.\+spells.\+Spell}}
+
+
+Un sort (ou compétence) peut être utilisée par un acteur, qui va alors l\textquotesingle{}incanter pour déclencher son effet. Un sort peut posséder beaucoup de caractéristiques, données par la classe \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} qui lui est fournie lors de son instanciation.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+spells.\+Spell\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1spells_1_1_spell}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_a25863b695362026f53baaadbc5654507}{Spell} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} owner, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} spell\+Data)
+\begin{DoxyCompactList}\small\item\em Crée le sort en lui assignant son possesseur et les données indiquées. Le sort est crée avec une charge. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_a3ab5f2807146348c84b264ab16d664e0}{Spell} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} owner, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} spell\+Data, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats)
+\begin{DoxyCompactList}\small\item\em Crée le sort en lui assignant son joueur et les données indiquées. Le sort est crée avec une charge. La statistique de Cooldown\+Reduction du joueur réduit le temps de recharge du sort. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_a5cf10338202ec828cc462808cfa76ee7}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Fait progresser le chargement du sort (si il n\textquotesingle{}a pas atteint son nombre de charges maximal) et son incantation si le possesseur du sort est en train de le lancer. Si le temps d\textquotesingle{}incantation écoulé est suffisant, déclenche l\textquotesingle{}effet du sort. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_a5dc46c946187e81a5c555bb931d6692d}{Actualise\+Cooldown} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats)
+\begin{DoxyCompactList}\small\item\em Met à jour le temps de rechargement du jour avec les statistiques de son joueur. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_ae1c14da219bcc85510459df0bbb8daa0}{Castable} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} target)
+\begin{DoxyCompactList}\small\item\em Indique si le sort peut être lancé par son possesseur. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_ac7f1bf84219ade09c2bbe6749eeb6496}{Cast} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} target)
+\begin{DoxyCompactList}\small\item\em Lorsque le sort est lancé, l\textquotesingle{}incantation de son possesseur commence, ce qui lance le type d\textquotesingle{}animation correspondant et lui interdit de lancer d\textquotesingle{}autres sort sdurant son incantation. Selon les données du sort, il est également rendu immobile. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_a85ff8039a270ba8dea0024beb6030ca8}{Cooldown\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le pourcentage de chargement du sort, entre 0 et 1. Plus la valeur est grande et plus le sort est chargé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_ad1e8e5d54cd8180d0c610ad9f8cfc48b}\label{class_tentacle_slicers_1_1spells_1_1_spell_ad1e8e5d54cd8180d0c610ad9f8cfc48b}} 
+int {\bfseries Range} =$>$ \+\_\+spell\+Data.\+Range
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a5fc7eb8f88534f04a7289dd83d4101d4}\label{class_tentacle_slicers_1_1spells_1_1_spell_a5fc7eb8f88534f04a7289dd83d4101d4}} 
+Bitmap {\bfseries Icon} =$>$ \+\_\+spell\+Data.\+Icon
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_af6b75e73ab6b7de1eca091bee60ec42f}\label{class_tentacle_slicers_1_1spells_1_1_spell_af6b75e73ab6b7de1eca091bee60ec42f}} 
+long {\bfseries Id} =$>$ \+\_\+spell\+Data.\+Id
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a691ae41caee56f29fb6275be1923a786}\label{class_tentacle_slicers_1_1spells_1_1_spell_a691ae41caee56f29fb6275be1923a786}} 
+int {\bfseries Max\+Chares} =$>$ \+\_\+spell\+Data.\+Nb\+Charges
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a7c5892c8fcafec6af838959d0c514ffc}\label{class_tentacle_slicers_1_1spells_1_1_spell_a7c5892c8fcafec6af838959d0c514ffc}} 
+static readonly string {\bfseries Image\+Path} = Sprite\+Handler.\+Image\+Path + \char`\"{}spells/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_ae349ff2985f1ba6f8127d717b600d311}\label{class_tentacle_slicers_1_1spells_1_1_spell_ae349ff2985f1ba6f8127d717b600d311}} 
+static readonly string {\bfseries Icon\+Path} = Sprite\+Handler.\+Image\+Path + \char`\"{}spells/icons/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_ab404e5359ddf25d5e44888e90b5bb505}\label{class_tentacle_slicers_1_1spells_1_1_spell_ab404e5359ddf25d5e44888e90b5bb505}} 
+\hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries State\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a8618857aa0cc73addf8dcb61de41cef7}\label{class_tentacle_slicers_1_1spells_1_1_spell_a8618857aa0cc73addf8dcb61de41cef7}} 
+int {\bfseries Current\+Charges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Un sort (ou compétence) peut être utilisée par un acteur, qui va alors l\textquotesingle{}incanter pour déclencher son effet. Un sort peut posséder beaucoup de caractéristiques, données par la classe \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} qui lui est fournie lors de son instanciation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a25863b695362026f53baaadbc5654507}\label{class_tentacle_slicers_1_1spells_1_1_spell_a25863b695362026f53baaadbc5654507}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Spell@{Spell}}
+\index{Spell@{Spell}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Spell()}{Spell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+spells.\+Spell.\+Spell (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{spell\+Data }\end{DoxyParamCaption})}
+
+
+
+Crée le sort en lui assignant son possesseur et les données indiquées. Le sort est crée avec une charge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le possesseur du sort \\
+\hline
+{\em spell\+Data} & Les données du sort \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a3ab5f2807146348c84b264ab16d664e0}\label{class_tentacle_slicers_1_1spells_1_1_spell_a3ab5f2807146348c84b264ab16d664e0}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Spell@{Spell}}
+\index{Spell@{Spell}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Spell()}{Spell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+spells.\+Spell.\+Spell (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{spell\+Data,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Crée le sort en lui assignant son joueur et les données indiquées. Le sort est crée avec une charge. La statistique de Cooldown\+Reduction du joueur réduit le temps de recharge du sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le possesseur du sort \\
+\hline
+{\em spell\+Data} & Les données du sort \\
+\hline
+{\em stats} & Les statistiques du joueur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a5dc46c946187e81a5c555bb931d6692d}\label{class_tentacle_slicers_1_1spells_1_1_spell_a5dc46c946187e81a5c555bb931d6692d}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Actualise\+Cooldown@{Actualise\+Cooldown}}
+\index{Actualise\+Cooldown@{Actualise\+Cooldown}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Actualise\+Cooldown()}{ActualiseCooldown()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell.\+Actualise\+Cooldown (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Met à jour le temps de rechargement du jour avec les statistiques de son joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stats} & Les statistiques du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_ac7f1bf84219ade09c2bbe6749eeb6496}\label{class_tentacle_slicers_1_1spells_1_1_spell_ac7f1bf84219ade09c2bbe6749eeb6496}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Cast@{Cast}}
+\index{Cast@{Cast}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Cast()}{Cast()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+spells.\+Spell.\+Cast (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lorsque le sort est lancé, l\textquotesingle{}incantation de son possesseur commence, ce qui lance le type d\textquotesingle{}animation correspondant et lui interdit de lancer d\textquotesingle{}autres sort sdurant son incantation. Selon les données du sort, il est également rendu immobile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & La cible du sort \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_ae1c14da219bcc85510459df0bbb8daa0}\label{class_tentacle_slicers_1_1spells_1_1_spell_ae1c14da219bcc85510459df0bbb8daa0}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Castable@{Castable}}
+\index{Castable@{Castable}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Castable()}{Castable()}}
+{\footnotesize\ttfamily virtual bool Tentacle\+Slicers.\+spells.\+Spell.\+Castable (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Indique si le sort peut être lancé par son possesseur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & La cible du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si le sort peut être lancé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a85ff8039a270ba8dea0024beb6030ca8}\label{class_tentacle_slicers_1_1spells_1_1_spell_a85ff8039a270ba8dea0024beb6030ca8}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Cooldown\+Ratio@{Cooldown\+Ratio}}
+\index{Cooldown\+Ratio@{Cooldown\+Ratio}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Cooldown\+Ratio()}{CooldownRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+spells.\+Spell.\+Cooldown\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le pourcentage de chargement du sort, entre 0 et 1. Plus la valeur est grande et plus le sort est chargé. 
+
+\begin{DoxyReturn}{Returns}
+Le pourcentage de chargement du sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_a5cf10338202ec828cc462808cfa76ee7}\label{class_tentacle_slicers_1_1spells_1_1_spell_a5cf10338202ec828cc462808cfa76ee7}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::spells\+::\+Spell@{Tentacle\+Slicers\+::spells\+::\+Spell}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Fait progresser le chargement du sort (si il n\textquotesingle{}a pas atteint son nombre de charges maximal) et son incantation si le possesseur du sort est en train de le lancer. Si le temps d\textquotesingle{}incantation écoulé est suffisant, déclenche l\textquotesingle{}effet du sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoule en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/spells/Spell.\+cs\end{DoxyCompactItemize}

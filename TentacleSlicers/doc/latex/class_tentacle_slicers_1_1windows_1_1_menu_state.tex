@@ -1,0 +1,114 @@
+\hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state}{}\section{Tentacle\+Slicers.\+windows.\+Menu\+State Class Reference}
+\label{class_tentacle_slicers_1_1windows_1_1_menu_state}\index{Tentacle\+Slicers.\+windows.\+Menu\+State@{Tentacle\+Slicers.\+windows.\+Menu\+State}}
+
+
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} pour dessiner l\textquotesingle{}image de fond de l\textquotesingle{}écran et gérer l\textquotesingle{}éventuel gestionnaire de boutons en lui délégant les entrées et en affichant ses boutons.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+windows.\+Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.709402cm]{class_tentacle_slicers_1_1windows_1_1_menu_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_menu_state_aab9ac7140f4086cd7a3d32f3c48b5b83}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue l\textquotesingle{}évènement d\textquotesingle{}une touche pressée aux boutons. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1windows_1_1_menu_state_adad16f85474aa05c42a263125e862f10}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image de fond puis affiche les boutons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state_aa45ee29127d21e470ddb058bb05566f0}\label{class_tentacle_slicers_1_1windows_1_1_menu_state_aa45ee29127d21e470ddb058bb05566f0}} 
+static readonly Point {\bfseries Screen\+Point} = new Point(Main\+Form.\+Fixed\+Width / 2.\+0, Main\+Form.\+Fixed\+Height)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_menu_state_abddb0d07d620c477680721407fdaa454}{Menu\+State} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite}{Basic\+Sprite} screen)
+\begin{DoxyCompactList}\small\item\em Crée l\textquotesingle{}état avec la fenêtre et l\textquotesingle{}image de fond associées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state_a313800565da3947dce9859126c14d01b}\label{class_tentacle_slicers_1_1windows_1_1_menu_state_a313800565da3947dce9859126c14d01b}} 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler} {\bfseries Buttons\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} pour dessiner l\textquotesingle{}image de fond de l\textquotesingle{}écran et gérer l\textquotesingle{}éventuel gestionnaire de boutons en lui délégant les entrées et en affichant ses boutons. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state_abddb0d07d620c477680721407fdaa454}\label{class_tentacle_slicers_1_1windows_1_1_menu_state_abddb0d07d620c477680721407fdaa454}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}!Menu\+State@{Menu\+State}}
+\index{Menu\+State@{Menu\+State}!Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}}
+\subsubsection{\texorpdfstring{Menu\+State()}{MenuState()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+windows.\+Menu\+State.\+Menu\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite}{Basic\+Sprite}}]{screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Crée l\textquotesingle{}état avec la fenêtre et l\textquotesingle{}image de fond associées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre \\
+\hline
+{\em screen} & L\textquotesingle{}image de fonc \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state_adad16f85474aa05c42a263125e862f10}\label{class_tentacle_slicers_1_1windows_1_1_menu_state_adad16f85474aa05c42a263125e862f10}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+windows.\+Menu\+State.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine l\textquotesingle{}image de fond puis affiche les boutons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_menu_state_aab9ac7140f4086cd7a3d32f3c48b5b83}\label{class_tentacle_slicers_1_1windows_1_1_menu_state_aab9ac7140f4086cd7a3d32f3c48b5b83}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::windows\+::\+Menu\+State@{Tentacle\+Slicers\+::windows\+::\+Menu\+State}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+windows.\+Menu\+State.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Délègue l\textquotesingle{}évènement d\textquotesingle{}une touche pressée aux boutons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclencheé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/windows/Menu\+State.\+cs\end{DoxyCompactItemize}

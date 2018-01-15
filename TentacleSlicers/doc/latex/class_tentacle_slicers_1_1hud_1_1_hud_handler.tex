@@ -1,0 +1,93 @@
+\hypertarget{class_tentacle_slicers_1_1hud_1_1_hud_handler}{}\section{Tentacle\+Slicers.\+hud.\+Hud\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1hud_1_1_hud_handler}\index{Tentacle\+Slicers.\+hud.\+Hud\+Handler@{Tentacle\+Slicers.\+hud.\+Hud\+Handler}}
+
+
+Gère les composants affichés à l\textquotesingle{}écran en position absolue. Récupère des données du monde pour afficher l\textquotesingle{}état des joueurs et la progression du niveau.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+hud.\+Hud\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1hud_1_1_hud_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_handler_a0566cbce018f4f281f7286dad1a76d34}{Hud\+Handler} (I\+Read\+Only\+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$ characters)
+\begin{DoxyCompactList}\small\item\em Crée les composants à afficher en jeu, c\textquotesingle{}est-\/à-\/dire la vie et les sorts des joueurs ainsi qu\textquotesingle{}un composant qui suit l\textquotesingle{}avancée du niveau, qui est instancié par le monde (World). \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_handler_a61718275f1f7d9a57d63a6b5588737f8}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine tous les composants. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_handler_a3786a79f72b2f65630ca61363dcd3246}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise tous les composants. Vérifie si le \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer}{Level\+Observer} doit être changé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère les composants affichés à l\textquotesingle{}écran en position absolue. Récupère des données du monde pour afficher l\textquotesingle{}état des joueurs et la progression du niveau. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_hud_handler_a0566cbce018f4f281f7286dad1a76d34}\label{class_tentacle_slicers_1_1hud_1_1_hud_handler_a0566cbce018f4f281f7286dad1a76d34}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}!Hud\+Handler@{Hud\+Handler}}
+\index{Hud\+Handler@{Hud\+Handler}!Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}}
+\subsubsection{\texorpdfstring{Hud\+Handler()}{HudHandler()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+hud.\+Hud\+Handler.\+Hud\+Handler (\begin{DoxyParamCaption}\item[{I\+Read\+Only\+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$}]{characters }\end{DoxyParamCaption})}
+
+
+
+Crée les composants à afficher en jeu, c\textquotesingle{}est-\/à-\/dire la vie et les sorts des joueurs ainsi qu\textquotesingle{}un composant qui suit l\textquotesingle{}avancée du niveau, qui est instancié par le monde (World). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em characters} & Les joueurs \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_hud_handler_a61718275f1f7d9a57d63a6b5588737f8}\label{class_tentacle_slicers_1_1hud_1_1_hud_handler_a61718275f1f7d9a57d63a6b5588737f8}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Hud\+Handler.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Dessine tous les composants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée par les composants \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_hud_handler_a3786a79f72b2f65630ca61363dcd3246}\label{class_tentacle_slicers_1_1hud_1_1_hud_handler_a3786a79f72b2f65630ca61363dcd3246}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::hud\+::\+Hud\+Handler@{Tentacle\+Slicers\+::hud\+::\+Hud\+Handler}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Hud\+Handler.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise tous les composants. Vérifie si le \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer}{Level\+Observer} doit être changé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en milliesecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/hud/Hud\+Handler.\+cs\end{DoxyCompactItemize}

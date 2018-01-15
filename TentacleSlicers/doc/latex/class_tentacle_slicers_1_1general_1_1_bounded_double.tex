@@ -1,0 +1,132 @@
+\hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double}{}\section{Tentacle\+Slicers.\+general.\+Bounded\+Double Class Reference}
+\label{class_tentacle_slicers_1_1general_1_1_bounded_double}\index{Tentacle\+Slicers.\+general.\+Bounded\+Double@{Tentacle\+Slicers.\+general.\+Bounded\+Double}}
+
+
+Encapsule une valeur (un double) et le garde entre 0 et un maximum indiqué. Lui rajoute également un facteur de modification en fonction du temps écoulé.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+general.\+Bounded\+Double\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1general_1_1_bounded_double}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double_a7cd57e6a16c703eb5a6e574f5d73585f}{Bounded\+Double} (double value\+Max, double regeneration=0)
+\begin{DoxyCompactList}\small\item\em Crée la valeur encadrée et l\textquotesingle{}initialise au maximum donné. Lui attribue aussi sa régénération (modification en fonction du temps écoulé). \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double_a4b526f05b7941e604fd6fd1fffd0f6e2}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise la valeur encadrée en fonction de sa régénération. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double_abcc7a3b553b3c4744925510564e79a71}{Is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em Indique si la valeur est égale à zéro. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double_ae0119b85bb355e2a13431360fc90c186}{Is\+Full} ()
+\begin{DoxyCompactList}\small\item\em Indique si la valeur est égale à son maximum. \end{DoxyCompactList}\item 
+override string \hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double_af752b916206e8a8481cc9eeb201ed68e}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Renvoie la valeur actuelle et sa valeur maximale, ainsi que sa régénération si elle n\textquotesingle{}est pas nulle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_aeffe74492bf4bfb019bcb92758cfe598}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_aeffe74492bf4bfb019bcb92758cfe598}} 
+double {\bfseries Regeneration}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_a2ae7e7e9bc916e1865c47a85e95b508d}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_a2ae7e7e9bc916e1865c47a85e95b508d}} 
+double {\bfseries Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_ae051d04a428e97d0466113f3c9f66f3c}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_ae051d04a428e97d0466113f3c9f66f3c}} 
+double {\bfseries Value\+Max}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsule une valeur (un double) et le garde entre 0 et un maximum indiqué. Lui rajoute également un facteur de modification en fonction du temps écoulé. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_a7cd57e6a16c703eb5a6e574f5d73585f}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_a7cd57e6a16c703eb5a6e574f5d73585f}} 
+\index{Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}!Bounded\+Double@{Bounded\+Double}}
+\index{Bounded\+Double@{Bounded\+Double}!Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}}
+\subsubsection{\texorpdfstring{Bounded\+Double()}{BoundedDouble()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+general.\+Bounded\+Double.\+Bounded\+Double (\begin{DoxyParamCaption}\item[{double}]{value\+Max,  }\item[{double}]{regeneration = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Crée la valeur encadrée et l\textquotesingle{}initialise au maximum donné. Lui attribue aussi sa régénération (modification en fonction du temps écoulé). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+Max} & La valeur initiale et maximale \\
+\hline
+{\em regeneration} & La régénération de la valeur encadrée \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_abcc7a3b553b3c4744925510564e79a71}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_abcc7a3b553b3c4744925510564e79a71}} 
+\index{Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}}
+\subsubsection{\texorpdfstring{Is\+Empty()}{IsEmpty()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+general.\+Bounded\+Double.\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si la valeur est égale à zéro. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si la valeur est égale à zéro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_ae0119b85bb355e2a13431360fc90c186}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_ae0119b85bb355e2a13431360fc90c186}} 
+\index{Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}!Is\+Full@{Is\+Full}}
+\index{Is\+Full@{Is\+Full}!Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}}
+\subsubsection{\texorpdfstring{Is\+Full()}{IsFull()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+general.\+Bounded\+Double.\+Is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si la valeur est égale à son maximum. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si la valeur est égale à son maximum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_a4b526f05b7941e604fd6fd1fffd0f6e2}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_a4b526f05b7941e604fd6fd1fffd0f6e2}} 
+\index{Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+general.\+Bounded\+Double.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise la valeur encadrée en fonction de sa régénération. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_bounded_double_af752b916206e8a8481cc9eeb201ed68e}\label{class_tentacle_slicers_1_1general_1_1_bounded_double_af752b916206e8a8481cc9eeb201ed68e}} 
+\index{Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Tentacle\+Slicers\+::general\+::\+Bounded\+Double@{Tentacle\+Slicers\+::general\+::\+Bounded\+Double}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string Tentacle\+Slicers.\+general.\+Bounded\+Double.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie la valeur actuelle et sa valeur maximale, ainsi que sa régénération si elle n\textquotesingle{}est pas nulle. 
+
+\begin{DoxyReturn}{Returns}
+Le string décrivant la valeur encadrée 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/general/Bounded\+Double.\+cs\end{DoxyCompactItemize}

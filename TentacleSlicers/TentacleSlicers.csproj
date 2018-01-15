@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4990C9C5-B41B-4E77-BEB6-46A1F94ACEA8}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TentacleSlicers</RootNamespace>
+    <AssemblyName>TentacleSlicers</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\actors\Actor.cs" />
+    <Compile Include="src\actors\ControlledActor.cs" />
+    <Compile Include="src\actors\Explosion.cs" />
+    <Compile Include="src\actors\ExplosionData.cs" />
+    <Compile Include="src\actors\Faction.cs" />
+    <Compile Include="src\actors\LivingActor.cs" />
+    <Compile Include="src\actors\Missile.cs" />
+    <Compile Include="src\actors\MissileData.cs" />
+    <Compile Include="src\actors\Mob.cs" />
+    <Compile Include="src\actors\MobData.cs" />
+    <Compile Include="src\actors\PassivePowerup.cs" />
+    <Compile Include="src\actors\PlayerCharacter.cs" />
+    <Compile Include="src\actors\PlayerStats.cs" />
+    <Compile Include="src\actors\Powerup.cs" />
+    <Compile Include="src\actors\PowerupData.cs" />
+    <Compile Include="src\actors\Residu.cs" />
+    <Compile Include="src\actors\ResiduData.cs" />
+    <Compile Include="src\actors\SpellPowerup.cs" />
+    <Compile Include="src\AI\AiBehavior.cs" />
+    <Compile Include="src\AI\AStar.cs" />
+    <Compile Include="src\AI\Node.cs" />
+    <Compile Include="src\collisions\ActorCollision.cs" />
+    <Compile Include="src\collisions\Circle.cs" />
+    <Compile Include="src\collisions\CollisionFunctions.cs" />
+    <Compile Include="src\collisions\RayonCaster.cs" />
+    <Compile Include="src\collisions\HitboxType.cs" />
+    <Compile Include="src\collisions\Rectangle.cs" />
+    <Compile Include="src\collisions\Form.cs" />
+    <Compile Include="src\collisions\ShiftedRectangle.cs" />
+    <Compile Include="src\collisions\Segment.cs" />
+    <Compile Include="src\customs\Actors.cs" />
+    <Compile Include="src\customs\StateArgArrow.cs" />
+    <Compile Include="src\customs\Bomb.cs" />
+    <Compile Include="src\customs\CthulhuGhost.cs" />
+    <Compile Include="src\customs\KnightTomb.cs" />
+    <Compile Include="src\customs\LevelSteps.cs" />
+    <Compile Include="src\customs\Sprites.cs" />
+    <Compile Include="src\customs\Knight.cs" />
+    <Compile Include="src\customs\Powerups.cs" />
+    <Compile Include="src\customs\Spells.cs" />
+    <Compile Include="src\customs\StateArgMeteor.cs" />
+    <Compile Include="src\customs\StateArgVoidball.cs" />
+    <Compile Include="src\customs\States.cs" />
+    <Compile Include="src\general\BoundedDouble.cs" />
+    <Compile Include="src\general\Point.cs" />
+    <Compile Include="src\graphics\Animation.cs" />
+    <Compile Include="src\graphics\AnimationHandler.cs" />
+    <Compile Include="src\graphics\AnimationPack.cs" />
+    <Compile Include="src\graphics\AnimationType.cs" />
+    <Compile Include="src\graphics\BasicSprite.cs" />
+    <Compile Include="src\graphics\FadingTransparency.cs" />
+    <Compile Include="src\graphics\ProgressingSprite.cs" />
+    <Compile Include="src\graphics\SpriteHandler.cs" />
+    <Compile Include="src\graphics\CustomSprite.cs" />
+    <Compile Include="src\graphics\Text.cs" />
+    <Compile Include="src\graphics\TransparencyHandler.cs" />
+    <Compile Include="src\graphics\ActorsTransparency.cs" />
+    <Compile Include="src\hud\Button.cs" />
+    <Compile Include="src\hud\ButtonsHandler.cs" />
+    <Compile Include="src\hud\HudComponent.cs" />
+    <Compile Include="src\hud\HudHandler.cs" />
+    <Compile Include="src\hud\LevelObserver.cs" />
+    <Compile Include="src\hud\Lifebar.cs" />
+    <Compile Include="src\hud\SpellSocket.cs" />
+    <Compile Include="src\inputs\GameController.cs" />
+    <Compile Include="src\inputs\InputHandler.cs" />
+    <Compile Include="src\inputs\PlayerController.cs" />
+    <Compile Include="src\interfaces\IController.cs" />
+    <Compile Include="src\interfaces\IDrawable.cs" />
+    <Compile Include="src\interfaces\IKeyPressed.cs" />
+    <Compile Include="src\interfaces\ITickable.cs" />
+    <Compile Include="src\levels\LevelScript.cs" />
+    <Compile Include="src\levels\LevelStep.cs" />
+    <Compile Include="src\maps\GameSave.cs" />
+    <Compile Include="src\maps\Map.cs" />
+    <Compile Include="src\maps\Square.cs" />
+    <Compile Include="src\maps\SquaresHandler.cs" />
+    <Compile Include="src\maps\Wall.cs" />
+    <Compile Include="src\maps\WallTransparency.cs" />
+    <Compile Include="src\maps\WallTransparencyHitbox.cs" />
+    <Compile Include="src\maps\World.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\spells\AttackSpellData.cs" />
+    <Compile Include="src\spells\MissileSpellData.cs" />
+    <Compile Include="src\spells\Spell.cs" />
+    <Compile Include="src\spells\SpellData.cs" />
+    <Compile Include="src\spells\SpellHandler.cs" />
+    <Compile Include="src\states\State.cs" />
+    <Compile Include="src\states\StateData.cs" />
+    <Compile Include="src\states\StateHandler.cs" />
+    <Compile Include="src\windows\CreateSaveState.cs" />
+    <Compile Include="src\windows\GameMenuState.cs" />
+    <Compile Include="src\windows\GameOverState.cs" />
+    <Compile Include="src\windows\GameState.cs" />
+    <Compile Include="src\windows\MainForm.cs" />
+    <Compile Include="src\windows\MainMenuState.cs" />
+    <Compile Include="src\windows\ChooseSaveState.cs" />
+    <Compile Include="src\windows\MenuState.cs" />
+    <Compile Include="src\windows\NewGameState.cs" />
+    <Compile Include="src\windows\TooMuchSaveState.cs" />
+    <Compile Include="src\windows\WindowsState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\images" />
+    <Folder Include="resources\maps" />
+    <Folder Include="resources\saves" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

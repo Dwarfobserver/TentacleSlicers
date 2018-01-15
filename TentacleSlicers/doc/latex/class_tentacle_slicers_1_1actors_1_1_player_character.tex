@@ -1,0 +1,358 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character}{}\section{Tentacle\+Slicers.\+actors.\+Player\+Character Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_player_character}\index{Tentacle\+Slicers.\+actors.\+Player\+Character@{Tentacle\+Slicers.\+actors.\+Player\+Character}}
+
+
+Représente le personnage d\textquotesingle{}un joueur. Il possède des fonctions appelées par le Player\+Controller de ce personnage lors de la pression, l\textquotesingle{}appui ou le relâchement de touches du clavier. Il peut ramasser des powerups pour les assigner à une des deux touches de sort. Il dispose de statistiques sauvegardes et chargeables qui modifient notamment l\textquotesingle{}impact de ses sorts.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Player\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.590164cm]{class_tentacle_slicers_1_1actors_1_1_player_character}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a0d2e5ef0774b29ddff168c5c83c255aa}{Save\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Enregistre les statistiques stockées lors d\textquotesingle{}une sauvegarde. \end{DoxyCompactList}\item 
+override double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a1e6201247e550f29f061ac87c88c70f6}{Physical\+Damages\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les statistiques du personnages influencent sur ses dégâts physiques. \end{DoxyCompactList}\item 
+override double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_aaeb9cd192c0caf68ed7aa994ebb6daa6}{Spell\+Power\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les statistiques du personnages influencent sur l\textquotesingle{}impact de ses sorts. \end{DoxyCompactList}\item 
+override double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_acc7326054ba178ac92ff43ed0fbaab2d}{Vampirism\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les statistiques du personnages influencent sur le pourcentage de vie gagné par rapport aux dommages infligés. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a40d9846096c2aaddb7112631310b240b}{Damages} (double value)
+\begin{DoxyCompactList}\small\item\em Les statistiques du personnages lui permettent de réduire les dégâts subis. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Lance un éventuel sort en attente, puis appelle la fontion Tick de la classe mère. Ensuite, le vecteur de vitesse est actualisé en fonction de paramètres actualisés lors de l\textquotesingle{}appui et le relâchement de touches du clavier. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a6d99c2fc9ae39b200026d6e2dc706878}{Is\+Choosing\+Spell} ()
+\begin{DoxyCompactList}\small\item\em Indique si le joueur doit assigner une touche au sort qu\textquotesingle{}il a précédemment obtenu avec le powerup associé. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_aa137852ffa3d88b5f75fc8ba0f020651}{Loot\+Powerup} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup}{Powerup} powerup)
+\begin{DoxyCompactList}\small\item\em Essaye de ramasser le powerup indiqué et indique si la tentative a réussie. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a7d7616298f1762e11f8824f0b77dec64}{Create\+Spell} (int num\+Spell, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} data)
+\begin{DoxyCompactList}\small\item\em Ajoute un sort à l\textquotesingle{}acteur et l\textquotesingle{}associe à un indice positif. Le sort est modifié par les statistiques du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a5014d03cdb591f545e08f599cf314770}{Key\+Pressed\+\_\+\+Spell} (int num)
+\begin{DoxyCompactList}\small\item\em Déclenché lors de l\textquotesingle{}activation d\textquotesingle{}une touche de sort, avec le numéro associé. Regarde si le joueur attribue un powerup aux sorts différents du 0 (qui ne peut être modifié), et applique le powerup ramassé au numéro si c\textquotesingle{}est le cas. Sinon, si le sort associé au numéro existe, il est enregistré pour être lancé lors de l\textquotesingle{}actualisation du personnage, avec comme cible l\textquotesingle{}extrémité du personnage suivant son orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a88a4c15c5bafbdca5b80544f278c4966}{Key\+Down\+\_\+\+Down} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers le bas du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a7c674d55517b678e1ef3e56eef87020b}{Key\+Up\+\_\+\+Down} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors du relâchement de la touche correspondant au mouvement vers le bas du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_accd59fed83e91a191e78ef1db45688db}{Key\+Down\+\_\+\+Up} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers le haut du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a4d847691e46394ff398a4df2297c442b}{Key\+Up\+\_\+\+Up} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors du relâchement de la touche correspondant au mouvement vers le haut du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_abf33ac13bbb9485e1692c1fe603d9c5e}{Key\+Down\+\_\+\+Left} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers la gauche du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a84e49238e717a5758a16482b728f7863}{Key\+Up\+\_\+\+Left} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors du relâchement de la touche correspondant au mouvement vers la gauche du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a8d5e8af51bb564b68ce9fd13916bb929}{Key\+Down\+\_\+\+Right} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers la droite du personnage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a8423a25a3ff0fcd6e9f883c4375fe627}{Key\+Up\+\_\+\+Right} ()
+\begin{DoxyCompactList}\small\item\em Déclenché lors du relâchement de la touche correspondant au mouvement vers la droite du personnage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_aa021c21aa48a8e90e56a5f92989f6a3b}\label{class_tentacle_slicers_1_1actors_1_1_player_character_aa021c21aa48a8e90e56a5f92989f6a3b}} 
+static readonly string {\bfseries Image\+Path} = graphics.\+Sprite\+Handler.\+Image\+Path + \char`\"{}heros/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a346e53738dbc763ad793e29635872823}{Player\+Character} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, int life\+Max, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats=null)
+\begin{DoxyCompactList}\small\item\em Crée un personnage sans sorts associé à la faction Players. Si l\textquotesingle{}objet \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} n\textquotesingle{}est pas donné, le personnage est crée avec le statistiques par défaut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a058059a644a1e097b56bb06b2bbaa2d4}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a058059a644a1e097b56bb06b2bbaa2d4}} 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} {\bfseries Stats}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a0cec2778ca5c457df73ba4cd9b0a5f7c}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a0cec2778ca5c457df73ba4cd9b0a5f7c}} 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} {\bfseries Savable\+Stats}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Représente le personnage d\textquotesingle{}un joueur. Il possède des fonctions appelées par le Player\+Controller de ce personnage lors de la pression, l\textquotesingle{}appui ou le relâchement de touches du clavier. Il peut ramasser des powerups pour les assigner à une des deux touches de sort. Il dispose de statistiques sauvegardes et chargeables qui modifient notamment l\textquotesingle{}impact de ses sorts. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a346e53738dbc763ad793e29635872823}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a346e53738dbc763ad793e29635872823}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Player\+Character@{Player\+Character}}
+\index{Player\+Character@{Player\+Character}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Player\+Character()}{PlayerCharacter()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Player\+Character.\+Player\+Character (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{int}]{life\+Max,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Crée un personnage sans sorts associé à la faction Players. Si l\textquotesingle{}objet \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} n\textquotesingle{}est pas donné, le personnage est crée avec le statistiques par défaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position initiale du personnage \\
+\hline
+{\em life\+Max} & La vie maximale du personnage \\
+\hline
+{\em stats} & Les statistiques attribuées au personnage \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a7d7616298f1762e11f8824f0b77dec64}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a7d7616298f1762e11f8824f0b77dec64}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Create\+Spell@{Create\+Spell}}
+\index{Create\+Spell@{Create\+Spell}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Create\+Spell()}{CreateSpell()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Create\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ajoute un sort à l\textquotesingle{}acteur et l\textquotesingle{}associe à un indice positif. Le sort est modifié par les statistiques du personnage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro associé au sort \\
+\hline
+{\em data} & Les informations pour créer le sort \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_afcfec115f484efa6142c2f82e1a1f4d5}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a40d9846096c2aaddb7112631310b240b}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a40d9846096c2aaddb7112631310b240b}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Damages@{Damages}}
+\index{Damages@{Damages}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Damages()}{Damages()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Damages (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les statistiques du personnages lui permettent de réduire les dégâts subis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Les dégâts entrants, avant leur réduction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_aa910b96f987e5aba0fb93b2aeabe6261}{Tentacle\+Slicers.\+customs.\+Knight}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a6d99c2fc9ae39b200026d6e2dc706878}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a6d99c2fc9ae39b200026d6e2dc706878}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Is\+Choosing\+Spell@{Is\+Choosing\+Spell}}
+\index{Is\+Choosing\+Spell@{Is\+Choosing\+Spell}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Is\+Choosing\+Spell()}{IsChoosingSpell()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Player\+Character.\+Is\+Choosing\+Spell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si le joueur doit assigner une touche au sort qu\textquotesingle{}il a précédemment obtenu avec le powerup associé. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le joueur est en train d\textquotesingle{}associer une touche à son nouveau sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a88a4c15c5bafbdca5b80544f278c4966}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a88a4c15c5bafbdca5b80544f278c4966}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Down\+\_\+\+Down@{Key\+Down\+\_\+\+Down}}
+\index{Key\+Down\+\_\+\+Down@{Key\+Down\+\_\+\+Down}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Down\+\_\+\+Down()}{KeyDown\_Down()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Down\+\_\+\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers le bas du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_abf33ac13bbb9485e1692c1fe603d9c5e}\label{class_tentacle_slicers_1_1actors_1_1_player_character_abf33ac13bbb9485e1692c1fe603d9c5e}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Down\+\_\+\+Left@{Key\+Down\+\_\+\+Left}}
+\index{Key\+Down\+\_\+\+Left@{Key\+Down\+\_\+\+Left}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Down\+\_\+\+Left()}{KeyDown\_Left()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Down\+\_\+\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers la gauche du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a8d5e8af51bb564b68ce9fd13916bb929}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a8d5e8af51bb564b68ce9fd13916bb929}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Down\+\_\+\+Right@{Key\+Down\+\_\+\+Right}}
+\index{Key\+Down\+\_\+\+Right@{Key\+Down\+\_\+\+Right}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Down\+\_\+\+Right()}{KeyDown\_Right()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Down\+\_\+\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers la droite du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_accd59fed83e91a191e78ef1db45688db}\label{class_tentacle_slicers_1_1actors_1_1_player_character_accd59fed83e91a191e78ef1db45688db}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Down\+\_\+\+Up@{Key\+Down\+\_\+\+Up}}
+\index{Key\+Down\+\_\+\+Up@{Key\+Down\+\_\+\+Up}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Down\+\_\+\+Up()}{KeyDown\_Up()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Down\+\_\+\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors de l\textquotesingle{}appui de la touche correspondant au mouvement vers le haut du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a5014d03cdb591f545e08f599cf314770}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a5014d03cdb591f545e08f599cf314770}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Pressed\+\_\+\+Spell@{Key\+Pressed\+\_\+\+Spell}}
+\index{Key\+Pressed\+\_\+\+Spell@{Key\+Pressed\+\_\+\+Spell}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Pressed\+\_\+\+Spell()}{KeyPressed\_Spell()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Pressed\+\_\+\+Spell (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors de l\textquotesingle{}activation d\textquotesingle{}une touche de sort, avec le numéro associé. Regarde si le joueur attribue un powerup aux sorts différents du 0 (qui ne peut être modifié), et applique le powerup ramassé au numéro si c\textquotesingle{}est le cas. Sinon, si le sort associé au numéro existe, il est enregistré pour être lancé lors de l\textquotesingle{}actualisation du personnage, avec comme cible l\textquotesingle{}extrémité du personnage suivant son orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Le numéro du sort \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a7c674d55517b678e1ef3e56eef87020b}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a7c674d55517b678e1ef3e56eef87020b}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Up\+\_\+\+Down@{Key\+Up\+\_\+\+Down}}
+\index{Key\+Up\+\_\+\+Down@{Key\+Up\+\_\+\+Down}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Up\+\_\+\+Down()}{KeyUp\_Down()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Up\+\_\+\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors du relâchement de la touche correspondant au mouvement vers le bas du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a84e49238e717a5758a16482b728f7863}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a84e49238e717a5758a16482b728f7863}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Up\+\_\+\+Left@{Key\+Up\+\_\+\+Left}}
+\index{Key\+Up\+\_\+\+Left@{Key\+Up\+\_\+\+Left}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Up\+\_\+\+Left()}{KeyUp\_Left()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Up\+\_\+\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors du relâchement de la touche correspondant au mouvement vers la gauche du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a8423a25a3ff0fcd6e9f883c4375fe627}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a8423a25a3ff0fcd6e9f883c4375fe627}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Up\+\_\+\+Right@{Key\+Up\+\_\+\+Right}}
+\index{Key\+Up\+\_\+\+Right@{Key\+Up\+\_\+\+Right}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Up\+\_\+\+Right()}{KeyUp\_Right()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Up\+\_\+\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors du relâchement de la touche correspondant au mouvement vers la droite du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a4d847691e46394ff398a4df2297c442b}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a4d847691e46394ff398a4df2297c442b}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Key\+Up\+\_\+\+Up@{Key\+Up\+\_\+\+Up}}
+\index{Key\+Up\+\_\+\+Up@{Key\+Up\+\_\+\+Up}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Key\+Up\+\_\+\+Up()}{KeyUp\_Up()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Key\+Up\+\_\+\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenché lors du relâchement de la touche correspondant au mouvement vers le haut du personnage. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_aa137852ffa3d88b5f75fc8ba0f020651}\label{class_tentacle_slicers_1_1actors_1_1_player_character_aa137852ffa3d88b5f75fc8ba0f020651}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Loot\+Powerup@{Loot\+Powerup}}
+\index{Loot\+Powerup@{Loot\+Powerup}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Loot\+Powerup()}{LootPowerup()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Player\+Character.\+Loot\+Powerup (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup}{Powerup}}]{powerup }\end{DoxyParamCaption})}
+
+
+
+Essaye de ramasser le powerup indiqué et indique si la tentative a réussie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em powerup} & Le powerup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si le powerup a été ramassé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a1e6201247e550f29f061ac87c88c70f6}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a1e6201247e550f29f061ac87c88c70f6}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}}
+\index{Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Physical\+Damages\+Ratio()}{PhysicalDamagesRatio()}}
+{\footnotesize\ttfamily override double Tentacle\+Slicers.\+actors.\+Player\+Character.\+Physical\+Damages\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les statistiques du personnages influencent sur ses dégâts physiques. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de multiplication des dégâts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a8041088479e124a66c24d185f5385b2f}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_a0d2e5ef0774b29ddff168c5c83c255aa}\label{class_tentacle_slicers_1_1actors_1_1_player_character_a0d2e5ef0774b29ddff168c5c83c255aa}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Save\+Stats@{Save\+Stats}}
+\index{Save\+Stats@{Save\+Stats}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Save\+Stats()}{SaveStats()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Save\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enregistre les statistiques stockées lors d\textquotesingle{}une sauvegarde. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_aaeb9cd192c0caf68ed7aa994ebb6daa6}\label{class_tentacle_slicers_1_1actors_1_1_player_character_aaeb9cd192c0caf68ed7aa994ebb6daa6}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Spell\+Power\+Ratio@{Spell\+Power\+Ratio}}
+\index{Spell\+Power\+Ratio@{Spell\+Power\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Spell\+Power\+Ratio()}{SpellPowerRatio()}}
+{\footnotesize\ttfamily override double Tentacle\+Slicers.\+actors.\+Player\+Character.\+Spell\+Power\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les statistiques du personnages influencent sur l\textquotesingle{}impact de ses sorts. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de puissance des sorts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a83e7b818449b5e92e3a7003c0cc6f571}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}\label{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Player\+Character.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lance un éventuel sort en attente, puis appelle la fontion Tick de la classe mère. Ensuite, le vecteur de vitesse est actualisé en fonction de paramètres actualisés lors de l\textquotesingle{}appui et le relâchement de touches du clavier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_character_acc7326054ba178ac92ff43ed0fbaab2d}\label{class_tentacle_slicers_1_1actors_1_1_player_character_acc7326054ba178ac92ff43ed0fbaab2d}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}!Vampirism\+Ratio@{Vampirism\+Ratio}}
+\index{Vampirism\+Ratio@{Vampirism\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Character@{Tentacle\+Slicers\+::actors\+::\+Player\+Character}}
+\subsubsection{\texorpdfstring{Vampirism\+Ratio()}{VampirismRatio()}}
+{\footnotesize\ttfamily override double Tentacle\+Slicers.\+actors.\+Player\+Character.\+Vampirism\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les statistiques du personnages influencent sur le pourcentage de vie gagné par rapport aux dommages infligés. 
+
+\begin{DoxyReturn}{Returns}
+Le pourcentage de vie rendu au possesseur par rapport aux dégâts infligés 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a3b86dc36055bcbe1838dd3df0c9274}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Player\+Character.\+cs\end{DoxyCompactItemize}

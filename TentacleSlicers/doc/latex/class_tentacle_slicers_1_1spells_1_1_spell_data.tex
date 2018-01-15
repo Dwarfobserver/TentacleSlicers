@@ -1,0 +1,121 @@
+\hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data}{}\section{Tentacle\+Slicers.\+spells.\+Spell\+Data Class Reference}
+\label{class_tentacle_slicers_1_1spells_1_1_spell_data}\index{Tentacle\+Slicers.\+spells.\+Spell\+Data@{Tentacle\+Slicers.\+spells.\+Spell\+Data}}
+
+
+Donne les informations communes et nécessaires à tous les sorts. Les classes filles de \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} permettent de simplifier et de réduire le nombre de paramètres à donner. Chaque \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} reçoit un indentifiant unique qui sert à le charger et à le sauvegarder grâce aux sauvegardes.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+spells.\+Spell\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1spells_1_1_spell_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data_a3b2b602a51419a4672fb611cf9894957}{Spell\+Data} (Action$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}, Point $>$ effet, \hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} animation\+Type, double cooldown, int cast\+Time\+Ms, double percent\+Cast, bool can\+Move, int nb\+Charges=1, int range=Default\+Range, Bitmap icon=null)
+\begin{DoxyCompactList}\small\item\em Crée les données du sort, et y associe un indentifiant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data_a15f445cba6452dea32e963b683873f27}{Get\+Spell\+Data} (long id)
+\begin{DoxyCompactList}\small\item\em Retourne le \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} qui possède l\textquotesingle{}identifiant demandé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a6291cb6932a4330dd48bcab48a2a2a40}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a6291cb6932a4330dd48bcab48a2a2a40}} 
+Action$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}, Point $>$ {\bfseries Effect}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_ac426c5275e568aae2da338dd12688a9d}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_ac426c5275e568aae2da338dd12688a9d}} 
+\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} {\bfseries Animation\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a5cc77f17d77e7d541fbd6c8a0790abe2}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a5cc77f17d77e7d541fbd6c8a0790abe2}} 
+double {\bfseries Cooldown}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a22d4bab1b8ce1468db5aca7913a4791d}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a22d4bab1b8ce1468db5aca7913a4791d}} 
+int {\bfseries Cast\+Time\+Ms}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a2193ef9f7eedcd776e305d8b71e4503c}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a2193ef9f7eedcd776e305d8b71e4503c}} 
+double {\bfseries Percent\+Cast}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a94d7585fdb9c4b026e90d7e2f2422e4f}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a94d7585fdb9c4b026e90d7e2f2422e4f}} 
+bool {\bfseries Can\+Move}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_ad308021013afbfcb811852f4943a23c1}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_ad308021013afbfcb811852f4943a23c1}} 
+int {\bfseries Nb\+Charges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_ad3f65c1a67886b98f980ec599a30fd97}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_ad3f65c1a67886b98f980ec599a30fd97}} 
+int {\bfseries Range}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a436435ff6cb4c4de32310c7387b7856a}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a436435ff6cb4c4de32310c7387b7856a}} 
+Bitmap {\bfseries Icon}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a820adaee8617e7313456b0ae6c2cc5cb}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a820adaee8617e7313456b0ae6c2cc5cb}} 
+long {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Donne les informations communes et nécessaires à tous les sorts. Les classes filles de \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} permettent de simplifier et de réduire le nombre de paramètres à donner. Chaque \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} reçoit un indentifiant unique qui sert à le charger et à le sauvegarder grâce aux sauvegardes. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a3b2b602a51419a4672fb611cf9894957}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a3b2b602a51419a4672fb611cf9894957}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Data@{Tentacle\+Slicers\+::spells\+::\+Spell\+Data}!Spell\+Data@{Spell\+Data}}
+\index{Spell\+Data@{Spell\+Data}!Tentacle\+Slicers\+::spells\+::\+Spell\+Data@{Tentacle\+Slicers\+::spells\+::\+Spell\+Data}}
+\subsubsection{\texorpdfstring{Spell\+Data()}{SpellData()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+spells.\+Spell\+Data.\+Spell\+Data (\begin{DoxyParamCaption}\item[{Action$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}, Point $>$}]{effet,  }\item[{\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type}}]{animation\+Type,  }\item[{double}]{cooldown,  }\item[{int}]{cast\+Time\+Ms,  }\item[{double}]{percent\+Cast,  }\item[{bool}]{can\+Move,  }\item[{int}]{nb\+Charges = {\ttfamily 1},  }\item[{int}]{range = {\ttfamily DefaultRange},  }\item[{Bitmap}]{icon = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Crée les données du sort, et y associe un indentifiant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em effet} & L\textquotesingle{}effet du sort \\
+\hline
+{\em animation\+Type} & Le type d\textquotesingle{}animation à jouer \\
+\hline
+{\em cooldown} & Le temps de rechargemetn du sort \\
+\hline
+{\em cast\+Time\+Ms} & Le temps de lancement du sort \\
+\hline
+{\em percent\+Cast} & A quel moment de l\textquotesingle{}incantation le sort est déclenché (entre 0 et 1) \\
+\hline
+{\em can\+Move} & Indique si le lanceur peut bouger pendant le lancement du sort \\
+\hline
+{\em nb\+Charges} & Le nombre de charges du sort (minimum 1) \\
+\hline
+{\em range} & La portée du sort, utilisée par les mobs \\
+\hline
+{\em icon} & L\textquotesingle{}icône du sort, qui est affichée des les slots de sorts des joueurs \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_data_a15f445cba6452dea32e963b683873f27}\label{class_tentacle_slicers_1_1spells_1_1_spell_data_a15f445cba6452dea32e963b683873f27}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Data@{Tentacle\+Slicers\+::spells\+::\+Spell\+Data}!Get\+Spell\+Data@{Get\+Spell\+Data}}
+\index{Get\+Spell\+Data@{Get\+Spell\+Data}!Tentacle\+Slicers\+::spells\+::\+Spell\+Data@{Tentacle\+Slicers\+::spells\+::\+Spell\+Data}}
+\subsubsection{\texorpdfstring{Get\+Spell\+Data()}{GetSpellData()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+spells.\+Spell\+Data.\+Get\+Spell\+Data (\begin{DoxyParamCaption}\item[{long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} qui possède l\textquotesingle{}identifiant demandé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & L\textquotesingle{}identifiant du \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/spells/Spell\+Data.\+cs\end{DoxyCompactItemize}

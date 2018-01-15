@@ -1,0 +1,149 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup}{}\section{Tentacle\+Slicers.\+actors.\+Powerup Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_powerup}\index{Tentacle\+Slicers.\+actors.\+Powerup@{Tentacle\+Slicers.\+actors.\+Powerup}}
+
+
+Représente un utilitaire à ramasser pour les joueurs. Il est immobile et disparaît si le joueur passe dessus. Il peut appliquer un effet au joueur lorsqu\textquotesingle{}il est ramassé ou être ensuite assigné à un emplacement de sort pour que le joueur aie une nouvelle compétence.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Powerup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.060109cm]{class_tentacle_slicers_1_1actors_1_1_powerup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sealed override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_aed821572dc4831af53c26150736986d5}{Set\+Collision} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} collision)
+\begin{DoxyCompactList}\small\item\em Scèle la fonction Set\+Collision parce qu\textquotesingle{}elle n\textquotesingle{}est pas destinée à être reécrite. \end{DoxyCompactList}\item 
+abstract void \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a65355e6ca82f35ca0d4ff111c03c8eee}{Apply} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} owner, int arg)
+\begin{DoxyCompactList}\small\item\em Applique les effets du powerup sur son possesseur, si besoin à l\textquotesingle{}aide d\textquotesingle{}un paramètre, comme le numéro de compétence auquel le sort a été associé. \end{DoxyCompactList}\item 
+abstract bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a31b3367e7a72d80526d92486472d329d}{Is\+Automatically\+Consumed} ()
+\begin{DoxyCompactList}\small\item\em Indique si le powerup est consommé directement après être ramassé. Sinon, il est utilisé à la place de la prochaine utilisation d\textquotesingle{}un sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup}{Powerup} \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a170bfc9101d384a73957470249458cfc}{Create} (Point position, \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_data}{Powerup\+Data} data)
+\begin{DoxyCompactList}\small\item\em Fabrique un powerup à partir d\textquotesingle{}une position et d\textquotesingle{}un objet stockant les données du powerup à créer. Selon ces données, instancie un \hyperlink{class_tentacle_slicers_1_1actors_1_1_spell_powerup}{Spell\+Powerup} ou un \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{Passive\+Powerup}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_ae8e50061f0084b2e77f8f1989c261ac7}\label{class_tentacle_slicers_1_1actors_1_1_powerup_ae8e50061f0084b2e77f8f1989c261ac7}} 
+static readonly string {\bfseries Image\+Path} = Sprite\+Handler.\+Image\+Path + \char`\"{}powerups/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a651bc1ff0a40f7ae22f41ed3a0f6cddf}{Powerup} (Point position, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}{Custom\+Sprite} sprite)
+\begin{DoxyCompactList}\small\item\em Initialise le powerup avec sa position et son sprite associé. Lui donne également sa collision lui permettant d\textquotesingle{}être ramassé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Représente un utilitaire à ramasser pour les joueurs. Il est immobile et disparaît si le joueur passe dessus. Il peut appliquer un effet au joueur lorsqu\textquotesingle{}il est ramassé ou être ensuite assigné à un emplacement de sort pour que le joueur aie une nouvelle compétence. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_a651bc1ff0a40f7ae22f41ed3a0f6cddf}\label{class_tentacle_slicers_1_1actors_1_1_powerup_a651bc1ff0a40f7ae22f41ed3a0f6cddf}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}!Powerup@{Powerup}}
+\index{Powerup@{Powerup}!Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}}
+\subsubsection{\texorpdfstring{Powerup()}{Powerup()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Powerup.\+Powerup (\begin{DoxyParamCaption}\item[{Point}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}{Custom\+Sprite}}]{sprite }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialise le powerup avec sa position et son sprite associé. Lui donne également sa collision lui permettant d\textquotesingle{}être ramassé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & la position du powerup \\
+\hline
+{\em sprite} & Le sprite du powerup \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_a65355e6ca82f35ca0d4ff111c03c8eee}\label{class_tentacle_slicers_1_1actors_1_1_powerup_a65355e6ca82f35ca0d4ff111c03c8eee}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}!Apply@{Apply}}
+\index{Apply@{Apply}!Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily abstract void Tentacle\+Slicers.\+actors.\+Powerup.\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}}]{owner,  }\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applique les effets du powerup sur son possesseur, si besoin à l\textquotesingle{}aide d\textquotesingle{}un paramètre, comme le numéro de compétence auquel le sort a été associé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le nouveau possesseur du powerup \\
+\hline
+{\em arg} & L\textquotesingle{}argument supplémentaire \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a73aed325e29e372952cf46add5377b57}{Tentacle\+Slicers.\+actors.\+Passive\+Powerup}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_spell_powerup_ad779a4a5ca4ccb8895f40f8a5f64dad3}{Tentacle\+Slicers.\+actors.\+Spell\+Powerup}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_a170bfc9101d384a73957470249458cfc}\label{class_tentacle_slicers_1_1actors_1_1_powerup_a170bfc9101d384a73957470249458cfc}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}!Create@{Create}}
+\index{Create@{Create}!Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup}{Powerup} Tentacle\+Slicers.\+actors.\+Powerup.\+Create (\begin{DoxyParamCaption}\item[{Point}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_data}{Powerup\+Data}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fabrique un powerup à partir d\textquotesingle{}une position et d\textquotesingle{}un objet stockant les données du powerup à créer. Selon ces données, instancie un \hyperlink{class_tentacle_slicers_1_1actors_1_1_spell_powerup}{Spell\+Powerup} ou un \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{Passive\+Powerup}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position du powerup dans le monde \\
+\hline
+{\em data} & Les données du powerup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le powerup instancié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_a31b3367e7a72d80526d92486472d329d}\label{class_tentacle_slicers_1_1actors_1_1_powerup_a31b3367e7a72d80526d92486472d329d}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}!Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}}
+\index{Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}!Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}}
+\subsubsection{\texorpdfstring{Is\+Automatically\+Consumed()}{IsAutomaticallyConsumed()}}
+{\footnotesize\ttfamily abstract bool Tentacle\+Slicers.\+actors.\+Powerup.\+Is\+Automatically\+Consumed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Indique si le powerup est consommé directement après être ramassé. Sinon, il est utilisé à la place de la prochaine utilisation d\textquotesingle{}un sort. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le powerup est consommé directement après être ramassé 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup_ac419aee4a7dfedee68728f747565f47f}{Tentacle\+Slicers.\+actors.\+Passive\+Powerup}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_spell_powerup_a9286f05a6eee9fb10532bf7439340bd8}{Tentacle\+Slicers.\+actors.\+Spell\+Powerup}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_powerup_aed821572dc4831af53c26150736986d5}\label{class_tentacle_slicers_1_1actors_1_1_powerup_aed821572dc4831af53c26150736986d5}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}!Set\+Collision@{Set\+Collision}}
+\index{Set\+Collision@{Set\+Collision}!Tentacle\+Slicers\+::actors\+::\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Powerup}}
+\subsubsection{\texorpdfstring{Set\+Collision()}{SetCollision()}}
+{\footnotesize\ttfamily sealed override void Tentacle\+Slicers.\+actors.\+Powerup.\+Set\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision}}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Scèle la fonction Set\+Collision parce qu\textquotesingle{}elle n\textquotesingle{}est pas destinée à être reécrite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & La collision assignée à l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a6e1eab5bc50ecb03842f49d0dc3b136e}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Powerup.\+cs\end{DoxyCompactItemize}

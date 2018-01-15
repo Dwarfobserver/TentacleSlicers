@@ -1,0 +1,236 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_mob}{}\section{Tentacle\+Slicers.\+actors.\+Mob Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_mob}\index{Tentacle\+Slicers.\+actors.\+Mob@{Tentacle\+Slicers.\+actors.\+Mob}}
+
+
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor} pour créer un personnage contrôlé par le jeu, à priori hostile au joueur (par défaut dans la Faction opposée Cultists). Le mob peut recevoir une série de points qui vont déterminer son chemin, et une cible qu\textquotesingle{}il va tenter d\textquotesingle{}attaquer si il peut lancer des sorts et que ceux-\/ci ont une portée suffisante. Sa vie et ses dégâts sont augmentés au fil des niveaux.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Mob\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.686193cm]{class_tentacle_slicers_1_1actors_1_1_mob}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a1f7b8eff3540a78e86ae8bcf3a00a811}{Mob} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, int life\+Max, bool showing\+Life)
+\begin{DoxyCompactList}\small\item\em Crée un mob avec la vie maximale et initiale indiquée, modifiée par le niveau courant. Par défaut, un comportement générique (Ai\+Behavior) lui est assigné, qui va déterminer ses destinations et ses cibles, si elles sont en ligne de vue directe. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a6b74133be2effd4552c57f5f1a8fc596}{Mob} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data} data)
+\begin{DoxyCompactList}\small\item\em Crée un mob avec toutes les données fournies par la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data}. Un comportement générique est assigné au mob pour lui déterminer ses destinations et ses cibles, si elles sont en ligne de vue directe. L\textquotesingle{}ordre des sorts fournis correspond à leur niveau de priorité, le premier étant le plus prioritaire. Utilise également le taux de loot indiqué par le paramètre data. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ac596097268c10f823e40533c869ced33}{Damages} (double value)
+\begin{DoxyCompactList}\small\item\em Si le mob meurt après être blessé, une chance correspondant au pourcentage de son taux de loot permet de faire apparaître un nouveau powerup augmentant les caractéristiques d\textquotesingle{}un joueur. De plus, il augmente le score de la partie. \end{DoxyCompactList}\item 
+sealed override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a79c96a3a4ea1b3a874e28a467683dd39}{Create\+Spell} (int num\+Spell, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} data)
+\begin{DoxyCompactList}\small\item\em Verrouille la fonction Create\+Spell, car elle n\textquotesingle{}est pas destinée à être réécrite. \end{DoxyCompactList}\item 
+override double \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a9a27f7eb262346d1e1837df5316823f2}{Physical\+Damages\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les dégâts physiques infligés par le mob sont augmentés suivant le niveau courant. \end{DoxyCompactList}\item 
+override double \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_abdd7f17fd41371465d7f6b56bf91567c}{Spell\+Power\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les effets magiques provenant du mob sont augmentés suivant le niveau courant. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a4964c017e117b1d5af224f65a16ea127}{Set\+Targets} (List$<$ \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} $>$ targets)
+\begin{DoxyCompactList}\small\item\em Ecrase les destinations actuelles du mob pour lui donner une nouvelle suite de points à parcourir. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ad3faa313dde3be8458da5efa209e68cb}{Set\+Target} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} target)
+\begin{DoxyCompactList}\small\item\em Ecrase les destinations actuelles du mob pour lui en donner une nouvelle. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise le mob avec la fonction Tick de la classe mère, puis modifie sa direction selon les destinations fournies. Ensuite, il tente d\textquotesingle{}attaquer la cible de son Ai\+Behavior si elle existe en essayant ses sorts par ordre de priorité. Ces actions sont déclenchées par les fonctions Actualise\+Moves puis Try\+To\+Cast. L\textquotesingle{}actualisation est ralentie par le facteur de vitesse courant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a9678bb1de8dc88e04ba7504ddea5f0c7}\label{class_tentacle_slicers_1_1actors_1_1_mob_a9678bb1de8dc88e04ba7504ddea5f0c7}} 
+static readonly string {\bfseries Image\+Path} = Sprite\+Handler.\+Image\+Path + \char`\"{}mobs/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a908ccd33e3ebd894a974645dacb860b9}\label{class_tentacle_slicers_1_1actors_1_1_mob_a908ccd33e3ebd894a974645dacb860b9}} 
+\hyperlink{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior}{Ai\+Behavior} {\bfseries Behavior}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_afde15cb04d735d384313b6f3bbc0f283}\label{class_tentacle_slicers_1_1actors_1_1_mob_afde15cb04d735d384313b6f3bbc0f283}} 
+double {\bfseries Loot\+Rate}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_aa0bfff04216bf5f92fa330789eee4854}\label{class_tentacle_slicers_1_1actors_1_1_mob_aa0bfff04216bf5f92fa330789eee4854}} 
+int {\bfseries Score\+Value}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor} pour créer un personnage contrôlé par le jeu, à priori hostile au joueur (par défaut dans la Faction opposée Cultists). Le mob peut recevoir une série de points qui vont déterminer son chemin, et une cible qu\textquotesingle{}il va tenter d\textquotesingle{}attaquer si il peut lancer des sorts et que ceux-\/ci ont une portée suffisante. Sa vie et ses dégâts sont augmentés au fil des niveaux. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a1f7b8eff3540a78e86ae8bcf3a00a811}\label{class_tentacle_slicers_1_1actors_1_1_mob_a1f7b8eff3540a78e86ae8bcf3a00a811}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Mob@{Mob}}
+\index{Mob@{Mob}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Mob()}{Mob()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Mob.\+Mob (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{int}]{life\+Max,  }\item[{bool}]{showing\+Life }\end{DoxyParamCaption})}
+
+
+
+Crée un mob avec la vie maximale et initiale indiquée, modifiée par le niveau courant. Par défaut, un comportement générique (Ai\+Behavior) lui est assigné, qui va déterminer ses destinations et ses cibles, si elles sont en ligne de vue directe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position initiale du mob \\
+\hline
+{\em life\+Max} & La vie maximale du mob \\
+\hline
+{\em showing\+Life} & Indique si la vie du mob est temporairement affichée au dessus de lui \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a6b74133be2effd4552c57f5f1a8fc596}\label{class_tentacle_slicers_1_1actors_1_1_mob_a6b74133be2effd4552c57f5f1a8fc596}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Mob@{Mob}}
+\index{Mob@{Mob}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Mob()}{Mob()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Mob.\+Mob (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data}}]{data }\end{DoxyParamCaption})}
+
+
+
+Crée un mob avec toutes les données fournies par la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_data}{Mob\+Data}. Un comportement générique est assigné au mob pour lui déterminer ses destinations et ses cibles, si elles sont en ligne de vue directe. L\textquotesingle{}ordre des sorts fournis correspond à leur niveau de priorité, le premier étant le plus prioritaire. Utilise également le taux de loot indiqué par le paramètre data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position initiale du mob \\
+\hline
+{\em data} & Les différents paramètres du mob \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a79c96a3a4ea1b3a874e28a467683dd39}\label{class_tentacle_slicers_1_1actors_1_1_mob_a79c96a3a4ea1b3a874e28a467683dd39}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Create\+Spell@{Create\+Spell}}
+\index{Create\+Spell@{Create\+Spell}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Create\+Spell()}{CreateSpell()}}
+{\footnotesize\ttfamily sealed override void Tentacle\+Slicers.\+actors.\+Mob.\+Create\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verrouille la fonction Create\+Spell, car elle n\textquotesingle{}est pas destinée à être réécrite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro associé au sort \\
+\hline
+{\em data} & Les informations pour créer le sort \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_afcfec115f484efa6142c2f82e1a1f4d5}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_ac596097268c10f823e40533c869ced33}\label{class_tentacle_slicers_1_1actors_1_1_mob_ac596097268c10f823e40533c869ced33}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Damages@{Damages}}
+\index{Damages@{Damages}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Damages()}{Damages()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Mob.\+Damages (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Si le mob meurt après être blessé, une chance correspondant au pourcentage de son taux de loot permet de faire apparaître un nouveau powerup augmentant les caractéristiques d\textquotesingle{}un joueur. De plus, il augmente le score de la partie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Les dégâts reçus \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_aeeb398970bf8433917fe035f5ec47f66}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a9a27f7eb262346d1e1837df5316823f2}\label{class_tentacle_slicers_1_1actors_1_1_mob_a9a27f7eb262346d1e1837df5316823f2}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}}
+\index{Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Physical\+Damages\+Ratio()}{PhysicalDamagesRatio()}}
+{\footnotesize\ttfamily override double Tentacle\+Slicers.\+actors.\+Mob.\+Physical\+Damages\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les dégâts physiques infligés par le mob sont augmentés suivant le niveau courant. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de multiplication des dégâts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a8041088479e124a66c24d185f5385b2f}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_ad3faa313dde3be8458da5efa209e68cb}\label{class_tentacle_slicers_1_1actors_1_1_mob_ad3faa313dde3be8458da5efa209e68cb}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Set\+Target@{Set\+Target}}
+\index{Set\+Target@{Set\+Target}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Set\+Target()}{SetTarget()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Mob.\+Set\+Target (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{target }\end{DoxyParamCaption})}
+
+
+
+Ecrase les destinations actuelles du mob pour lui en donner une nouvelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & La nouvelle destination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_a4964c017e117b1d5af224f65a16ea127}\label{class_tentacle_slicers_1_1actors_1_1_mob_a4964c017e117b1d5af224f65a16ea127}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Set\+Targets@{Set\+Targets}}
+\index{Set\+Targets@{Set\+Targets}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Set\+Targets()}{SetTargets()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Mob.\+Set\+Targets (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} $>$}]{targets }\end{DoxyParamCaption})}
+
+
+
+Ecrase les destinations actuelles du mob pour lui donner une nouvelle suite de points à parcourir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em targets} & La liste des points, à parcourir dans l\textquotesingle{}ordre \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_abdd7f17fd41371465d7f6b56bf91567c}\label{class_tentacle_slicers_1_1actors_1_1_mob_abdd7f17fd41371465d7f6b56bf91567c}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Spell\+Power\+Ratio@{Spell\+Power\+Ratio}}
+\index{Spell\+Power\+Ratio@{Spell\+Power\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Spell\+Power\+Ratio()}{SpellPowerRatio()}}
+{\footnotesize\ttfamily override double Tentacle\+Slicers.\+actors.\+Mob.\+Spell\+Power\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les effets magiques provenant du mob sont augmentés suivant le niveau courant. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de puissance des sorts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a83e7b818449b5e92e3a7003c0cc6f571}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}\label{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Mob@{Tentacle\+Slicers\+::actors\+::\+Mob}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Mob.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise le mob avec la fonction Tick de la classe mère, puis modifie sa direction selon les destinations fournies. Ensuite, il tente d\textquotesingle{}attaquer la cible de son Ai\+Behavior si elle existe en essayant ses sorts par ordre de priorité. Ces actions sont déclenchées par les fonctions Actualise\+Moves puis Try\+To\+Cast. L\textquotesingle{}actualisation est ralentie par le facteur de vitesse courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_a402aea79e343f8f5a1b153a143edf9fb}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Mob.\+cs\end{DoxyCompactItemize}

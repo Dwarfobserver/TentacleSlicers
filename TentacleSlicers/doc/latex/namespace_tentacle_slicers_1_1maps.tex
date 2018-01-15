@@ -1,0 +1,17 @@
+\hypertarget{namespace_tentacle_slicers_1_1maps}{}\section{Tentacle\+Slicers.\+maps Namespace Reference}
+\label{namespace_tentacle_slicers_1_1maps}\index{Tentacle\+Slicers.\+maps@{Tentacle\+Slicers.\+maps}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save}
+\begin{DoxyCompactList}\small\item\em Stocke les sauvegardes existantes et permet de créer et charger des sauvegardes. Les sauvegardes conservent l\textquotesingle{}état de la partie du début du niveau. La création d\textquotesingle{}une sauvegarde est détaillé dans le dossier resources/saves avec le fichier reamde. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_map}{Map}
+\begin{DoxyCompactList}\small\item\em Représente les données chargées par les fichiers .map, qui n\textquotesingle{}évolueront pas au cours d\textquotesingle{}une partie \+: Les textures de la map, ses murs et collisions, ses deux points d\textquotesingle{}apparition pour les joueurs et ceux de leurs adversaires. La création d\textquotesingle{}une map est détaillée dans le dossier resources/maps avec le fichier readme. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square}
+\begin{DoxyCompactList}\small\item\em Une case du gestionnaire de collisions qui stocke les acteurs qui sont en collision avec cette case. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler}{Squares\+Handler}
+\begin{DoxyCompactList}\small\item\em Le gestionnaire de collisions du jeu. Il découpe l\textquotesingle{}espace jouable en cases, qui contiennent chacune les acteurs qui sont en collision avec elles. Pour cela, lors du test d\textquotesingle{}une collision d\textquotesingle{}une forme à une certaine position, le gestionnaire de collisions va inclure la forme dans un rectangle et va indiquer les acteurs qui sont suspectibles d\textquotesingle{}être en collision avec la forme, en retournant les acteurs référencées par les cases en collision avec le rectangle incluant la forme. Ainsi, cette méthode limite les nombres d\textquotesingle{}acteurs à tester pour voir si ils entrent en collision avec la forme. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_wall}{Wall}
+\begin{DoxyCompactList}\small\item\em Spéficie la classe Actor pour représenter un mur, de la taille d\textquotesingle{}une case de la map. Il peut être invisible ou avoir un comportement transparent, lorsque des acteurs passent derrière lui. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1maps_1_1_world}{World}
+\begin{DoxyCompactList}\small\item\em Le monde est le conteneur de tous les aceurs et de la map générée, et leur délègue les fonctions Tick et Draw. Il peut être crée à partir d\textquotesingle{}une sauvegarde, il actualise le déroulement des niveaux et il place la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler}{}\section{Tentacle\+Slicers.\+maps.\+Squares\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1maps_1_1_squares_handler}\index{Tentacle\+Slicers.\+maps.\+Squares\+Handler@{Tentacle\+Slicers.\+maps.\+Squares\+Handler}}
+
+
+Le gestionnaire de collisions du jeu. Il découpe l\textquotesingle{}espace jouable en cases, qui contiennent chacune les acteurs qui sont en collision avec elles. Pour cela, lors du test d\textquotesingle{}une collision d\textquotesingle{}une forme à une certaine position, le gestionnaire de collisions va inclure la forme dans un rectangle et va indiquer les acteurs qui sont suspectibles d\textquotesingle{}être en collision avec la forme, en retournant les acteurs référencées par les cases en collision avec le rectangle incluant la forme. Ainsi, cette méthode limite les nombres d\textquotesingle{}acteurs à tester pour voir si ils entrent en collision avec la forme.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a359564e42a93abcbfab17e27a96923c0}{Squares\+Handler} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Crée le gestionnaire de collision avec une grille de \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} aux dimensions indiquées. Cette grille doit recouvrir l\textquotesingle{}espace jouable. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a757757f75b4fc5fd74739f3d55ea7e00}{Get\+Actors} (List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$ squares)
+\begin{DoxyCompactList}\small\item\em Retourne la liste d\textquotesingle{}acteurs (sans doublons) en collision avec les Squares passés en paramètre. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a80e39f9258518ba76d3a8f82ffff0947}{Get\+Actors} (\hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} data)
+\begin{DoxyCompactList}\small\item\em Retourne la liste d\textquotesingle{}acteurs (sans doublons) proches du rectangle positionné passé en paramètre. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a77fb8f2f5483270a7db4b505806e1608}{Get\+And\+Update\+Squares} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox)
+\begin{DoxyCompactList}\small\item\em Retourne la liste de Squares en collision avec l\textquotesingle{}acteur passé en paramètres. Ces squares ajoutent l\textquotesingle{}acteur à leur liste d\textquotesingle{}acteurs. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a729b67b5c51d0e676f974e83e5e1743f}{Update\+Squares} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor, List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$ squares)
+\begin{DoxyCompactList}\small\item\em Actualise la liste passée en paramètre pour qu\textquotesingle{}elle n\textquotesingle{}ait que les Squares en collision avec l\textquotesingle{}acteur. Les anciens Squares ne référencent plus l\textquotesingle{}acteur et les nouveaux le référence. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_a2a62ea5ef7ec0cc77fc29954593b1e26}{Dispose\+Actor} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor, List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$ squares)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque l\textquotesingle{}acteur est mort, pour qu\textquotesingle{}il soit enlevé des squares qu\textquotesingle{}il occupait. \end{DoxyCompactList}\item 
+override string \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler_afb49d452ddd0e4ff5b5bbc19e90b870c}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Indique les acteurs et leurs positions contenus dans chaque \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Le gestionnaire de collisions du jeu. Il découpe l\textquotesingle{}espace jouable en cases, qui contiennent chacune les acteurs qui sont en collision avec elles. Pour cela, lors du test d\textquotesingle{}une collision d\textquotesingle{}une forme à une certaine position, le gestionnaire de collisions va inclure la forme dans un rectangle et va indiquer les acteurs qui sont suspectibles d\textquotesingle{}être en collision avec la forme, en retournant les acteurs référencées par les cases en collision avec le rectangle incluant la forme. Ainsi, cette méthode limite les nombres d\textquotesingle{}acteurs à tester pour voir si ils entrent en collision avec la forme. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a359564e42a93abcbfab17e27a96923c0}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a359564e42a93abcbfab17e27a96923c0}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Squares\+Handler@{Squares\+Handler}}
+\index{Squares\+Handler@{Squares\+Handler}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Squares\+Handler()}{SquaresHandler()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Squares\+Handler (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Crée le gestionnaire de collision avec une grille de \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} aux dimensions indiquées. Cette grille doit recouvrir l\textquotesingle{}espace jouable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & La largeur de la grille \\
+\hline
+{\em height} & Le hauteur de la grille \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a2a62ea5ef7ec0cc77fc29954593b1e26}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a2a62ea5ef7ec0cc77fc29954593b1e26}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Dispose\+Actor@{Dispose\+Actor}}
+\index{Dispose\+Actor@{Dispose\+Actor}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Dispose\+Actor()}{DisposeActor()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Dispose\+Actor (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor,  }\item[{List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$}]{squares }\end{DoxyParamCaption})}
+
+
+
+Appelé lorsque l\textquotesingle{}acteur est mort, pour qu\textquotesingle{}il soit enlevé des squares qu\textquotesingle{}il occupait. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur mort \\
+\hline
+{\em squares} & La liste des squares qu\textquotesingle{}occupe l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a757757f75b4fc5fd74739f3d55ea7e00}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a757757f75b4fc5fd74739f3d55ea7e00}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Get\+Actors@{Get\+Actors}}
+\index{Get\+Actors@{Get\+Actors}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Actors()}{GetActors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}$>$ Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Get\+Actors (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$}]{squares }\end{DoxyParamCaption})}
+
+
+
+Retourne la liste d\textquotesingle{}acteurs (sans doublons) en collision avec les Squares passés en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em squares} & La liste de Squares \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La liste d\textquotesingle{}acteurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a80e39f9258518ba76d3a8f82ffff0947}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a80e39f9258518ba76d3a8f82ffff0947}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Get\+Actors@{Get\+Actors}}
+\index{Get\+Actors@{Get\+Actors}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Actors()}{GetActors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}$>$ Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Get\+Actors (\begin{DoxyParamCaption}\item[{\hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle}}]{data }\end{DoxyParamCaption})}
+
+
+
+Retourne la liste d\textquotesingle{}acteurs (sans doublons) proches du rectangle positionné passé en paramètre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Le rectangle positionné \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La liste d\textquotesingle{}acteurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a77fb8f2f5483270a7db4b505806e1608}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a77fb8f2f5483270a7db4b505806e1608}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Get\+And\+Update\+Squares@{Get\+And\+Update\+Squares}}
+\index{Get\+And\+Update\+Squares@{Get\+And\+Update\+Squares}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Get\+And\+Update\+Squares()}{GetAndUpdateSquares()}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square}$>$ Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Get\+And\+Update\+Squares (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor,  }\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox }\end{DoxyParamCaption})}
+
+
+
+Retourne la liste de Squares en collision avec l\textquotesingle{}acteur passé en paramètres. Ces squares ajoutent l\textquotesingle{}acteur à leur liste d\textquotesingle{}acteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur \\
+\hline
+{\em hitbox} & La hitbox de l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La liste de Squares 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_afb49d452ddd0e4ff5b5bbc19e90b870c}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_afb49d452ddd0e4ff5b5bbc19e90b870c}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique les acteurs et leurs positions contenus dans chaque \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square}. 
+
+\begin{DoxyReturn}{Returns}
+Le contenu de chaque \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} du gestionnarie de collisions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_squares_handler_a729b67b5c51d0e676f974e83e5e1743f}\label{class_tentacle_slicers_1_1maps_1_1_squares_handler_a729b67b5c51d0e676f974e83e5e1743f}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}!Update\+Squares@{Update\+Squares}}
+\index{Update\+Squares@{Update\+Squares}!Tentacle\+Slicers\+::maps\+::\+Squares\+Handler@{Tentacle\+Slicers\+::maps\+::\+Squares\+Handler}}
+\subsubsection{\texorpdfstring{Update\+Squares()}{UpdateSquares()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+Squares\+Handler.\+Update\+Squares (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor,  }\item[{List$<$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_square}{Square} $>$}]{squares }\end{DoxyParamCaption})}
+
+
+
+Actualise la liste passée en paramètre pour qu\textquotesingle{}elle n\textquotesingle{}ait que les Squares en collision avec l\textquotesingle{}acteur. Les anciens Squares ne référencent plus l\textquotesingle{}acteur et les nouveaux le référence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur \\
+\hline
+{\em squares} & la liste à actualiser \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/maps/Squares\+Handler.\+cs\end{DoxyCompactItemize}

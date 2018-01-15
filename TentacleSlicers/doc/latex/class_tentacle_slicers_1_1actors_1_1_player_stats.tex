@@ -1,0 +1,186 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats}{}\section{Tentacle\+Slicers.\+actors.\+Player\+Stats Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_player_stats}\index{Tentacle\+Slicers.\+actors.\+Player\+Stats@{Tentacle\+Slicers.\+actors.\+Player\+Stats}}
+
+
+Stocke les statistiques d\textquotesingle{}un joueur, qui vont augmenter son efficacité. Les statistiques peuvent être enregistrées et chargées depuis une chaîne de caractères.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a0a2b8101d263a29f19192254bc6bce7e}{Player\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Crée de nouvelles statistiques, initialisées à zéro. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a5f056aab0dfb1739b8707db43d7561f9}{Player\+Stats} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} clone)
+\begin{DoxyCompactList}\small\item\em Crée de nouvelles statistiques en copiant celles indiquées. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a210da673cb3fb0cddfe07e8a65dbfebd}{Damages\+Taken\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le coefficient de réduction des dégâts subis. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d7e24093042f209364aa79e18de2864}{Cooldown\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le coefficient de réduction des temps de rechargement des sorts. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a094235ee4cd7603bab14329f307daeb6}{Physical\+Damages\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le coefficient d\textquotesingle{}augmentation des dégâts physiques. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a744a660037a39b93d43eb9f27346ae09}{Spell\+Power\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le coefficient d\textquotesingle{}augmentation d\textquotesingle{}efficacité des sorts. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_aee8ecef8466079afcd359984e9bfc7dd}{Vampirism\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Retourne le pourcentage de vie récupérée par rapport aux dégâts infligés. \end{DoxyCompactList}\item 
+string \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d09e82d6cd66e67a8100c67a7b977ba}{Save} ()
+\begin{DoxyCompactList}\small\item\em Enregistre les statistiques dans une chaîne de caractère. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats_a9e9edcd409cbe2f955f4f7313c4a36dd}{Load} (string data)
+\begin{DoxyCompactList}\small\item\em Récupère les statistiques sauvegardées dans une chaîne de caractères. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a8c938549333beaab41c805bf758e9f43}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a8c938549333beaab41c805bf758e9f43}} 
+int {\bfseries Armor}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a6ed0f49d016587771f185cebcc9847a6}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a6ed0f49d016587771f185cebcc9847a6}} 
+int {\bfseries Strength}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_ad905c53bce2226802d8dc57c903fd561}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_ad905c53bce2226802d8dc57c903fd561}} 
+int {\bfseries Spell\+Power}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a38fe172126bba50e3361e7cc25825814}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a38fe172126bba50e3361e7cc25825814}} 
+int {\bfseries Vampirism}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a2f3ba92bde9ebb09e74cf01dd3c0d378}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a2f3ba92bde9ebb09e74cf01dd3c0d378}} 
+int {\bfseries Cooldown\+Reduction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stocke les statistiques d\textquotesingle{}un joueur, qui vont augmenter son efficacité. Les statistiques peuvent être enregistrées et chargées depuis une chaîne de caractères. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a0a2b8101d263a29f19192254bc6bce7e}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a0a2b8101d263a29f19192254bc6bce7e}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Player\+Stats@{Player\+Stats}}
+\index{Player\+Stats@{Player\+Stats}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Player\+Stats()}{PlayerStats()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Player\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée de nouvelles statistiques, initialisées à zéro. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a5f056aab0dfb1739b8707db43d7561f9}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a5f056aab0dfb1739b8707db43d7561f9}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Player\+Stats@{Player\+Stats}}
+\index{Player\+Stats@{Player\+Stats}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Player\+Stats()}{PlayerStats()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Player\+Stats (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{clone }\end{DoxyParamCaption})}
+
+
+
+Crée de nouvelles statistiques en copiant celles indiquées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clone} & Les statistiques recopiées \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d7e24093042f209364aa79e18de2864}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d7e24093042f209364aa79e18de2864}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Cooldown\+Ratio@{Cooldown\+Ratio}}
+\index{Cooldown\+Ratio@{Cooldown\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Cooldown\+Ratio()}{CooldownRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Cooldown\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le coefficient de réduction des temps de rechargement des sorts. 
+
+\begin{DoxyReturn}{Returns}
+Le coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a210da673cb3fb0cddfe07e8a65dbfebd}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a210da673cb3fb0cddfe07e8a65dbfebd}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Damages\+Taken\+Ratio@{Damages\+Taken\+Ratio}}
+\index{Damages\+Taken\+Ratio@{Damages\+Taken\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Damages\+Taken\+Ratio()}{DamagesTakenRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Damages\+Taken\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le coefficient de réduction des dégâts subis. 
+
+\begin{DoxyReturn}{Returns}
+Le coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a9e9edcd409cbe2f955f4f7313c4a36dd}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a9e9edcd409cbe2f955f4f7313c4a36dd}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Load@{Load}}
+\index{Load@{Load}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Load (\begin{DoxyParamCaption}\item[{string}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Récupère les statistiques sauvegardées dans une chaîne de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & La chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Les statistiques 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a094235ee4cd7603bab14329f307daeb6}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a094235ee4cd7603bab14329f307daeb6}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}}
+\index{Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Physical\+Damages\+Ratio()}{PhysicalDamagesRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Physical\+Damages\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le coefficient d\textquotesingle{}augmentation des dégâts physiques. 
+
+\begin{DoxyReturn}{Returns}
+Le coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d09e82d6cd66e67a8100c67a7b977ba}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a0d09e82d6cd66e67a8100c67a7b977ba}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Save@{Save}}
+\index{Save@{Save}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily string Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enregistre les statistiques dans une chaîne de caractère. 
+
+\begin{DoxyReturn}{Returns}
+La chaîne de caractères 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_a744a660037a39b93d43eb9f27346ae09}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_a744a660037a39b93d43eb9f27346ae09}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Spell\+Power\+Ratio@{Spell\+Power\+Ratio}}
+\index{Spell\+Power\+Ratio@{Spell\+Power\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Spell\+Power\+Ratio()}{SpellPowerRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Spell\+Power\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le coefficient d\textquotesingle{}augmentation d\textquotesingle{}efficacité des sorts. 
+
+\begin{DoxyReturn}{Returns}
+Le coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_player_stats_aee8ecef8466079afcd359984e9bfc7dd}\label{class_tentacle_slicers_1_1actors_1_1_player_stats_aee8ecef8466079afcd359984e9bfc7dd}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}!Vampirism\+Ratio@{Vampirism\+Ratio}}
+\index{Vampirism\+Ratio@{Vampirism\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Player\+Stats@{Tentacle\+Slicers\+::actors\+::\+Player\+Stats}}
+\subsubsection{\texorpdfstring{Vampirism\+Ratio()}{VampirismRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Player\+Stats.\+Vampirism\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le pourcentage de vie récupérée par rapport aux dégâts infligés. 
+
+\begin{DoxyReturn}{Returns}
+Le pourcentage 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Player\+Stats.\+cs\end{DoxyCompactItemize}

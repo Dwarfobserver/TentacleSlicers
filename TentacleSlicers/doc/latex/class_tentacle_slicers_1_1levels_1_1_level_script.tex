@@ -1,0 +1,106 @@
+\hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script}{}\section{Tentacle\+Slicers.\+levels.\+Level\+Script Class Reference}
+\label{class_tentacle_slicers_1_1levels_1_1_level_script}\index{Tentacle\+Slicers.\+levels.\+Level\+Script@{Tentacle\+Slicers.\+levels.\+Level\+Script}}
+
+
+Définit le déroulement d\textquotesingle{}un niveau via une file d\textquotesingle{}étapes, qui constituent des vagues. Chaque étape constitue une nouvelle vague si son délai n\textquotesingle{}est pas nul, sinon elle s\textquotesingle{}ajoute à la vague courante. Le score total du niveau est calculé.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+levels.\+Level\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1levels_1_1_level_script}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script_a7618d5285222ca9e8a9bb84a9f58383d}{Level\+Script} ()
+\begin{DoxyCompactList}\small\item\em Initialise le numéro de la vague courante à zéro. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script_ab14cf8eb6a0953e29f31bab2af9ab4ad}{Add\+Step} (\hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step}{Level\+Step} step)
+\begin{DoxyCompactList}\small\item\em Ajoute à la fin de la file l\textquotesingle{}étape donnée. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script_a7b9f11e8df73abbaedcb531aa8e4b1f7}{Is\+Finished} ()
+\begin{DoxyCompactList}\small\item\em Indique si toutes les étapes sont déclenchées et finies. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script_a93a9edee66308c30511184e4328b30b5}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise toutes les étapes qui ont commencé mais pas fini l\textquotesingle{}invocation de leurs mobs, et retire celles qui ont terminé. Ensuite, actualise la prochaine étape qui doit commencer. Si elle début, lance les prochaines tant qu\textquotesingle{}elles ont un délai nul, afin de lancer la nouvelle vague de façon homogène. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_a08ece69d1ada1cbcea0fe2679db892a7}\label{class_tentacle_slicers_1_1levels_1_1_level_script_a08ece69d1ada1cbcea0fe2679db892a7}} 
+int {\bfseries Wave}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_a534a3062136738f892ec0052b709584c}\label{class_tentacle_slicers_1_1levels_1_1_level_script_a534a3062136738f892ec0052b709584c}} 
+double {\bfseries Cooldown}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Définit le déroulement d\textquotesingle{}un niveau via une file d\textquotesingle{}étapes, qui constituent des vagues. Chaque étape constitue une nouvelle vague si son délai n\textquotesingle{}est pas nul, sinon elle s\textquotesingle{}ajoute à la vague courante. Le score total du niveau est calculé. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_a7618d5285222ca9e8a9bb84a9f58383d}\label{class_tentacle_slicers_1_1levels_1_1_level_script_a7618d5285222ca9e8a9bb84a9f58383d}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}!Level\+Script@{Level\+Script}}
+\index{Level\+Script@{Level\+Script}!Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}}
+\subsubsection{\texorpdfstring{Level\+Script()}{LevelScript()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+levels.\+Level\+Script.\+Level\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise le numéro de la vague courante à zéro. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_ab14cf8eb6a0953e29f31bab2af9ab4ad}\label{class_tentacle_slicers_1_1levels_1_1_level_script_ab14cf8eb6a0953e29f31bab2af9ab4ad}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}!Add\+Step@{Add\+Step}}
+\index{Add\+Step@{Add\+Step}!Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}}
+\subsubsection{\texorpdfstring{Add\+Step()}{AddStep()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+levels.\+Level\+Script.\+Add\+Step (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1levels_1_1_level_step}{Level\+Step}}]{step }\end{DoxyParamCaption})}
+
+
+
+Ajoute à la fin de la file l\textquotesingle{}étape donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em step} & La nouvelle étape \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_a7b9f11e8df73abbaedcb531aa8e4b1f7}\label{class_tentacle_slicers_1_1levels_1_1_level_script_a7b9f11e8df73abbaedcb531aa8e4b1f7}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}!Is\+Finished@{Is\+Finished}}
+\index{Is\+Finished@{Is\+Finished}!Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}}
+\subsubsection{\texorpdfstring{Is\+Finished()}{IsFinished()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+levels.\+Level\+Script.\+Is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si toutes les étapes sont déclenchées et finies. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si toutes les étapes sont finies 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1levels_1_1_level_script_a93a9edee66308c30511184e4328b30b5}\label{class_tentacle_slicers_1_1levels_1_1_level_script_a93a9edee66308c30511184e4328b30b5}} 
+\index{Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::levels\+::\+Level\+Script@{Tentacle\+Slicers\+::levels\+::\+Level\+Script}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+levels.\+Level\+Script.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise toutes les étapes qui ont commencé mais pas fini l\textquotesingle{}invocation de leurs mobs, et retire celles qui ont terminé. Ensuite, actualise la prochaine étape qui doit commencer. Si elle début, lance les prochaines tant qu\textquotesingle{}elles ont un délai nul, afin de lancer la nouvelle vague de façon homogène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé, en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/levels/Level\+Script.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,189 @@
+\hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state}{}\section{Tentacle\+Slicers.\+windows.\+Game\+State Class Reference}
+\label{class_tentacle_slicers_1_1windows_1_1_game_state}\index{Tentacle\+Slicers.\+windows.\+Game\+State@{Tentacle\+Slicers.\+windows.\+Game\+State}}
+
+
+Définit l\textquotesingle{}état en cours de partie. L\textquotesingle{}actualisation et le dessin sont délégués au World puis au Hud\+Handler, et les évènements du clavier sont délégués à l\textquotesingle{}Input\+Handler.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+windows.\+Game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.085400cm]{class_tentacle_slicers_1_1windows_1_1_game_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a040ca1d4586473de5d08f351494df8ba}{Game\+State} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, \hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save} save)
+\begin{DoxyCompactList}\small\item\em Crée la partie à partir d\textquotesingle{}une sauvegarde. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_af85c9746fa3d2d41200fadf913eebd85}{Game\+State} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, int num\+Map, int nb\+Players)
+\begin{DoxyCompactList}\small\item\em Crée une nouvelle partie avec les paramètres indiqués. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a5c14a1f42f191bcd140ed439bd9333e1}{Key\+Down} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue les évènements liés à l\textquotesingle{}appui d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_ad3ef60d5743fafada6620b4281560470}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue les évènements liés à la pression d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a3457252ae6d879e134167351a3b16445}{Key\+Up} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue les évènements liés au relâchement d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a5430584218158416e4f3c34cf6151d30}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche le monde puis l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a395b822a8a2435ae6c3dfe22ce733f59}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Vérifie si la partie est terminée, auquel cas l\textquotesingle{}état de game over est passé à l\textquotesingle{}application. Sinon, actualise le monde et l\textquotesingle{}interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Définit l\textquotesingle{}état en cours de partie. L\textquotesingle{}actualisation et le dessin sont délégués au World puis au Hud\+Handler, et les évènements du clavier sont délégués à l\textquotesingle{}Input\+Handler. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_a040ca1d4586473de5d08f351494df8ba}\label{class_tentacle_slicers_1_1windows_1_1_game_state_a040ca1d4586473de5d08f351494df8ba}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Game\+State()}{GameState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+windows.\+Game\+State.\+Game\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{\hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save}}]{save }\end{DoxyParamCaption})}
+
+
+
+Crée la partie à partir d\textquotesingle{}une sauvegarde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre de l\textquotesingle{}application \\
+\hline
+{\em save} & la sauvegarde à charger \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_af85c9746fa3d2d41200fadf913eebd85}\label{class_tentacle_slicers_1_1windows_1_1_game_state_af85c9746fa3d2d41200fadf913eebd85}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Game\+State()}{GameState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+windows.\+Game\+State.\+Game\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{int}]{num\+Map,  }\item[{int}]{nb\+Players }\end{DoxyParamCaption})}
+
+
+
+Crée une nouvelle partie avec les paramètres indiqués. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre de l\textquotesingle{}application \\
+\hline
+{\em num\+Map} & Le numéro de la map \\
+\hline
+{\em nb\+Players} & Le nombre de joueurs \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_a5430584218158416e4f3c34cf6151d30}\label{class_tentacle_slicers_1_1windows_1_1_game_state_a5430584218158416e4f3c34cf6151d30}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+windows.\+Game\+State.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche le monde puis l\textquotesingle{}interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_a5c14a1f42f191bcd140ed439bd9333e1}\label{class_tentacle_slicers_1_1windows_1_1_game_state_a5c14a1f42f191bcd140ed439bd9333e1}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Key\+Down@{Key\+Down}}
+\index{Key\+Down@{Key\+Down}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Key\+Down()}{KeyDown()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+windows.\+Game\+State.\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Délègue les évènements liés à l\textquotesingle{}appui d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a16a1b0165062f4214e29966f58bce1d5}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_ad3ef60d5743fafada6620b4281560470}\label{class_tentacle_slicers_1_1windows_1_1_game_state_ad3ef60d5743fafada6620b4281560470}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+windows.\+Game\+State.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Délègue les évènements liés à la pression d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_a3457252ae6d879e134167351a3b16445}\label{class_tentacle_slicers_1_1windows_1_1_game_state_a3457252ae6d879e134167351a3b16445}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Key\+Up@{Key\+Up}}
+\index{Key\+Up@{Key\+Up}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Key\+Up()}{KeyUp()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+windows.\+Game\+State.\+Key\+Up (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Délègue les évènements liés au relâchement d\textquotesingle{}une touche à l\textquotesingle{}Input\+Handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a9147d47b6d7f84f9d338499fa991b695}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_game_state_a395b822a8a2435ae6c3dfe22ce733f59}\label{class_tentacle_slicers_1_1windows_1_1_game_state_a395b822a8a2435ae6c3dfe22ce733f59}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::windows\+::\+Game\+State@{Tentacle\+Slicers\+::windows\+::\+Game\+State}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+windows.\+Game\+State.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Vérifie si la partie est terminée, auquel cas l\textquotesingle{}état de game over est passé à l\textquotesingle{}application. Sinon, actualise le monde et l\textquotesingle{}interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a21040da05a02cf0bf9d8dfbdcbe5274d}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/windows/Game\+State.\+cs\end{DoxyCompactItemize}

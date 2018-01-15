@@ -1,0 +1,94 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{}\section{Tentacle\+Slicers.\+actors.\+Passive\+Powerup Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_passive_powerup}\index{Tentacle\+Slicers.\+actors.\+Passive\+Powerup@{Tentacle\+Slicers.\+actors.\+Passive\+Powerup}}
+
+
+Un type de powerup qui aplique un effet au joueur qui le ramasse. Il est donc directement consommé. Il efface les états du joueur qui le prend.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Passive\+Powerup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.060109cm]{class_tentacle_slicers_1_1actors_1_1_passive_powerup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a36c2f04ef2b3bd32b71f0c866774e995}{Passive\+Powerup} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_data}{Powerup\+Data} data)
+\begin{DoxyCompactList}\small\item\em Crée le powerup avec la position et les données indiquées. Appelé par la méthode statique \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a170bfc9101d384a73957470249458cfc}{Powerup.\+Create}. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a73aed325e29e372952cf46add5377b57}{Apply} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} owner, int arg)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}effet appliqué par le \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{Passive\+Powerup} est un effet concernant son possesseur. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup_ac419aee4a7dfedee68728f747565f47f}{Is\+Automatically\+Consumed} ()
+\begin{DoxyCompactList}\small\item\em Le powerup est consommé dès son ramassage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Un type de powerup qui aplique un effet au joueur qui le ramasse. Il est donc directement consommé. Il efface les états du joueur qui le prend. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a36c2f04ef2b3bd32b71f0c866774e995}\label{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a36c2f04ef2b3bd32b71f0c866774e995}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}!Passive\+Powerup@{Passive\+Powerup}}
+\index{Passive\+Powerup@{Passive\+Powerup}!Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}}
+\subsubsection{\texorpdfstring{Passive\+Powerup()}{PassivePowerup()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Passive\+Powerup.\+Passive\+Powerup (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_data}{Powerup\+Data}}]{data }\end{DoxyParamCaption})}
+
+
+
+Crée le powerup avec la position et les données indiquées. Appelé par la méthode statique \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a170bfc9101d384a73957470249458cfc}{Powerup.\+Create}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position du powerup \\
+\hline
+{\em data} & Les données du powerup \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a73aed325e29e372952cf46add5377b57}\label{class_tentacle_slicers_1_1actors_1_1_passive_powerup_a73aed325e29e372952cf46add5377b57}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}!Apply@{Apply}}
+\index{Apply@{Apply}!Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Passive\+Powerup.\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}}]{owner,  }\item[{int}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+L\textquotesingle{}effet appliqué par le \hyperlink{class_tentacle_slicers_1_1actors_1_1_passive_powerup}{Passive\+Powerup} est un effet concernant son possesseur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le possesseur du powerup \\
+\hline
+{\em arg} & L\textquotesingle{}argument optionnel, inutilisé par ce type de powerup \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a65355e6ca82f35ca0d4ff111c03c8eee}{Tentacle\+Slicers.\+actors.\+Powerup}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_passive_powerup_ac419aee4a7dfedee68728f747565f47f}\label{class_tentacle_slicers_1_1actors_1_1_passive_powerup_ac419aee4a7dfedee68728f747565f47f}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}!Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}}
+\index{Is\+Automatically\+Consumed@{Is\+Automatically\+Consumed}!Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup@{Tentacle\+Slicers\+::actors\+::\+Passive\+Powerup}}
+\subsubsection{\texorpdfstring{Is\+Automatically\+Consumed()}{IsAutomaticallyConsumed()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+actors.\+Passive\+Powerup.\+Is\+Automatically\+Consumed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Le powerup est consommé dès son ramassage. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le powerup est consommé à son ramassage 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_a31b3367e7a72d80526d92486472d329d}{Tentacle\+Slicers.\+actors.\+Powerup}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Passive\+Powerup.\+cs\end{DoxyCompactItemize}

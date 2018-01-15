@@ -1,0 +1,291 @@
+\hypertarget{class_tentacle_slicers_1_1customs_1_1_states}{}\section{Tentacle\+Slicers.\+customs.\+States Class Reference}
+\label{class_tentacle_slicers_1_1customs_1_1_states}\index{Tentacle\+Slicers.\+customs.\+States@{Tentacle\+Slicers.\+customs.\+States}}
+
+
+Classe statique qui rescence les states du jeu.  
+
+
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Arrow\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Impact\+Debuff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Bomb\+Debuff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Dash\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Dash\+De\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Regeneration\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Vampirism\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Strength\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Invincibility\+Buff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Cthulhu\+Chains\+Init}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Cthulhu\+Chains\+Debuff}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Cthulhu\+Meteor}
+\item 
+static readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} {\bfseries Cthulhu\+Voidball}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe statique qui rescence les states du jeu. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_ae2aea1435dd7e823359ee4c2e77a9afd}\label{class_tentacle_slicers_1_1customs_1_1_states_ae2aea1435dd7e823359ee4c2e77a9afd}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Arrow\+Buff@{Arrow\+Buff}}
+\index{Arrow\+Buff@{Arrow\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Arrow\+Buff}{ArrowBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Arrow\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(Spells.ArrowTimeValue + 50, (owner, ms, arg) =>
+        \{
+            
+            var data = (StateArgArrow) arg;
+            data.CurrentMs += ms;
+            if (data.CurrentMs <= Spells.ArrowTimeValue / 2) return;
+            data.CurrentMs -= Spells.ArrowTimeValue / 2;
+            new Missile(owner, owner.Position + data.Orientation, Actors.Arrow());
+        \})
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_abae86f714fd3531b1785dccffba32f18}\label{class_tentacle_slicers_1_1customs_1_1_states_abae86f714fd3531b1785dccffba32f18}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Bomb\+Debuff@{Bomb\+Debuff}}
+\index{Bomb\+Debuff@{Bomb\+Debuff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Bomb\+Debuff}{BombDebuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Bomb\+Debuff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(1500, null, (actor, arg) =>
+        \{
+            actor.UnlockMoves();
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"bomb.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_ae5bcaae15503d28de3c4e93905101ec8}\label{class_tentacle_slicers_1_1customs_1_1_states_ae5bcaae15503d28de3c4e93905101ec8}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Cthulhu\+Chains\+Debuff@{Cthulhu\+Chains\+Debuff}}
+\index{Cthulhu\+Chains\+Debuff@{Cthulhu\+Chains\+Debuff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Cthulhu\+Chains\+Debuff}{CthulhuChainsDebuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Cthulhu\+Chains\+Debuff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(10000, null, (actor, arg) =>
+        \{
+            var caster = (CthulhuGhost) arg;
+            
+            \textcolor{keywordflow}{if} (!caster.IsDead())
+            \{
+                actor.Speed -= (int) (actor.Speed * Spells.CthulhuChainsReductionPercent);
+                actor.CreateState(CthulhuChainsDebuff, arg);
+            \}
+        \} , \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"chains debuff.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_ae804c8d1d3cdb7f7c7e73feb3be7900a}\label{class_tentacle_slicers_1_1customs_1_1_states_ae804c8d1d3cdb7f7c7e73feb3be7900a}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Cthulhu\+Chains\+Init@{Cthulhu\+Chains\+Init}}
+\index{Cthulhu\+Chains\+Init@{Cthulhu\+Chains\+Init}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Cthulhu\+Chains\+Init}{CthulhuChainsInit}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Cthulhu\+Chains\+Init\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(10000, (actor, ms, arg) =>
+        \{
+            var caster = (CthulhuGhost) arg;
+            \textcolor{keywordflow}{if} (caster.IsDead()) actor.CleanStates();
+        \}, (actor, arg) =>
+        \{
+            var caster = (CthulhuGhost) arg;
+            \textcolor{keywordflow}{if} (caster.IsDead())
+            \{
+                actor.Speed = Knight.InitialSpeed;
+            \}
+            
+            \textcolor{keywordflow}{else}
+            \{
+                actor.CreateState(CthulhuChainsInit, arg);
+            \}
+        \} , \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"chains init.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_ab9be28255c455aa0da93137a074e411c}\label{class_tentacle_slicers_1_1customs_1_1_states_ab9be28255c455aa0da93137a074e411c}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Cthulhu\+Meteor@{Cthulhu\+Meteor}}
+\index{Cthulhu\+Meteor@{Cthulhu\+Meteor}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Cthulhu\+Meteor}{CthulhuMeteor}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Cthulhu\+Meteor\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(500, (actor, ms, arg) =>
+        \{
+            var data = (StateArgMeteor) arg;
+            var vector = data.Vector * (500 - data.MsElapsed) * ms / 1000.0;
+            data.MsElapsed += ms;
+            actor.Move(vector * ms);
+        \})
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a179ee128f8b45b11903117ca7827ee52}\label{class_tentacle_slicers_1_1customs_1_1_states_a179ee128f8b45b11903117ca7827ee52}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Cthulhu\+Voidball@{Cthulhu\+Voidball}}
+\index{Cthulhu\+Voidball@{Cthulhu\+Voidball}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Cthulhu\+Voidball}{CthulhuVoidball}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Cthulhu\+Voidball\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(2000, (caster, ms, arg) =>
+        \{
+            \textcolor{keyword}{const} \textcolor{keywordtype}{int} num = Spells.CthulhuVoidballNumber;
+            \textcolor{keyword}{const} \textcolor{keywordtype}{int} msCast = 800;
+
+            var data = (StateArgVoidball) arg;
+
+            \textcolor{keywordflow}{foreach} (var voidball \textcolor{keywordflow}{in} data.Voidballs)
+            \{
+                voidball.Speed += (int) (ms / 2.5);
+            \}
+            data.MsElapsed += ms;
+
+            \textcolor{keywordflow}{if} (data.MsElapsed <= msCast / num ||
+                data.Voidballs.Count >= num) \textcolor{keywordflow}{return};
+
+            data.MsElapsed -= msCast / num;
+            var coef1 = (num - data.Voidballs.Count) / (\textcolor{keywordtype}{double}) num;
+            var coef2 = data.Voidballs.Count / (double) num;
+            var target = caster.Position + data.BeginPoint * coef1 + data.EndingPoint * coef2;
+            var missile = \textcolor{keyword}{new} Missile(caster, target, Actors.CthulhuVoidball()) \{Speed = 0\};
+            missile.Move(caster.Position - caster.Muzzle());
+            data.Voidballs.Add(missile);
+        \})
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a52c519e63e2d28fedbf29caa9e65242a}\label{class_tentacle_slicers_1_1customs_1_1_states_a52c519e63e2d28fedbf29caa9e65242a}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Dash\+Buff@{Dash\+Buff}}
+\index{Dash\+Buff@{Dash\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Dash\+Buff}{DashBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Dash\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(1500, (owner, ms, arg) =>
+        \{
+            
+            var victims = (List<LivingActor>) arg;
+            var actors = CollisionFunctions.GetCollidingActors(owner.Position, DashHitbox);
+            \textcolor{keywordflow}{foreach} (var actor \textcolor{keywordflow}{in} actors)
+            \{
+                var livingActor = actor as LivingActor;
+                \textcolor{keywordflow}{if} (livingActor != null && owner.EnnemyWith(livingActor) && !victims.Contains(livingActor))
+                \{
+                    victims.Add(livingActor);
+                    livingActor.CreateState(DashDeBuff, owner);
+                \}
+            \}
+        \}, (owner, arg) =>
+        \{
+            ((PlayerCharacter) owner).Stats.Armor -= Spells.DashArmorValue;
+            owner.Speed -= Spells.DashSpeedValue;
+            owner.UnlockCasts();
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"dash buff.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a6d1c3393e9ecc3b721268306c2db6ec8}\label{class_tentacle_slicers_1_1customs_1_1_states_a6d1c3393e9ecc3b721268306c2db6ec8}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Dash\+De\+Buff@{Dash\+De\+Buff}}
+\index{Dash\+De\+Buff@{Dash\+De\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Dash\+De\+Buff}{DashDeBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Dash\+De\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(3000, (actor, ms, arg) =>
+        \{
+            
+            var livingActor = (LivingActor) actor;
+            var caster = (LivingActor) arg;
+            var damages = caster.SpellPowerRatio() * 50 * ms / 3000;
+            livingActor.Damages(damages);
+            caster.Heals(damages * caster.VampirismRatio());
+        \}, null, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"dash debuff.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_aaf1dacbd0e97e31892c31b08b3417294}\label{class_tentacle_slicers_1_1customs_1_1_states_aaf1dacbd0e97e31892c31b08b3417294}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Impact\+Debuff@{Impact\+Debuff}}
+\index{Impact\+Debuff@{Impact\+Debuff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Impact\+Debuff}{ImpactDebuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Impact\+Debuff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(1000, null, (actor, arg) =>
+        \{
+            actor.UnlockCasts();
+            actor.UnlockMoves();
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"impact.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a64a08a2e84c0fc66749ea14dc6dbed5b}\label{class_tentacle_slicers_1_1customs_1_1_states_a64a08a2e84c0fc66749ea14dc6dbed5b}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Invincibility\+Buff@{Invincibility\+Buff}}
+\index{Invincibility\+Buff@{Invincibility\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Invincibility\+Buff}{InvincibilityBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Invincibility\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(1500, null, (owner, arg) =>
+        \{
+            var player = (PlayerCharacter) owner;
+            player.Stats.Armor -= Spells.InvincibilityBuffValue;
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"couronne blue.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a1d9623b6ccb8a77f208aa593513916af}\label{class_tentacle_slicers_1_1customs_1_1_states_a1d9623b6ccb8a77f208aa593513916af}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Regeneration\+Buff@{Regeneration\+Buff}}
+\index{Regeneration\+Buff@{Regeneration\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Regeneration\+Buff}{RegenerationBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Regeneration\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(2000, (owner, ms, arg) =>
+        \{
+            var player = (PlayerCharacter) owner;
+            player.Heals(ms * Spells.RegenerationBuffValue * player.Stats.SpellPowerRatio() / 2000.0);
+        \}, null, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"couronne green.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a5ad923973f0e1d63850f21e192c34098}\label{class_tentacle_slicers_1_1customs_1_1_states_a5ad923973f0e1d63850f21e192c34098}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Strength\+Buff@{Strength\+Buff}}
+\index{Strength\+Buff@{Strength\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Strength\+Buff}{StrengthBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Strength\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(2000, null, (owner, arg) =>
+        \{
+            var player = (PlayerCharacter) owner;
+            player.Stats.Strength -= Spells.StrengthBuffValue;
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"couronne gold.png"}))
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_states_a01fb88256c5edb1fbadb7e0466bab8c2}\label{class_tentacle_slicers_1_1customs_1_1_states_a01fb88256c5edb1fbadb7e0466bab8c2}} 
+\index{Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}!Vampirism\+Buff@{Vampirism\+Buff}}
+\index{Vampirism\+Buff@{Vampirism\+Buff}!Tentacle\+Slicers\+::customs\+::\+States@{Tentacle\+Slicers\+::customs\+::\+States}}
+\subsubsection{\texorpdfstring{Vampirism\+Buff}{VampirismBuff}}
+{\footnotesize\ttfamily readonly \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} Tentacle\+Slicers.\+customs.\+States.\+Vampirism\+Buff\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \textcolor{keyword}{new} StateData(2000, null, (owner, arg) =>
+        \{
+            var player = (PlayerCharacter) owner;
+            player.Stats.Vampirism -= Spells.VampirismBuffValue;
+        \}, \textcolor{keyword}{new} BasicSprite(State.ImagePath + \textcolor{stringliteral}{"couronne red.png"}))
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/customs/States.\+cs\end{DoxyCompactItemize}

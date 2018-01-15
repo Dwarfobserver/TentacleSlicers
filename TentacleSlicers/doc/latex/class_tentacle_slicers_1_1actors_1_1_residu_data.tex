@@ -1,0 +1,71 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_residu_data}{}\section{Tentacle\+Slicers.\+actors.\+Residu\+Data Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_residu_data}\index{Tentacle\+Slicers.\+actors.\+Residu\+Data@{Tentacle\+Slicers.\+actors.\+Residu\+Data}}
+
+
+Utilisé lors de la mort d\textquotesingle{}un acteur pour vérifier si il peut créer un résidu, et pour fournir le cas échéant les paramètres du résidu.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_residu_data_a9e187ab497a159aa1122a96f81f6fced}{Residu\+Data} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} owner, \hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} type, bool keep\+Owner\+Movement)
+\begin{DoxyCompactList}\small\item\em Initialise les paramètres du résidu de la mort de l\textquotesingle{}acteur donné avec les informations indiquées. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_residu_data_a210a14ceb5de1859a2d3c225446b37ff}{Is\+Valid\+Data} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si le résidu peut être crée, en fonction de l\textquotesingle{}acteur et du type d\textquotesingle{}animation demandé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_residu_data_a3bf3709c9d3fbe27f8ca997dfb0ec88a}\label{class_tentacle_slicers_1_1actors_1_1_residu_data_a3bf3709c9d3fbe27f8ca997dfb0ec88a}} 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} {\bfseries Animation} =$>$ Get\+Animation()
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_residu_data_a94e1fa921e154afebef25078911f6a42}\label{class_tentacle_slicers_1_1actors_1_1_residu_data_a94e1fa921e154afebef25078911f6a42}} 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} {\bfseries Speed\+Vector} =$>$ Get\+Speed\+Vector()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utilisé lors de la mort d\textquotesingle{}un acteur pour vérifier si il peut créer un résidu, et pour fournir le cas échéant les paramètres du résidu. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_residu_data_a9e187ab497a159aa1122a96f81f6fced}\label{class_tentacle_slicers_1_1actors_1_1_residu_data_a9e187ab497a159aa1122a96f81f6fced}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Residu\+Data@{Tentacle\+Slicers\+::actors\+::\+Residu\+Data}!Residu\+Data@{Residu\+Data}}
+\index{Residu\+Data@{Residu\+Data}!Tentacle\+Slicers\+::actors\+::\+Residu\+Data@{Tentacle\+Slicers\+::actors\+::\+Residu\+Data}}
+\subsubsection{\texorpdfstring{Residu\+Data()}{ResiduData()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Residu\+Data.\+Residu\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{owner,  }\item[{\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type}}]{type,  }\item[{bool}]{keep\+Owner\+Movement }\end{DoxyParamCaption})}
+
+
+
+Initialise les paramètres du résidu de la mort de l\textquotesingle{}acteur donné avec les informations indiquées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & L\textquotesingle{}acteur qui va créer le résidu à sa mort \\
+\hline
+{\em type} & Le type de l\textquotesingle{}animation du résidu \\
+\hline
+{\em keep\+Owner\+Movement} & Indique si le résidu conserve la vitesse de l\textquotesingle{}acteur à sa mort \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_residu_data_a210a14ceb5de1859a2d3c225446b37ff}\label{class_tentacle_slicers_1_1actors_1_1_residu_data_a210a14ceb5de1859a2d3c225446b37ff}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Residu\+Data@{Tentacle\+Slicers\+::actors\+::\+Residu\+Data}!Is\+Valid\+Data@{Is\+Valid\+Data}}
+\index{Is\+Valid\+Data@{Is\+Valid\+Data}!Tentacle\+Slicers\+::actors\+::\+Residu\+Data@{Tentacle\+Slicers\+::actors\+::\+Residu\+Data}}
+\subsubsection{\texorpdfstring{Is\+Valid\+Data()}{IsValidData()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Residu\+Data.\+Is\+Valid\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le résidu peut être crée, en fonction de l\textquotesingle{}acteur et du type d\textquotesingle{}animation demandé. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le résidu peut être crée 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Residu\+Data.\+cs\end{DoxyCompactItemize}

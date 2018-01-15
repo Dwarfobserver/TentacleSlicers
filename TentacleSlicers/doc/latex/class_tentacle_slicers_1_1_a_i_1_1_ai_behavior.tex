@@ -1,0 +1,82 @@
+\hypertarget{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior}{}\section{Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior Class Reference}
+\label{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior}\index{Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior@{Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior}}
+
+
+Définit les destinations et une possible cible en ligne de vue directe pour un mob associé.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_a1aa1d81aed97a3259a55768fd442f421}{Ai\+Behavior} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob}{Mob} mob)
+\begin{DoxyCompactList}\small\item\em Initialise le comportement en lui demandant de se mettre à jour lorsque le mob associé sera actualisé. Le paramètre Target\+Need\+Direct\+Sight esst mis à vrai pour indiquer que la cible n\textquotesingle{}est indiquée que si le mob a une ligne de vue directe sur elle. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_acec78a17fc2bc5784aa12ef11e11a685}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Incrémente un timer interne. Si celui-\/ci dépasse un certain seuil, le comportement est mis à jour. Le seuil à dépasser est d\textquotesingle{}autant plus grand si les adversaires du mob sont éloignés. Le seuil contient également une part d\textquotesingle{}aléatoire, le faisant aller du simple au double en terme de durée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_a00bef1a35b20ad21450309f3c0b22d85}\label{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_a00bef1a35b20ad21450309f3c0b22d85}} 
+bool {\bfseries Target\+Need\+Direct\+Sight}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_ab6f6e914f3aba2337d8eb625836d8041}\label{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_ab6f6e914f3aba2337d8eb625836d8041}} 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} {\bfseries Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Définit les destinations et une possible cible en ligne de vue directe pour un mob associé. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_a1aa1d81aed97a3259a55768fd442f421}\label{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_a1aa1d81aed97a3259a55768fd442f421}} 
+\index{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior@{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior}!Ai\+Behavior@{Ai\+Behavior}}
+\index{Ai\+Behavior@{Ai\+Behavior}!Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior@{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior}}
+\subsubsection{\texorpdfstring{Ai\+Behavior()}{AiBehavior()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior.\+Ai\+Behavior (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_mob}{Mob}}]{mob }\end{DoxyParamCaption})}
+
+
+
+Initialise le comportement en lui demandant de se mettre à jour lorsque le mob associé sera actualisé. Le paramètre Target\+Need\+Direct\+Sight esst mis à vrai pour indiquer que la cible n\textquotesingle{}est indiquée que si le mob a une ligne de vue directe sur elle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & Le mob associé \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_acec78a17fc2bc5784aa12ef11e11a685}\label{class_tentacle_slicers_1_1_a_i_1_1_ai_behavior_acec78a17fc2bc5784aa12ef11e11a685}} 
+\index{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior@{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior@{Tentacle\+Slicers\+::\+A\+I\+::\+Ai\+Behavior}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+A\+I.\+Ai\+Behavior.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Incrémente un timer interne. Si celui-\/ci dépasse un certain seuil, le comportement est mis à jour. Le seuil à dépasser est d\textquotesingle{}autant plus grand si les adversaires du mob sont éloignés. Le seuil contient également une part d\textquotesingle{}aléatoire, le faisant aller du simple au double en terme de durée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/\+A\+I/Ai\+Behavior.\+cs\end{DoxyCompactItemize}

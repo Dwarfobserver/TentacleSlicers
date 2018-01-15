@@ -1,0 +1,99 @@
+\hypertarget{class_tentacle_slicers_1_1windows_1_1_create_save_state}{}\section{Tentacle\+Slicers.\+windows.\+Create\+Save\+State Class Reference}
+\label{class_tentacle_slicers_1_1windows_1_1_create_save_state}\index{Tentacle\+Slicers.\+windows.\+Create\+Save\+State@{Tentacle\+Slicers.\+windows.\+Create\+Save\+State}}
+
+
+Définit l\textquotesingle{}état permettant au(x) joueur(s) d\textquotesingle{}entrer le nom de la nouvelle sauvegarde et de la valider, ou de retourner au menu en jeu.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+windows.\+Create\+Save\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.894057cm]{class_tentacle_slicers_1_1windows_1_1_create_save_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_create_save_state_a91e1d436055ed7a3a759d3a23b832d1c}{Create\+Save\+State} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} state)
+\begin{DoxyCompactList}\small\item\em Crée l\textquotesingle{}état avec le menu en jeu vers lequel retourner et le texte à afficher à la fenêtre. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_create_save_state_a54077f2c7fdc69de077ab90cf110921d}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Permet de valider la sauvegarde ou de revenir à l\textquotesingle{}état précédent. Permet également d\textquotesingle{}entrer le prochain caractère ou d\textquotesingle{}effacer le dernier pour donner le nom de la sauvegarde. Les caractères autorisés sont les espaces, les lettres minuscules et majuscules et les chiffres. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1windows_1_1_create_save_state_aeaa70c2f8e3d4279c54e7f8032f99465}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche le nom courant de la sauvegarde et le texte environnant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Définit l\textquotesingle{}état permettant au(x) joueur(s) d\textquotesingle{}entrer le nom de la nouvelle sauvegarde et de la valider, ou de retourner au menu en jeu. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_create_save_state_a91e1d436055ed7a3a759d3a23b832d1c}\label{class_tentacle_slicers_1_1windows_1_1_create_save_state_a91e1d436055ed7a3a759d3a23b832d1c}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}!Create\+Save\+State@{Create\+Save\+State}}
+\index{Create\+Save\+State@{Create\+Save\+State}!Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}}
+\subsubsection{\texorpdfstring{Create\+Save\+State()}{CreateSaveState()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+windows.\+Create\+Save\+State.\+Create\+Save\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State}}]{state }\end{DoxyParamCaption})}
+
+
+
+Crée l\textquotesingle{}état avec le menu en jeu vers lequel retourner et le texte à afficher à la fenêtre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre de l\textquotesingle{}application \\
+\hline
+{\em state} & L\textquotesingle{}état précédent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_create_save_state_aeaa70c2f8e3d4279c54e7f8032f99465}\label{class_tentacle_slicers_1_1windows_1_1_create_save_state_aeaa70c2f8e3d4279c54e7f8032f99465}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+windows.\+Create\+Save\+State.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche le nom courant de la sauvegarde et le texte environnant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutiilisée \\
+\hline
+{\em g} & l\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_create_save_state_a54077f2c7fdc69de077ab90cf110921d}\label{class_tentacle_slicers_1_1windows_1_1_create_save_state_a54077f2c7fdc69de077ab90cf110921d}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State@{Tentacle\+Slicers\+::windows\+::\+Create\+Save\+State}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+windows.\+Create\+Save\+State.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet de valider la sauvegarde ou de revenir à l\textquotesingle{}état précédent. Permet également d\textquotesingle{}entrer le prochain caractère ou d\textquotesingle{}effacer le dernier pour donner le nom de la sauvegarde. Les caractères autorisés sont les espaces, les lettres minuscules et majuscules et les chiffres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Tentacle\+Slicers.\+windows.\+Windows\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/windows/Create\+Save\+State.\+cs\end{DoxyCompactItemize}

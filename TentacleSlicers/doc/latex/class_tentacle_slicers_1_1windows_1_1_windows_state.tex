@@ -1,0 +1,151 @@
+\hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state}{}\section{Tentacle\+Slicers.\+windows.\+Windows\+State Class Reference}
+\label{class_tentacle_slicers_1_1windows_1_1_windows_state}\index{Tentacle\+Slicers.\+windows.\+Windows\+State@{Tentacle\+Slicers.\+windows.\+Windows\+State}}
+
+
+Gère l\textquotesingle{}application en recevant de la fenêtre les fonctions d\textquotesingle{}actualisation des données, (Tick) de leur affichage (Draw) et les évènements provenant du clavier (Key\+Down, key\+Pressed et Key\+Up).  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+windows.\+Windows\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.709402cm]{class_tentacle_slicers_1_1windows_1_1_windows_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a16a1b0165062f4214e29966f58bce1d5}{Key\+Down} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Par défaut, ne déclenche aucune action lors de l\textquotesingle{}appui d\textquotesingle{}une touche. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a9147d47b6d7f84f9d338499fa991b695}{Key\+Up} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Par défaut, ne déclenche aucune action lors de lu relâchement d\textquotesingle{}une touche. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_a21040da05a02cf0bf9d8dfbdcbe5274d}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Par défaut, n\textquotesingle{}actualise pas de données lorsque le temps s\textquotesingle{}écoule. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_abe9ebcc151e1d58f2b611f44069f2972}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_abe9ebcc151e1d58f2b611f44069f2972}} 
+abstract bool {\bfseries Key\+Pressed} (Key\+Press\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_ac2fcba7a0e84806db717373649288790}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_ac2fcba7a0e84806db717373649288790}} 
+abstract void {\bfseries Draw} (Point shift, Graphics g)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_ad7c650963ba3b760ed0eb8ede6950d86}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_ad7c650963ba3b760ed0eb8ede6950d86}} 
+static readonly string {\bfseries Image\+Path} = Hud\+Component.\+Image\+Path + \char`\"{}windows/\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state_afefb5e108d3b404ccc019e209187b625}{Windows\+State} (\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form)
+\begin{DoxyCompactList}\small\item\em Crée l\textquotesingle{}état de la fenêtre en enregistrant la fenêtre associée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_a2f975398d0f8f204ceebc7a662127b89}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_a2f975398d0f8f204ceebc7a662127b89}} 
+\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} {\bfseries Form}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère l\textquotesingle{}application en recevant de la fenêtre les fonctions d\textquotesingle{}actualisation des données, (Tick) de leur affichage (Draw) et les évènements provenant du clavier (Key\+Down, key\+Pressed et Key\+Up). 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_afefb5e108d3b404ccc019e209187b625}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_afefb5e108d3b404ccc019e209187b625}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}!Windows\+State@{Windows\+State}}
+\index{Windows\+State@{Windows\+State}!Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}}
+\subsubsection{\texorpdfstring{Windows\+State()}{WindowsState()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+windows.\+Windows\+State.\+Windows\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Crée l\textquotesingle{}état de la fenêtre en enregistrant la fenêtre associée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & La fenêtre de l\textquotesingle{}état \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_a16a1b0165062f4214e29966f58bce1d5}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_a16a1b0165062f4214e29966f58bce1d5}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}!Key\+Down@{Key\+Down}}
+\index{Key\+Down@{Key\+Down}!Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}}
+\subsubsection{\texorpdfstring{Key\+Down()}{KeyDown()}}
+{\footnotesize\ttfamily virtual bool Tentacle\+Slicers.\+windows.\+Windows\+State.\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Par défaut, ne déclenche aucune action lors de l\textquotesingle{}appui d\textquotesingle{}une touche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a5c14a1f42f191bcd140ed439bd9333e1}{Tentacle\+Slicers.\+windows.\+Game\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_a9147d47b6d7f84f9d338499fa991b695}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_a9147d47b6d7f84f9d338499fa991b695}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}!Key\+Up@{Key\+Up}}
+\index{Key\+Up@{Key\+Up}!Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}}
+\subsubsection{\texorpdfstring{Key\+Up()}{KeyUp()}}
+{\footnotesize\ttfamily virtual bool Tentacle\+Slicers.\+windows.\+Windows\+State.\+Key\+Up (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Par défaut, ne déclenche aucune action lors de lu relâchement d\textquotesingle{}une touche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a3457252ae6d879e134167351a3b16445}{Tentacle\+Slicers.\+windows.\+Game\+State}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1windows_1_1_windows_state_a21040da05a02cf0bf9d8dfbdcbe5274d}\label{class_tentacle_slicers_1_1windows_1_1_windows_state_a21040da05a02cf0bf9d8dfbdcbe5274d}} 
+\index{Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::windows\+::\+Windows\+State@{Tentacle\+Slicers\+::windows\+::\+Windows\+State}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+windows.\+Windows\+State.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Par défaut, n\textquotesingle{}actualise pas de données lorsque le temps s\textquotesingle{}écoule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state_a395b822a8a2435ae6c3dfe22ce733f59}{Tentacle\+Slicers.\+windows.\+Game\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/windows/Windows\+State.\+cs\end{DoxyCompactItemize}

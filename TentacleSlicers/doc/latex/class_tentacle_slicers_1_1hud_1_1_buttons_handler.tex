@@ -1,0 +1,142 @@
+\hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{}\section{Tentacle\+Slicers.\+hud.\+Buttons\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler}\index{Tentacle\+Slicers.\+hud.\+Buttons\+Handler@{Tentacle\+Slicers.\+hud.\+Buttons\+Handler}}
+
+
+Gère et affiche un ou plusieurs boutons en gardant celui qui est focus, et lui redirige les évènements de touche presée. Permet aussi d\textquotesingle{}associer un bouton à la touche echap.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+hud.\+Buttons\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1hud_1_1_buttons_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9f5cc9dac18041a013f0bf37d88dee25}{Buttons\+Handler} (\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button} first\+Button)
+\begin{DoxyCompactList}\small\item\em Crée le \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler} avec le bouton qui possède le focus au début. Par défaut, aucun bouton n\textquotesingle{}est associé à la touche echap. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9da242600dd5a643bd3247157ef557cc}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Remet le \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler} à son état d\textquotesingle{}origine, avec comme bouton focus celui qui fut passé au constructeur. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_ad3a0cdf8322d6dfd4766970542fbbf53}{Add} (\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button} button)
+\begin{DoxyCompactList}\small\item\em Ajoute un bouton au \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_afb17709bbc0a405595a61c4f2a09ad8b}{Link\+To\+Echap} (\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button} button)
+\begin{DoxyCompactList}\small\item\em Lie le bouton donné à la touche echap. Si un bouton y était déjà lié, il est écrasé par le nouveau bouton. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a4fb37b6edf1c21cbbb53a96f11c6d3cc}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine tous les boutons du \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler_abab8bf40df88c7cd220d591425c151b5}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Si la touche entrée est appuyée, déclenche l\textquotesingle{}effet du bouton qui y est lié. Sinon, délègue l\textquotesingle{}évènement au bouton ayant le focus et récupère le nouveau bouton focus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère et affiche un ou plusieurs boutons en gardant celui qui est focus, et lui redirige les évènements de touche presée. Permet aussi d\textquotesingle{}associer un bouton à la touche echap. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9f5cc9dac18041a013f0bf37d88dee25}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9f5cc9dac18041a013f0bf37d88dee25}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Buttons\+Handler@{Buttons\+Handler}}
+\index{Buttons\+Handler@{Buttons\+Handler}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Buttons\+Handler()}{ButtonsHandler()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Buttons\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button}}]{first\+Button }\end{DoxyParamCaption})}
+
+
+
+Crée le \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler} avec le bouton qui possède le focus au début. Par défaut, aucun bouton n\textquotesingle{}est associé à la touche echap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Button} & Le bouton qui possède initialement le focus \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_ad3a0cdf8322d6dfd4766970542fbbf53}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_ad3a0cdf8322d6dfd4766970542fbbf53}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Add@{Add}}
+\index{Add@{Add}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button}}]{button }\end{DoxyParamCaption})}
+
+
+
+Ajoute un bouton au \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Le bouton ajouté \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a4fb37b6edf1c21cbbb53a96f11c6d3cc}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a4fb37b6edf1c21cbbb53a96f11c6d3cc}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Dessine tous les boutons du \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & Le point de décalage \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_abab8bf40df88c7cd220d591425c151b5}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_abab8bf40df88c7cd220d591425c151b5}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Si la touche entrée est appuyée, déclenche l\textquotesingle{}effet du bouton qui y est lié. Sinon, délègue l\textquotesingle{}évènement au bouton ayant le focus et récupère le nouveau bouton focus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action ne correspond à l\textquotesingle{}évènement 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_key_pressed}{Tentacle\+Slicers.\+interfaces.\+I\+Key\+Pressed}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_afb17709bbc0a405595a61c4f2a09ad8b}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_afb17709bbc0a405595a61c4f2a09ad8b}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Link\+To\+Echap@{Link\+To\+Echap}}
+\index{Link\+To\+Echap@{Link\+To\+Echap}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Link\+To\+Echap()}{LinkToEchap()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Link\+To\+Echap (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1hud_1_1_button}{Button}}]{button }\end{DoxyParamCaption})}
+
+
+
+Lie le bouton donné à la touche echap. Si un bouton y était déjà lié, il est écrasé par le nouveau bouton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Le bouton lié à la touche echap \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9da242600dd5a643bd3247157ef557cc}\label{class_tentacle_slicers_1_1hud_1_1_buttons_handler_a9da242600dd5a643bd3247157ef557cc}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}!Reset@{Reset}}
+\index{Reset@{Reset}!Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler@{Tentacle\+Slicers\+::hud\+::\+Buttons\+Handler}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+hud.\+Buttons\+Handler.\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remet le \hyperlink{class_tentacle_slicers_1_1hud_1_1_buttons_handler}{Buttons\+Handler} à son état d\textquotesingle{}origine, avec comme bouton focus celui qui fut passé au constructeur. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/hud/Buttons\+Handler.\+cs\end{DoxyCompactItemize}

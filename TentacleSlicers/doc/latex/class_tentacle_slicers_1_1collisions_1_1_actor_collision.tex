@@ -1,0 +1,118 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{}\section{Tentacle\+Slicers.\+collisions.\+Actor\+Collision Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision}\index{Tentacle\+Slicers.\+collisions.\+Actor\+Collision@{Tentacle\+Slicers.\+collisions.\+Actor\+Collision}}
+
+
+Déclenche les effets de la collision d\textquotesingle{}un acteur et le place dans le gestionnaire de collisions.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Actor\+Collision\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_actor_collision}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_afe57c1bade07db8e5d75fc7486dc6439}{Actor\+Collision} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} owner, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} rectangle, \hyperlink{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}{Hitbox\+Type} hitbox\+Type, Action$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ collision=null)
+\begin{DoxyCompactList}\small\item\em Place l\textquotesingle{}acteur associé dans le gestionnaire de collisions. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_af9a8dd515b5941b2049b106787688bbb}{Actor\+Collision} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} clone)
+\begin{DoxyCompactList}\small\item\em Recrée l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} d\textquotesingle{}un acteur. Utilisé lorsque celui-\/ci est ressussité, pour restaurer sa collision. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a947c3ad0a5857b93b32c2259c34e7410}{Update} ()
+\begin{DoxyCompactList}\small\item\em Appelé à chaque fois que l\textquotesingle{}acteur est déplacé (même lorsqu\textquotesingle{}il est replacé, contrairement à la fonction \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a46c2289d3374b5e04ab40b81955e1a8e}{Update\+And\+Collide()}) afin de le stocker correctement dans le gestionnaire de collisions. Aucune action n\textquotesingle{}est faite si l\textquotesingle{}acteur est en collision avec un ou plusieurs autres acteurs. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a46c2289d3374b5e04ab40b81955e1a8e}{Update\+And\+Collide} ()
+\begin{DoxyCompactList}\small\item\em Appelé lorsque l\textquotesingle{}acteur se déplace afin de l\textquotesingle{}actualiser dans le gestionnaire de collision et appliquer tous les possibles effets de collision. Pour chaque acteur entré en collision, si celui-\/ci n\textquotesingle{}est pas mort, les effets de collision sont appliqués à cet acteur et les effets de collision de cet acteur sont appliqué à l\textquotesingle{}acteur associé. Enfin, selon le type de hitbox de chaque acteur, un des deux acteurs peut être replacé. En cas de deux types de hitbox de même type (non immaterielles ou unmovables), c\textquotesingle{}est l\textquotesingle{}acteur en cours de déplacement qui est replacé. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a6d80fd7d67f1ac25fcc5216c8680896f}{Dispose} ()
+\begin{DoxyCompactList}\small\item\em Appelé lors de la destruction de la hitbox de l\textquotesingle{}acteur ou de la mort de l\textquotesingle{}acteur lui-\/même afin de le retirer du gestionnaire de collisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a1845b24ded4200b93bbb94e10c988101}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a1845b24ded4200b93bbb94e10c988101}} 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} {\bfseries Hitbox}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a668e3ecea9834be08b64d9b12555de31}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a668e3ecea9834be08b64d9b12555de31}} 
+\hyperlink{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}{Hitbox\+Type} {\bfseries Hitbox\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Déclenche les effets de la collision d\textquotesingle{}un acteur et le place dans le gestionnaire de collisions. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_afe57c1bade07db8e5d75fc7486dc6439}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_afe57c1bade07db8e5d75fc7486dc6439}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}!Actor\+Collision@{Actor\+Collision}}
+\index{Actor\+Collision@{Actor\+Collision}!Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}}
+\subsubsection{\texorpdfstring{Actor\+Collision()}{ActorCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Actor\+Collision.\+Actor\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{rectangle,  }\item[{\hyperlink{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}{Hitbox\+Type}}]{hitbox\+Type,  }\item[{Action$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$}]{collision = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Place l\textquotesingle{}acteur associé dans le gestionnaire de collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & L\textquotesingle{}acteur associé \\
+\hline
+{\em rectangle} & La taille de la hitbox de l\textquotesingle{}acteur \\
+\hline
+{\em hitbox\+Type} & Le type de hitbox de l\textquotesingle{}acteur \\
+\hline
+{\em collision} & L\textquotesingle{}éventuel effet déclenché lors de la collision de l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_af9a8dd515b5941b2049b106787688bbb}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_af9a8dd515b5941b2049b106787688bbb}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}!Actor\+Collision@{Actor\+Collision}}
+\index{Actor\+Collision@{Actor\+Collision}!Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}}
+\subsubsection{\texorpdfstring{Actor\+Collision()}{ActorCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Actor\+Collision.\+Actor\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision}}]{clone }\end{DoxyParamCaption})}
+
+
+
+Recrée l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} d\textquotesingle{}un acteur. Utilisé lorsque celui-\/ci est ressussité, pour restaurer sa collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clone} & L\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} à récupérer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a6d80fd7d67f1ac25fcc5216c8680896f}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a6d80fd7d67f1ac25fcc5216c8680896f}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+collisions.\+Actor\+Collision.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Appelé lors de la destruction de la hitbox de l\textquotesingle{}acteur ou de la mort de l\textquotesingle{}acteur lui-\/même afin de le retirer du gestionnaire de collisions. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a947c3ad0a5857b93b32c2259c34e7410}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a947c3ad0a5857b93b32c2259c34e7410}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}!Update@{Update}}
+\index{Update@{Update}!Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+collisions.\+Actor\+Collision.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Appelé à chaque fois que l\textquotesingle{}acteur est déplacé (même lorsqu\textquotesingle{}il est replacé, contrairement à la fonction \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a46c2289d3374b5e04ab40b81955e1a8e}{Update\+And\+Collide()}) afin de le stocker correctement dans le gestionnaire de collisions. Aucune action n\textquotesingle{}est faite si l\textquotesingle{}acteur est en collision avec un ou plusieurs autres acteurs. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a46c2289d3374b5e04ab40b81955e1a8e}\label{class_tentacle_slicers_1_1collisions_1_1_actor_collision_a46c2289d3374b5e04ab40b81955e1a8e}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}!Update\+And\+Collide@{Update\+And\+Collide}}
+\index{Update\+And\+Collide@{Update\+And\+Collide}!Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision@{Tentacle\+Slicers\+::collisions\+::\+Actor\+Collision}}
+\subsubsection{\texorpdfstring{Update\+And\+Collide()}{UpdateAndCollide()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+collisions.\+Actor\+Collision.\+Update\+And\+Collide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Appelé lorsque l\textquotesingle{}acteur se déplace afin de l\textquotesingle{}actualiser dans le gestionnaire de collision et appliquer tous les possibles effets de collision. Pour chaque acteur entré en collision, si celui-\/ci n\textquotesingle{}est pas mort, les effets de collision sont appliqués à cet acteur et les effets de collision de cet acteur sont appliqué à l\textquotesingle{}acteur associé. Enfin, selon le type de hitbox de chaque acteur, un des deux acteurs peut être replacé. En cas de deux types de hitbox de même type (non immaterielles ou unmovables), c\textquotesingle{}est l\textquotesingle{}acteur en cours de déplacement qui est replacé. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Actor\+Collision.\+cs\end{DoxyCompactItemize}

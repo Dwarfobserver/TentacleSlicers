@@ -1,0 +1,173 @@
+\hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler}{}\section{Tentacle\+Slicers.\+inputs.\+Input\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1inputs_1_1_input_handler}\index{Tentacle\+Slicers.\+inputs.\+Input\+Handler@{Tentacle\+Slicers.\+inputs.\+Input\+Handler}}
+
+
+Reçoit les inputs de la fenêtre en jeu pour les traiter.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+inputs.\+Input\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1inputs_1_1_input_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler_a7c9bfb4948b863cf8499d5142b622f32}{Input\+Handler} (I\+Read\+Only\+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$ players, \hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form} form, \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} escape\+State)
+\begin{DoxyCompactList}\small\item\em Crée l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler}{Input\+Handler} avec les joueurs, la fenêtre de l\textquotesingle{}application et le menu en jeu à déclencher. A chque joueur est assigné un \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller}, qui va récupérer les évènements qui passent par l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler}{Input\+Handler}. Si un évènement n\textquotesingle{}est pas traité après les \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller}, un \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller} le reçoit pour faire les actions qui ne concernent pas la gestion d\textquotesingle{}un personnage. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler_a3ac60dd0530cbd2b5e00d34d04f3ffc4}{Key\+Down} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler_a45c9b57b11c327fbf21e7927fedac068}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler_a828d7294af3ca64820101d343983da5b}{Key\+Up} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Keys \mbox{[}$\,$\mbox{]} {\bfseries Moving\+Keys}
+\item 
+static readonly int \mbox{[}$\,$\mbox{]} {\bfseries Moving\+Codes}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a0fc7734438c26c1a29a23435cf2eea0a}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a0fc7734438c26c1a29a23435cf2eea0a}} 
+static readonly int {\bfseries Enter\+Code} = 13
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a54d1bdccad7c5afe4d64706fb1b4e50b}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a54d1bdccad7c5afe4d64706fb1b4e50b}} 
+static readonly int {\bfseries Escape\+Code} = 27
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reçoit les inputs de la fenêtre en jeu pour les traiter. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a7c9bfb4948b863cf8499d5142b622f32}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a7c9bfb4948b863cf8499d5142b622f32}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Input\+Handler@{Input\+Handler}}
+\index{Input\+Handler@{Input\+Handler}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Input\+Handler()}{InputHandler()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Input\+Handler (\begin{DoxyParamCaption}\item[{I\+Read\+Only\+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$}]{players,  }\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}}]{form,  }\item[{\hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State}}]{escape\+State }\end{DoxyParamCaption})}
+
+
+
+Crée l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler}{Input\+Handler} avec les joueurs, la fenêtre de l\textquotesingle{}application et le menu en jeu à déclencher. A chque joueur est assigné un \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller}, qui va récupérer les évènements qui passent par l\textquotesingle{}\hyperlink{class_tentacle_slicers_1_1inputs_1_1_input_handler}{Input\+Handler}. Si un évènement n\textquotesingle{}est pas traité après les \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller}, un \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller} le reçoit pour faire les actions qui ne concernent pas la gestion d\textquotesingle{}un personnage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em players} & Les joueurs, qui sont associés à un \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} \\
+\hline
+{\em form} & La fenêtre de l\textquotesingle{}application \\
+\hline
+{\em escape\+State} & Le menu en jeu, déclenché par le \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a3ac60dd0530cbd2b5e00d34d04f3ffc4}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a3ac60dd0530cbd2b5e00d34d04f3ffc4}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Key\+Down@{Key\+Down}}
+\index{Key\+Down@{Key\+Down}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Key\+Down()}{KeyDown()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a45c9b57b11c327fbf21e7927fedac068}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a45c9b57b11c327fbf21e7927fedac068}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_key_pressed}{Tentacle\+Slicers.\+interfaces.\+I\+Key\+Pressed}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a828d7294af3ca64820101d343983da5b}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a828d7294af3ca64820101d343983da5b}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Key\+Up@{Key\+Up}}
+\index{Key\+Up@{Key\+Up}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Key\+Up()}{KeyUp()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Key\+Up (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Délègue l\textquotesingle{}évènement aux \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller}{Player\+Controller} puis au \hyperlink{class_tentacle_slicers_1_1inputs_1_1_game_controller}{Game\+Controller}, tant qu\textquotesingle{}il n\textquotesingle{}est pas traité par l\textquotesingle{}un d\textquotesingle{}eux. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a été déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_ab38692312177363ed6a573a92f6da41d}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_ab38692312177363ed6a573a92f6da41d}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Moving\+Codes@{Moving\+Codes}}
+\index{Moving\+Codes@{Moving\+Codes}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Moving\+Codes}{MovingCodes}}
+{\footnotesize\ttfamily readonly int \mbox{[}$\,$\mbox{]} Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Moving\+Codes\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+        \{
+            115,
+            122,
+            113,
+            100
+        \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_input_handler_a20ec219e4dda2e40baf0c1bf951c931f}\label{class_tentacle_slicers_1_1inputs_1_1_input_handler_a20ec219e4dda2e40baf0c1bf951c931f}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}!Moving\+Keys@{Moving\+Keys}}
+\index{Moving\+Keys@{Moving\+Keys}!Tentacle\+Slicers\+::inputs\+::\+Input\+Handler@{Tentacle\+Slicers\+::inputs\+::\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Moving\+Keys}{MovingKeys}}
+{\footnotesize\ttfamily readonly Keys \mbox{[}$\,$\mbox{]} Tentacle\+Slicers.\+inputs.\+Input\+Handler.\+Moving\+Keys\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+        \{
+            Keys.Down,
+            Keys.Up,
+            Keys.Left,
+            Keys.Right
+        \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/inputs/Input\+Handler.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,301 @@
+\hypertarget{class_tentacle_slicers_1_1maps_1_1_world}{}\section{Tentacle\+Slicers.\+maps.\+World Class Reference}
+\label{class_tentacle_slicers_1_1maps_1_1_world}\index{Tentacle\+Slicers.\+maps.\+World@{Tentacle\+Slicers.\+maps.\+World}}
+
+
+Le monde est le conteneur de tous les aceurs et de la map générée, et leur délègue les fonctions Tick et Draw. Il peut être crée à partir d\textquotesingle{}une sauvegarde, il actualise le déroulement des niveaux et il place la caméra.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+maps.\+World\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1maps_1_1_world}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_ab55d73a8b605af1c6c51d2652d854b9a}\label{class_tentacle_slicers_1_1maps_1_1_world_ab55d73a8b605af1c6c51d2652d854b9a}} 
+void {\bfseries Add\+Score} (int points)
+\item 
+double \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a1621a82ae5b10a2e8346458afab52ed8}{Life\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Renvoi le facteur qui augmente les points de vie des mobs, en fonction des niveaux. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a41d0d2bfd31016cd3ae740cc7caf1cfb}{Damages\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Renvoi le facteur qui augmente les dégâts des mobs, en fonction des niveaux. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a383fb2d74c13c7b775077bc40ace811c}{Speed\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Renvoie le facteur de vitesse de déplacement et de lancement de sorts des mobs, en fonction des niveaux. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer}{Level\+Observer} \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_af2e84a1b1b30adaa42efe2dc064d6135}{Get\+Level\+Observer} (Point position)
+\begin{DoxyCompactList}\small\item\em Retourne un composant de l\textquotesingle{}interface ayant accès aux données du niveau en train de se dérouler. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a50ddf5fe23bb64a24f987dd6019b4105}{Add\+Actor} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor)
+\begin{DoxyCompactList}\small\item\em Ajoute un acteur au monde, qui va appeler ses fonctions Tick et Draw. Lorsqu\textquotesingle{}un acteur s\textquotesingle{}est déplacé, il est retiré puis replacé dans le monde car les acteurs sont triés en fonction de leur ordonnée, pour les dessiner dans l\textquotesingle{}ordre. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a43f29da91277b7a270c294d9dba6e2c7}{Remove\+Actor} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor)
+\begin{DoxyCompactList}\small\item\em Retire un acteur du monde, parce qu\textquotesingle{}il est mort ou parce qu\textquotesingle{}il va se déplacer et être remis dans le monde. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_aa9e6e80fc271c36e2aa38524b40faa8f}{Remove\+Spell\+Powerup} ()
+\begin{DoxyCompactList}\small\item\em Retire un spell powerup, ce qui peut permettre le lancement du niveau. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a20a8554db452ea19e6000fe733f83c8f}{Get\+Players} ()
+\begin{DoxyCompactList}\small\item\em Retourne le liste des joueurs. \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_ace5271f17f83aaa36a16746da29f896a}{Get\+Alive\+Players} ()
+\begin{DoxyCompactList}\small\item\em Retourne la liste des joueurs en vie. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_ae5532fc6ce77572a16b4723ddc88055e}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine les acteurs du monde, triés par ordonnée croissante (ils sont dessinés de haut en bas). \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a93c11c3e0f192f2eea8ff5368f2604a1}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Vérifie si tous les acteurs sont morts. Sinon, centre la caméra, fait avancer le niveau et actualise tous les acteurs. Si le niveau est fini et que le boss est mort, passe au niveau suivant, et le lance lorsque tous les powerups de sort sont consommés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_a04ef69bcd3d1eb1e0aed79a61a481bf4}{Load} (\hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save} save)
+\begin{DoxyCompactList}\small\item\em Charge le monde à partir d\textquotesingle{}une sauvegarde. \end{DoxyCompactList}\item 
+static void \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_acf0958d5895361adbbeada432516abff}{Load} (int num\+Map, int nb\+Players)
+\begin{DoxyCompactList}\small\item\em Initialise le monde avec un numéro de map et un nombre de joueurs. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1maps_1_1_world}{World} \hyperlink{class_tentacle_slicers_1_1maps_1_1_world_afc92ddf0168726d7651893a2e0f5bc39}{Get\+World} ()
+\begin{DoxyCompactList}\small\item\em Retourne le monde actuel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a9f1a1f19b560d569796ff2aef5049933}\label{class_tentacle_slicers_1_1maps_1_1_world_a9f1a1f19b560d569796ff2aef5049933}} 
+const int {\bfseries Max\+Game\+Over\+Delay} = 1000
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a90f631ad305f23a37fb9ede4bd9ac759}\label{class_tentacle_slicers_1_1maps_1_1_world_a90f631ad305f23a37fb9ede4bd9ac759}} 
+static readonly Random {\bfseries Random} = new Random()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_add4b73f014ea74a0bdf0a2b0f3ec27eb}\label{class_tentacle_slicers_1_1maps_1_1_world_add4b73f014ea74a0bdf0a2b0f3ec27eb}} 
+int {\bfseries Initial\+Score}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a8a66be56947805cc65749b44b7505bd2}\label{class_tentacle_slicers_1_1maps_1_1_world_a8a66be56947805cc65749b44b7505bd2}} 
+int {\bfseries Score}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a8d8c9a48ad57e9aff59251f0c3961cfd}\label{class_tentacle_slicers_1_1maps_1_1_world_a8d8c9a48ad57e9aff59251f0c3961cfd}} 
+int {\bfseries Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a8a1b7fe42f7bf83693d332f62c1ae4bc}\label{class_tentacle_slicers_1_1maps_1_1_world_a8a1b7fe42f7bf83693d332f62c1ae4bc}} 
+\hyperlink{class_tentacle_slicers_1_1maps_1_1_map}{Map} {\bfseries Map}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a1d71538997d3e715ae420014e18883f9}\label{class_tentacle_slicers_1_1maps_1_1_world_a1d71538997d3e715ae420014e18883f9}} 
+int {\bfseries Game\+Over\+Delay}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Le monde est le conteneur de tous les aceurs et de la map générée, et leur délègue les fonctions Tick et Draw. Il peut être crée à partir d\textquotesingle{}une sauvegarde, il actualise le déroulement des niveaux et il place la caméra. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a50ddf5fe23bb64a24f987dd6019b4105}\label{class_tentacle_slicers_1_1maps_1_1_world_a50ddf5fe23bb64a24f987dd6019b4105}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Add\+Actor@{Add\+Actor}}
+\index{Add\+Actor@{Add\+Actor}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Add\+Actor()}{AddActor()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+World.\+Add\+Actor (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor }\end{DoxyParamCaption})}
+
+
+
+Ajoute un acteur au monde, qui va appeler ses fonctions Tick et Draw. Lorsqu\textquotesingle{}un acteur s\textquotesingle{}est déplacé, il est retiré puis replacé dans le monde car les acteurs sont triés en fonction de leur ordonnée, pour les dessiner dans l\textquotesingle{}ordre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur ajouté au monde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a41d0d2bfd31016cd3ae740cc7caf1cfb}\label{class_tentacle_slicers_1_1maps_1_1_world_a41d0d2bfd31016cd3ae740cc7caf1cfb}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Damages\+Ratio@{Damages\+Ratio}}
+\index{Damages\+Ratio@{Damages\+Ratio}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Damages\+Ratio()}{DamagesRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+maps.\+World.\+Damages\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoi le facteur qui augmente les dégâts des mobs, en fonction des niveaux. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de dégâts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_ae5532fc6ce77572a16b4723ddc88055e}\label{class_tentacle_slicers_1_1maps_1_1_world_ae5532fc6ce77572a16b4723ddc88055e}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+World.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Dessine les acteurs du monde, triés par ordonnée croissante (ils sont dessinés de haut en bas). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_ace5271f17f83aaa36a16746da29f896a}\label{class_tentacle_slicers_1_1maps_1_1_world_ace5271f17f83aaa36a16746da29f896a}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Get\+Alive\+Players@{Get\+Alive\+Players}}
+\index{Get\+Alive\+Players@{Get\+Alive\+Players}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+Alive\+Players()}{GetAlivePlayers()}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}$>$ Tentacle\+Slicers.\+maps.\+World.\+Get\+Alive\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne la liste des joueurs en vie. 
+
+\begin{DoxyReturn}{Returns}
+la liste des joueurs vivants 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_af2e84a1b1b30adaa42efe2dc064d6135}\label{class_tentacle_slicers_1_1maps_1_1_world_af2e84a1b1b30adaa42efe2dc064d6135}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Get\+Level\+Observer@{Get\+Level\+Observer}}
+\index{Get\+Level\+Observer@{Get\+Level\+Observer}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+Level\+Observer()}{GetLevelObserver()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer}{Level\+Observer} Tentacle\+Slicers.\+maps.\+World.\+Get\+Level\+Observer (\begin{DoxyParamCaption}\item[{Point}]{position }\end{DoxyParamCaption})}
+
+
+
+Retourne un composant de l\textquotesingle{}interface ayant accès aux données du niveau en train de se dérouler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position du composant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le composant de l\textquotesingle{}interface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a20a8554db452ea19e6000fe733f83c8f}\label{class_tentacle_slicers_1_1maps_1_1_world_a20a8554db452ea19e6000fe733f83c8f}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Get\+Players@{Get\+Players}}
+\index{Get\+Players@{Get\+Players}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+Players()}{GetPlayers()}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}$>$ Tentacle\+Slicers.\+maps.\+World.\+Get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le liste des joueurs. 
+
+\begin{DoxyReturn}{Returns}
+La liste des joueurs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_afc92ddf0168726d7651893a2e0f5bc39}\label{class_tentacle_slicers_1_1maps_1_1_world_afc92ddf0168726d7651893a2e0f5bc39}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Get\+World@{Get\+World}}
+\index{Get\+World@{Get\+World}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Get\+World()}{GetWorld()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1maps_1_1_world}{World} Tentacle\+Slicers.\+maps.\+World.\+Get\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le monde actuel. 
+
+\begin{DoxyReturn}{Returns}
+Le monde 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a1621a82ae5b10a2e8346458afab52ed8}\label{class_tentacle_slicers_1_1maps_1_1_world_a1621a82ae5b10a2e8346458afab52ed8}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Life\+Ratio@{Life\+Ratio}}
+\index{Life\+Ratio@{Life\+Ratio}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Life\+Ratio()}{LifeRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+maps.\+World.\+Life\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoi le facteur qui augmente les points de vie des mobs, en fonction des niveaux. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de point de vie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a04ef69bcd3d1eb1e0aed79a61a481bf4}\label{class_tentacle_slicers_1_1maps_1_1_world_a04ef69bcd3d1eb1e0aed79a61a481bf4}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Load@{Load}}
+\index{Load@{Load}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Tentacle\+Slicers.\+maps.\+World.\+Load (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1maps_1_1_game_save}{Game\+Save}}]{save }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Charge le monde à partir d\textquotesingle{}une sauvegarde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save} & La sauvegarde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_acf0958d5895361adbbeada432516abff}\label{class_tentacle_slicers_1_1maps_1_1_world_acf0958d5895361adbbeada432516abff}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Load@{Load}}
+\index{Load@{Load}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Load()}{Load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Tentacle\+Slicers.\+maps.\+World.\+Load (\begin{DoxyParamCaption}\item[{int}]{num\+Map,  }\item[{int}]{nb\+Players }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialise le monde avec un numéro de map et un nombre de joueurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Map} & Le numéro de map \\
+\hline
+{\em nb\+Players} & Le nombre de joueurs \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a43f29da91277b7a270c294d9dba6e2c7}\label{class_tentacle_slicers_1_1maps_1_1_world_a43f29da91277b7a270c294d9dba6e2c7}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Remove\+Actor@{Remove\+Actor}}
+\index{Remove\+Actor@{Remove\+Actor}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Remove\+Actor()}{RemoveActor()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+World.\+Remove\+Actor (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor }\end{DoxyParamCaption})}
+
+
+
+Retire un acteur du monde, parce qu\textquotesingle{}il est mort ou parce qu\textquotesingle{}il va se déplacer et être remis dans le monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur retiré du monde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_aa9e6e80fc271c36e2aa38524b40faa8f}\label{class_tentacle_slicers_1_1maps_1_1_world_aa9e6e80fc271c36e2aa38524b40faa8f}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Remove\+Spell\+Powerup@{Remove\+Spell\+Powerup}}
+\index{Remove\+Spell\+Powerup@{Remove\+Spell\+Powerup}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Remove\+Spell\+Powerup()}{RemoveSpellPowerup()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+World.\+Remove\+Spell\+Powerup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retire un spell powerup, ce qui peut permettre le lancement du niveau. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a383fb2d74c13c7b775077bc40ace811c}\label{class_tentacle_slicers_1_1maps_1_1_world_a383fb2d74c13c7b775077bc40ace811c}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Speed\+Ratio@{Speed\+Ratio}}
+\index{Speed\+Ratio@{Speed\+Ratio}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Speed\+Ratio()}{SpeedRatio()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+maps.\+World.\+Speed\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie le facteur de vitesse de déplacement et de lancement de sorts des mobs, en fonction des niveaux. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de vitesse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_world_a93c11c3e0f192f2eea8ff5368f2604a1}\label{class_tentacle_slicers_1_1maps_1_1_world_a93c11c3e0f192f2eea8ff5368f2604a1}} 
+\index{Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::maps\+::\+World@{Tentacle\+Slicers\+::maps\+::\+World}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+World.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Vérifie si tous les acteurs sont morts. Sinon, centre la caméra, fait avancer le niveau et actualise tous les acteurs. Si le niveau est fini et que le boss est mort, passe au niveau suivant, et le lance lorsque tous les powerups de sort sont consommés. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/maps/World.\+cs\end{DoxyCompactItemize}

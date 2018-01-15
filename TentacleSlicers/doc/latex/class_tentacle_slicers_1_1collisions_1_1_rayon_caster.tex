@@ -1,0 +1,76 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_rayon_caster}{}\section{Tentacle\+Slicers.\+collisions.\+Rayon\+Caster Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_rayon_caster}\index{Tentacle\+Slicers.\+collisions.\+Rayon\+Caster@{Tentacle\+Slicers.\+collisions.\+Rayon\+Caster}}
+
+
+Facilite le test de collision des segments en stockant le résultat des collisions d\textquotesingle{}un segment crée entre deux points \+: Colliding\+Actors stocke la liste des acteurs touchés, triés par leur distance depuis la source du segment (le premier acteur est le plus proche du segment), Impacts stocke pour chaque acteur touché le premier point d\textquotesingle{}impact où le segment touche l\textquotesingle{}acteur.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Rayon\+Caster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_rayon_caster}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_ae43e7cab7009f87dc9aac003339b8a71}{Rayon\+Caster} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} target)
+\begin{DoxyCompactList}\small\item\em Crée le rayon et récupère les acteurs touchés dans le gestionnaire de collisions. Trie ensuite les acteurs selon leur distance depuis la source du segment (le premier acteur est le plus proche du segment). Enfin, stocke pour chaque acteur le point où le segment touche l\textquotesingle{}acteur (en partant de la source). \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_aa9938228630292ef5142e87968d336d7}{Direct\+Sight} ()
+\begin{DoxyCompactList}\small\item\em Utilisé lorsque deux acteurs sont à chaque bout du segment. Indique si le segment relie les deux acteurs sans toucher un autre acteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_a6e696f3cbcda1addf00a2c7c47fd751b}\label{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_a6e696f3cbcda1addf00a2c7c47fd751b}} 
+List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ {\bfseries Colliding\+Actors}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_ac027555d5252a6e5ded8bfba17165b37}\label{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_ac027555d5252a6e5ded8bfba17165b37}} 
+List$<$ \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} $>$ {\bfseries Impacts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Facilite le test de collision des segments en stockant le résultat des collisions d\textquotesingle{}un segment crée entre deux points \+: Colliding\+Actors stocke la liste des acteurs touchés, triés par leur distance depuis la source du segment (le premier acteur est le plus proche du segment), Impacts stocke pour chaque acteur touché le premier point d\textquotesingle{}impact où le segment touche l\textquotesingle{}acteur. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_ae43e7cab7009f87dc9aac003339b8a71}\label{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_ae43e7cab7009f87dc9aac003339b8a71}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster@{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster}!Rayon\+Caster@{Rayon\+Caster}}
+\index{Rayon\+Caster@{Rayon\+Caster}!Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster@{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster}}
+\subsubsection{\texorpdfstring{Rayon\+Caster()}{RayonCaster()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Rayon\+Caster.\+Rayon\+Caster (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{target }\end{DoxyParamCaption})}
+
+
+
+Crée le rayon et récupère les acteurs touchés dans le gestionnaire de collisions. Trie ensuite les acteurs selon leur distance depuis la source du segment (le premier acteur est le plus proche du segment). Enfin, stocke pour chaque acteur le point où le segment touche l\textquotesingle{}acteur (en partant de la source). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La source du segment \\
+\hline
+{\em target} & La destination du segment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_aa9938228630292ef5142e87968d336d7}\label{class_tentacle_slicers_1_1collisions_1_1_rayon_caster_aa9938228630292ef5142e87968d336d7}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster@{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster}!Direct\+Sight@{Direct\+Sight}}
+\index{Direct\+Sight@{Direct\+Sight}!Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster@{Tentacle\+Slicers\+::collisions\+::\+Rayon\+Caster}}
+\subsubsection{\texorpdfstring{Direct\+Sight()}{DirectSight()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+collisions.\+Rayon\+Caster.\+Direct\+Sight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utilisé lorsque deux acteurs sont à chaque bout du segment. Indique si le segment relie les deux acteurs sans toucher un autre acteur. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si les deux acteurs sont les seuls touchés par le segment 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Rayon\+Caster.\+cs\end{DoxyCompactItemize}

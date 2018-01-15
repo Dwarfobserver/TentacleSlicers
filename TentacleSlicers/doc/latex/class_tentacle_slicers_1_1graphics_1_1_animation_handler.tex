@@ -1,0 +1,198 @@
+\hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler}{}\section{Tentacle\+Slicers.\+graphics.\+Animation\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler}\index{Tentacle\+Slicers.\+graphics.\+Animation\+Handler@{Tentacle\+Slicers.\+graphics.\+Animation\+Handler}}
+
+
+Etend la classe \hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler}{Sprite\+Handler} pour associer plusieurs animations à un acteur. Met à disposition de nouvelles fonctions pour forcer le lancement d\textquotesingle{}un nouvelle animation, et pour indiquer le type d\textquotesingle{}animation à jouer lorsque l\textquotesingle{}animation prioritaire courante est terminée. Le paramètre Animation\+Type définit le type d\textquotesingle{}animation non prioritaire.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+graphics.\+Animation\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1graphics_1_1_animation_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a08c5657382776774bfa54a9ea571447a}{Animation\+Handler} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} owner, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack}{Animation\+Pack} animations, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_transparency_handler}{Transparency\+Handler} transparency=null)
+\begin{DoxyCompactList}\small\item\em Crée le gestionnaire d\textquotesingle{}animations avec comme sprite par défaut le premier sprite de l\textquotesingle{}animation par défaut (généralement de type Stand) du pack d\textquotesingle{}animations fourni. Peut également récupérer un comportement pour l\textquotesingle{}opacité de l\textquotesingle{}animation. Par défaut, l\textquotesingle{}animation de type Birth est lancée une unique fois puis le type de l\textquotesingle{}animation par défaut du pack d\textquotesingle{}animations est mis en type d\textquotesingle{}animation par défaut. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a715079dfbfd41b8ba8bfe1b4433876a3}{Animation\+Handler} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} owner, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} animation, bool loop, int ms\+Length=-\/1, \hyperlink{class_tentacle_slicers_1_1graphics_1_1_transparency_handler}{Transparency\+Handler} transparency=null)
+\begin{DoxyCompactList}\small\item\em Crée le gestionnaire d\textquotesingle{}animations avec comme sprite par défaut le premier sprite de l\textquotesingle{}animation donnée. Peut également récupérer un comportement pour l\textquotesingle{}opacité de l\textquotesingle{}animation. L\textquotesingle{}animation est lancée une unique fois ou en boucle avec la durée indiquée, sinon celle par défaut. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a898fe508064f17af1e1fed3b5470ed0c}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise l\textquotesingle{}animation courante. Si l\textquotesingle{}animation courante est lancée en boucle alors que le type d\textquotesingle{}animation à jouer par défaut est différent, lance en boucle l\textquotesingle{}animation correspondant à ce type d\textquotesingle{}animation. Si l\textquotesingle{}animation est terminée, soit elle doit être jouée en boucle et est relancée, soit elle doit être jouée une unique fois. Dans ce cas, si le type d\textquotesingle{}animation à jouer par défaut est différent, une nouvelle animation correspondant à ce type est lancée en boucle, sinon l\textquotesingle{}animation est mise en pause. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_acaf5bb3839d75ef2238dab5bc37d70c4}{Play\+Animation} (\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} type, bool loop, int ms\+Length=-\/1)
+\begin{DoxyCompactList}\small\item\em Appelle Play\+Animation avec l\textquotesingle{}animation correspondant au type indiqué. Si les animations fournies ne comportent pas le type indiqué, l\textquotesingle{}animation lancée correspond à l\textquotesingle{}animation par défaut des animations fournies. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a2b4b19e529766c672717b5274c2261cc}{Play\+Animation} (\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} animation, bool loop, int ms\+Length=-\/1)
+\begin{DoxyCompactList}\small\item\em Interrompt l\textquotesingle{}animation courante pour jouer l\textquotesingle{}animation indiquée, avec la longueur indiquée (sinon, utilise la longueur par défaut de l\textquotesingle{}animation fournie). Le type d\textquotesingle{}animation par défaut est mis égal au type de l\textquotesingle{}animation fournie. Si l\textquotesingle{}animation doit être jouée en boucle, elle n\textquotesingle{}est pas prioritaire et changer la valeur du type à jouer par défaut va interrompre l\textquotesingle{}animation en boucle. Sinon, l\textquotesingle{}animation est prioritaire et ne peut être interrompue qu\textquotesingle{}avec un autre appel à cette fonction. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a9689c8aa6eda698f6c70f2d4722d2f67}{Get\+Animation} (\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} type)
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}animation correspondant au type d\textquotesingle{}animation indiqué. Si l\textquotesingle{}animation n\textquotesingle{}existe pas, retourne l\textquotesingle{}animation par défaut, auquel cas le type de l\textquotesingle{}animation renvoyée sera différent du type demandé. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a7517212410c75974b516371e74023874}{Current\+Animation} ()
+\begin{DoxyCompactList}\small\item\em Renvoie l\textquotesingle{}animation jouée actuellement. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a12a0833af42233820bdcecf6bcf92403}{Is\+Finished} ()
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}animation est finie et mise en pause. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a506e01c8587c17d94bf73bf913ab7454}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a506e01c8587c17d94bf73bf913ab7454}} 
+\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} {\bfseries Animation\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Etend la classe \hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler}{Sprite\+Handler} pour associer plusieurs animations à un acteur. Met à disposition de nouvelles fonctions pour forcer le lancement d\textquotesingle{}un nouvelle animation, et pour indiquer le type d\textquotesingle{}animation à jouer lorsque l\textquotesingle{}animation prioritaire courante est terminée. Le paramètre Animation\+Type définit le type d\textquotesingle{}animation non prioritaire. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a08c5657382776774bfa54a9ea571447a}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a08c5657382776774bfa54a9ea571447a}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\index{Animation\+Handler@{Animation\+Handler}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Animation\+Handler()}{AnimationHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Animation\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack}{Animation\+Pack}}]{animations,  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_transparency_handler}{Transparency\+Handler}}]{transparency = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Crée le gestionnaire d\textquotesingle{}animations avec comme sprite par défaut le premier sprite de l\textquotesingle{}animation par défaut (généralement de type Stand) du pack d\textquotesingle{}animations fourni. Peut également récupérer un comportement pour l\textquotesingle{}opacité de l\textquotesingle{}animation. Par défaut, l\textquotesingle{}animation de type Birth est lancée une unique fois puis le type de l\textquotesingle{}animation par défaut du pack d\textquotesingle{}animations est mis en type d\textquotesingle{}animation par défaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & L\textquotesingle{}acteur assossié \\
+\hline
+{\em animations} & Les animations de l\textquotesingle{}acteur \\
+\hline
+{\em transparency} & Le paramaètre d\textquotesingle{}opacité optionnel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a715079dfbfd41b8ba8bfe1b4433876a3}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a715079dfbfd41b8ba8bfe1b4433876a3}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Animation\+Handler@{Animation\+Handler}}
+\index{Animation\+Handler@{Animation\+Handler}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Animation\+Handler()}{AnimationHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Animation\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation}}]{animation,  }\item[{bool}]{loop,  }\item[{int}]{ms\+Length = {\ttfamily -\/1},  }\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_transparency_handler}{Transparency\+Handler}}]{transparency = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Crée le gestionnaire d\textquotesingle{}animations avec comme sprite par défaut le premier sprite de l\textquotesingle{}animation donnée. Peut également récupérer un comportement pour l\textquotesingle{}opacité de l\textquotesingle{}animation. L\textquotesingle{}animation est lancée une unique fois ou en boucle avec la durée indiquée, sinon celle par défaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & L\textquotesingle{}acteur associé \\
+\hline
+{\em animation} & L\textquotesingle{}animation à jouer \\
+\hline
+{\em loop} & Indique si l\textquotesingle{}animation est joueé en boucle \\
+\hline
+{\em ms\+Length} & Fournit une longueur de l\textquotesingle{}animation optionnelle \\
+\hline
+{\em transparency} & Le paramètre d\textquotesingle{}opacité optionnel \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a7517212410c75974b516371e74023874}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a7517212410c75974b516371e74023874}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Current\+Animation@{Current\+Animation}}
+\index{Current\+Animation@{Current\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Current\+Animation()}{CurrentAnimation()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Current\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie l\textquotesingle{}animation jouée actuellement. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}animation courante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a9689c8aa6eda698f6c70f2d4722d2f67}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a9689c8aa6eda698f6c70f2d4722d2f67}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Get\+Animation@{Get\+Animation}}
+\index{Get\+Animation@{Get\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Animation()}{GetAnimation()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Get\+Animation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}animation correspondant au type d\textquotesingle{}animation indiqué. Si l\textquotesingle{}animation n\textquotesingle{}existe pas, retourne l\textquotesingle{}animation par défaut, auquel cas le type de l\textquotesingle{}animation renvoyée sera différent du type demandé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Le type d\textquotesingle{}animation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}animation correspondant au type requis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a12a0833af42233820bdcecf6bcf92403}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a12a0833af42233820bdcecf6bcf92403}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Is\+Finished@{Is\+Finished}}
+\index{Is\+Finished@{Is\+Finished}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Is\+Finished()}{IsFinished()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}animation est finie et mise en pause. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}animtaion est finie et mise en pause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_acaf5bb3839d75ef2238dab5bc37d70c4}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_acaf5bb3839d75ef2238dab5bc37d70c4}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Play\+Animation@{Play\+Animation}}
+\index{Play\+Animation@{Play\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Play\+Animation()}{PlayAnimation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Play\+Animation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type}}]{type,  }\item[{bool}]{loop,  }\item[{int}]{ms\+Length = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Appelle Play\+Animation avec l\textquotesingle{}animation correspondant au type indiqué. Si les animations fournies ne comportent pas le type indiqué, l\textquotesingle{}animation lancée correspond à l\textquotesingle{}animation par défaut des animations fournies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Le type de l\textquotesingle{}animation à jouer \\
+\hline
+{\em loop} & Si l\textquotesingle{}aniamtion doit être jouée en boucle \\
+\hline
+{\em ms\+Length} & La longueur de l\textquotesingle{}animation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a2b4b19e529766c672717b5274c2261cc}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a2b4b19e529766c672717b5274c2261cc}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Play\+Animation@{Play\+Animation}}
+\index{Play\+Animation@{Play\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Play\+Animation()}{PlayAnimation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Play\+Animation (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation}}]{animation,  }\item[{bool}]{loop,  }\item[{int}]{ms\+Length = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Interrompt l\textquotesingle{}animation courante pour jouer l\textquotesingle{}animation indiquée, avec la longueur indiquée (sinon, utilise la longueur par défaut de l\textquotesingle{}animation fournie). Le type d\textquotesingle{}animation par défaut est mis égal au type de l\textquotesingle{}animation fournie. Si l\textquotesingle{}animation doit être jouée en boucle, elle n\textquotesingle{}est pas prioritaire et changer la valeur du type à jouer par défaut va interrompre l\textquotesingle{}animation en boucle. Sinon, l\textquotesingle{}animation est prioritaire et ne peut être interrompue qu\textquotesingle{}avec un autre appel à cette fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animation} & L\textquotesingle{}animation à jouer \\
+\hline
+{\em loop} & Si l\textquotesingle{}aniamtion doit être jouée en boucle \\
+\hline
+{\em ms\+Length} & La longueur de l\textquotesingle{}animation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a898fe508064f17af1e1fed3b5470ed0c}\label{class_tentacle_slicers_1_1graphics_1_1_animation_handler_a898fe508064f17af1e1fed3b5470ed0c}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Handler}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+graphics.\+Animation\+Handler.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise l\textquotesingle{}animation courante. Si l\textquotesingle{}animation courante est lancée en boucle alors que le type d\textquotesingle{}animation à jouer par défaut est différent, lance en boucle l\textquotesingle{}animation correspondant à ce type d\textquotesingle{}animation. Si l\textquotesingle{}animation est terminée, soit elle doit être jouée en boucle et est relancée, soit elle doit être jouée une unique fois. Dans ce cas, si le type d\textquotesingle{}animation à jouer par défaut est différent, une nouvelle animation correspondant à ce type est lancée en boucle, sinon l\textquotesingle{}animation est mise en pause. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler_ab08b58ee3a955cbb5621d8aa4e32c97b}{Tentacle\+Slicers.\+graphics.\+Sprite\+Handler}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/graphics/Animation\+Handler.\+cs\end{DoxyCompactItemize}

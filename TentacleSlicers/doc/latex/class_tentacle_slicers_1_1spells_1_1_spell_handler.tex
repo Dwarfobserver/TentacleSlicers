@@ -1,0 +1,162 @@
+\hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler}{}\section{Tentacle\+Slicers.\+spells.\+Spell\+Handler Class Reference}
+\label{class_tentacle_slicers_1_1spells_1_1_spell_handler}\index{Tentacle\+Slicers.\+spells.\+Spell\+Handler@{Tentacle\+Slicers.\+spells.\+Spell\+Handler}}
+
+
+Gère d\textquotesingle{}un acteur et permet de les créer, à partir de \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} et en l\textquotesingle{}associant à un numéro.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+spells.\+Spell\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1spells_1_1_spell_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_a7a51dff0edbbc1c0c6ac99af89c4b757}{Spell\+Handler} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} owner)
+\begin{DoxyCompactList}\small\item\em Initialise le Spellhandler sans sorts. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_a47c8173e5ce918165b4b4b85ca20d44f}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise les sorts. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_a21bcc65c646df5c305e7c92ab31341b6}{Create\+Spell} (int num\+Spell, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} data)
+\begin{DoxyCompactList}\small\item\em Crée un sort pour le possesseur du Spellhandler, avec le numéro associé. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_ae639fa595626e043cb07d0e0ab909a6d}{Create\+Spell} (int num\+Spell, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} data, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats)
+\begin{DoxyCompactList}\small\item\em Crée un sort pour le joueur du Spellhandler, avec le numéro associé et les statistiques du joueur. Celles-\/ci permettent notemment de réduire le temps de rechargement du sort. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_a6ac92e59c19c60376e248d277b2fa193}{Actualise\+Spells} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque le joueur modifie sa caractéristique Cooldown\+Reduction pour mettre à jour le temps de rechargement de ses sorts. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell}{Spell} \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_aa5c435cd7e2f44e3988c7aff1d0814b3}{Get\+Spell} (int num\+Spell)
+\begin{DoxyCompactList}\small\item\em Retourne le sort qui fut assigné au numéro indiqué lors de sa création. Si il n\textquotesingle{}existe pas, renvoie null. \end{DoxyCompactList}\item 
+int \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler_add51cb1ca45f894e63c46d7f9a8d56d3}{Get\+Nb\+Spells} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de sorts du possesseur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère d\textquotesingle{}un acteur et permet de les créer, à partir de \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} et en l\textquotesingle{}associant à un numéro. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_a7a51dff0edbbc1c0c6ac99af89c4b757}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_a7a51dff0edbbc1c0c6ac99af89c4b757}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Spell\+Handler@{Spell\+Handler}}
+\index{Spell\+Handler@{Spell\+Handler}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Spell\+Handler()}{SpellHandler()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Spell\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}}]{owner }\end{DoxyParamCaption})}
+
+
+
+Initialise le Spellhandler sans sorts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le possesseur des sorts \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_a6ac92e59c19c60376e248d277b2fa193}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_a6ac92e59c19c60376e248d277b2fa193}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Actualise\+Spells@{Actualise\+Spells}}
+\index{Actualise\+Spells@{Actualise\+Spells}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Actualise\+Spells()}{ActualiseSpells()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Actualise\+Spells (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Appelé lorsque le joueur modifie sa caractéristique Cooldown\+Reduction pour mettre à jour le temps de rechargement de ses sorts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stats} & Les statistiques du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_a21bcc65c646df5c305e7c92ab31341b6}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_a21bcc65c646df5c305e7c92ab31341b6}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Create\+Spell@{Create\+Spell}}
+\index{Create\+Spell@{Create\+Spell}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Spell()}{CreateSpell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Create\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{data }\end{DoxyParamCaption})}
+
+
+
+Crée un sort pour le possesseur du Spellhandler, avec le numéro associé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro du sort \\
+\hline
+{\em data} & Les données du sort \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_ae639fa595626e043cb07d0e0ab909a6d}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_ae639fa595626e043cb07d0e0ab909a6d}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Create\+Spell@{Create\+Spell}}
+\index{Create\+Spell@{Create\+Spell}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Create\+Spell()}{CreateSpell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Create\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{data,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Crée un sort pour le joueur du Spellhandler, avec le numéro associé et les statistiques du joueur. Celles-\/ci permettent notemment de réduire le temps de rechargement du sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro du sort \\
+\hline
+{\em data} & Les données du sort \\
+\hline
+{\em stats} & les statistiques du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_add51cb1ca45f894e63c46d7f9a8d56d3}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_add51cb1ca45f894e63c46d7f9a8d56d3}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Get\+Nb\+Spells@{Get\+Nb\+Spells}}
+\index{Get\+Nb\+Spells@{Get\+Nb\+Spells}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Nb\+Spells()}{GetNbSpells()}}
+{\footnotesize\ttfamily int Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Get\+Nb\+Spells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le nombre de sorts du possesseur. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de sorts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_aa5c435cd7e2f44e3988c7aff1d0814b3}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_aa5c435cd7e2f44e3988c7aff1d0814b3}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Get\+Spell@{Get\+Spell}}
+\index{Get\+Spell@{Get\+Spell}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Spell()}{GetSpell()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell}{Spell} Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Get\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell }\end{DoxyParamCaption})}
+
+
+
+Retourne le sort qui fut assigné au numéro indiqué lors de sa création. Si il n\textquotesingle{}existe pas, renvoie null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le sort correspondant au numéro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1spells_1_1_spell_handler_a47c8173e5ce918165b4b4b85ca20d44f}\label{class_tentacle_slicers_1_1spells_1_1_spell_handler_a47c8173e5ce918165b4b4b85ca20d44f}} 
+\index{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::spells\+::\+Spell\+Handler@{Tentacle\+Slicers\+::spells\+::\+Spell\+Handler}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+spells.\+Spell\+Handler.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise les sorts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/spells/Spell\+Handler.\+cs\end{DoxyCompactItemize}

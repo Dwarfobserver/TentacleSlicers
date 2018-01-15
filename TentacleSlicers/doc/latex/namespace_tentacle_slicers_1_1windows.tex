@@ -1,0 +1,27 @@
+\hypertarget{namespace_tentacle_slicers_1_1windows}{}\section{Tentacle\+Slicers.\+windows Namespace Reference}
+\label{namespace_tentacle_slicers_1_1windows}\index{Tentacle\+Slicers.\+windows@{Tentacle\+Slicers.\+windows}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_choose_save_state}{Choose\+Save\+State}
+\begin{DoxyCompactList}\small\item\em Définit le menu permettant de choisir une sauvegarde. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_create_save_state}{Create\+Save\+State}
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}état permettant au(x) joueur(s) d\textquotesingle{}entrer le nom de la nouvelle sauvegarde et de la valider, ou de retourner au menu en jeu. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_menu_state}{Game\+Menu\+State}
+\begin{DoxyCompactList}\small\item\em Définit le menu accessible en jeu depuis la touche echap. Il permet de créer une nouvelle sauvegarde et de retourner au menu principal. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_over_state}{Game\+Over\+State}
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}état sur lequel on arrive une fois que tous les joueurs sont morts. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_game_state}{Game\+State}
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}état en cours de partie. L\textquotesingle{}actualisation et le dessin sont délégués au World puis au Hud\+Handler, et les évènements du clavier sont délégués à l\textquotesingle{}Input\+Handler. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_main_form}{Main\+Form}
+\begin{DoxyCompactList}\small\item\em La fenêtre graphique de l\textquotesingle{}application. Crée périodiquement des évènements d\textquotesingle{}actualisation qui appellent les fonctions Tick et Draw, et reçoit les évènements liés à l\textquotesingle{}appui, l\textquotesingle{}activation ou le relâchement d\textquotesingle{}une touche du clavier. Toutes ces fonctions sont déléguées à l\textquotesingle{}objet qui gère l\textquotesingle{}état actuel de la fenêtre. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_main_menu_state}{Main\+Menu\+State}
+\begin{DoxyCompactList}\small\item\em Définit le menu principal. C\textquotesingle{}est l\textquotesingle{}état initial de l\textquotesingle{}application. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_menu_state}{Menu\+State}
+\begin{DoxyCompactList}\small\item\em Spécifie la classe \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State} pour dessiner l\textquotesingle{}image de fond de l\textquotesingle{}écran et gérer l\textquotesingle{}éventuel gestionnaire de boutons en lui délégant les entrées et en affichant ses boutons. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_new_game_state}{New\+Game\+State}
+\begin{DoxyCompactList}\small\item\em Définit un état juste avant de lancer une nouvelle partie pour définir le nombre de joueurs et la map sur laquelle jouer. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_too_much_save_state}{Too\+Much\+Save\+State}
+\begin{DoxyCompactList}\small\item\em Définit un petit état qui remplace celui permettant de créer une nouvelle sauvegarde si le nombre maximal de sauvegardes est déjà atteint. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1windows_1_1_windows_state}{Windows\+State}
+\begin{DoxyCompactList}\small\item\em Gère l\textquotesingle{}application en recevant de la fenêtre les fonctions d\textquotesingle{}actualisation des données, (Tick) de leur affichage (Draw) et les évènements provenant du clavier (Key\+Down, key\+Pressed et Key\+Up). \end{DoxyCompactList}\end{DoxyCompactItemize}

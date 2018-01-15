@@ -1,0 +1,173 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment}{}\section{Tentacle\+Slicers.\+collisions.\+Segment Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_segment}\index{Tentacle\+Slicers.\+collisions.\+Segment@{Tentacle\+Slicers.\+collisions.\+Segment}}
+
+
+Une forme dont la zone de collision est un segment, d\textquotesingle{}épaisseur nulle.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_segment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_ade4ddd9352ef4b56cee6ac58d639eae2}{Segment} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Crée le segment d\textquotesingle{}après les coordonnées de sa cible. Son origine est considérée initialement comme étant le point (0, 0). \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_a24beaff9e89a6b3fd54b59f16a9edb4b}{Segment} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} cible)
+\begin{DoxyCompactList}\small\item\em Crée le segment d\textquotesingle{}après sa cible. Son origine est considérée initialement comme étant le point (0, 0). \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_a6af6eae47bbfa2f74e0e714e034d5af8}{Collides} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Indique si le segment, avec pour origine p1, est en collision avec le rectangle donné de centre p2. \end{DoxyCompactList}\item 
+override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_a9d4a74136b93980586e412d8bb295ec9}{Including\+Rectangle} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position)
+\begin{DoxyCompactList}\small\item\em Retourne un rectangle incluant le segment \+: Il a comme coin les deux bouts du segments, et le milieu du segment comme position. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_a060d2e1954b3b6eee9225cb52bddc8c5}{Impact} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Retourne le premier point de collision entre le segment et le rectangle donné, en partant de l\textquotesingle{}origine du segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment_afc2e42528b122bc5307209e10ef13689}{operator Segment} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p)
+\begin{DoxyCompactList}\small\item\em Alternative au constructeur du segment en indiquant sa cible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a36fdbb7df8aee1de72139c9862625201}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a36fdbb7df8aee1de72139c9862625201}} 
+static bool {\bfseries operator$<$} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment} p1, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment} p2)
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a2f3e63b7a26e9ba24ac063b8d232f701}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a2f3e63b7a26e9ba24ac063b8d232f701}} 
+static bool {\bfseries operator$>$} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment} p1, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment} p2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Une forme dont la zone de collision est un segment, d\textquotesingle{}épaisseur nulle. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_ade4ddd9352ef4b56cee6ac58d639eae2}\label{class_tentacle_slicers_1_1collisions_1_1_segment_ade4ddd9352ef4b56cee6ac58d639eae2}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Segment.\+Segment (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Crée le segment d\textquotesingle{}après les coordonnées de sa cible. Son origine est considérée initialement comme étant le point (0, 0). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & L\textquotesingle{}abscisse de la cible \\
+\hline
+{\em y} & L\textquotesingle{}ordonnée de la cible \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a24beaff9e89a6b3fd54b59f16a9edb4b}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a24beaff9e89a6b3fd54b59f16a9edb4b}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Segment.\+Segment (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{cible }\end{DoxyParamCaption})}
+
+
+
+Crée le segment d\textquotesingle{}après sa cible. Son origine est considérée initialement comme étant le point (0, 0). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & La cible indiquée \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a6af6eae47bbfa2f74e0e714e034d5af8}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a6af6eae47bbfa2f74e0e714e034d5af8}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!Collides@{Collides}}
+\index{Collides@{Collides}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{Collides()}{Collides()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+collisions.\+Segment.\+Collides (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Indique si le segment, avec pour origine p1, est en collision avec le rectangle donné de centre p2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hitbox} & Le rectangle donné \\
+\hline
+{\em p1} & L\textquotesingle{}origine du segment \\
+\hline
+{\em p2} & le centre du rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a51bde480596aa821d6d927427864ae5c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a060d2e1954b3b6eee9225cb52bddc8c5}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a060d2e1954b3b6eee9225cb52bddc8c5}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!Impact@{Impact}}
+\index{Impact@{Impact}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{Impact()}{Impact()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+collisions.\+Segment.\+Impact (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Retourne le premier point de collision entre le segment et le rectangle donné, en partant de l\textquotesingle{}origine du segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hitbox} & Le rectangle donné \\
+\hline
+{\em p1} & L\textquotesingle{}origine du segment \\
+\hline
+{\em p2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_a9d4a74136b93980586e412d8bb295ec9}\label{class_tentacle_slicers_1_1collisions_1_1_segment_a9d4a74136b93980586e412d8bb295ec9}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!Including\+Rectangle@{Including\+Rectangle}}
+\index{Including\+Rectangle@{Including\+Rectangle}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{Including\+Rectangle()}{IncludingRectangle()}}
+{\footnotesize\ttfamily override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} Tentacle\+Slicers.\+collisions.\+Segment.\+Including\+Rectangle (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne un rectangle incluant le segment \+: Il a comme coin les deux bouts du segments, et le milieu du segment comme position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & L\textquotesingle{}origine du segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le rectangle incluant le segment et son centre 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a00c94b5a1e83d9db6aa3a4cab969fd2c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_segment_afc2e42528b122bc5307209e10ef13689}\label{class_tentacle_slicers_1_1collisions_1_1_segment_afc2e42528b122bc5307209e10ef13689}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}!operator Segment@{operator Segment}}
+\index{operator Segment@{operator Segment}!Tentacle\+Slicers\+::collisions\+::\+Segment@{Tentacle\+Slicers\+::collisions\+::\+Segment}}
+\subsubsection{\texorpdfstring{operator Segment()}{operator Segment()}}
+{\footnotesize\ttfamily static Tentacle\+Slicers.\+collisions.\+Segment.\+operator \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment} (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [static]}}
+
+
+
+Alternative au constructeur du segment en indiquant sa cible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & La cible du segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le segment allant de (0, 0) à la cible donnée 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Segment.\+cs\end{DoxyCompactItemize}

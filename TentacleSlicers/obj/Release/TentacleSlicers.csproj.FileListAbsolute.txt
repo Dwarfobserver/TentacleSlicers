@@ -1,0 +1,5 @@
+C:\Users\sidne\Documents\GitHub\Projet 4A\TentacleSlicers\TentacleSlicers\TentacleSlicers\bin\Release\TentacleSlicers.exe
+C:\Users\sidne\Documents\GitHub\Projet 4A\TentacleSlicers\TentacleSlicers\TentacleSlicers\bin\Release\TentacleSlicers.pdb
+C:\Users\sidne\Documents\GitHub\Projet 4A\TentacleSlicers\TentacleSlicers\TentacleSlicers\obj\Release\TentacleSlicers.csprojResolveAssemblyReference.cache
+C:\Users\sidne\Documents\GitHub\Projet 4A\TentacleSlicers\TentacleSlicers\TentacleSlicers\obj\Release\TentacleSlicers.exe
+C:\Users\sidne\Documents\GitHub\Projet 4A\TentacleSlicers\TentacleSlicers\TentacleSlicers\obj\Release\TentacleSlicers.pdb

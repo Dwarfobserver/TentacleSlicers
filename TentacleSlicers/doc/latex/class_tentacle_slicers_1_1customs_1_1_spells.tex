@@ -1,0 +1,326 @@
+\hypertarget{class_tentacle_slicers_1_1customs_1_1_spells}{}\section{Tentacle\+Slicers.\+customs.\+Spells Class Reference}
+\label{class_tentacle_slicers_1_1customs_1_1_spells}\index{Tentacle\+Slicers.\+customs.\+Spells@{Tentacle\+Slicers.\+customs.\+Spells}}
+
+
+Classe statique qui rescence les sorts du jeu.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_aa6c96bd7d4dbfae6c4e007e5e1a6292c}{Load} ()
+\begin{DoxyCompactList}\small\item\em Utilisé pour charger au lancement du programme les spell data. Afin de conserver la comptabilité avec les sauvegardes précédentes, les nouveaux sorts doivent être rajoutés à la suite de ceux déjà présents dans la fonction. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a1400f7def2ffb9f09f8c171bea304af2}{Player\+Attack} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des joueurs. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a6d0ec159b32ab1924fcceb617b801f57}{Holyball} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Holy\+Ball. Celui-\/ci possède 3 charges et permet de lancer un unique projectile après une canalisation. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_aeda241fbf33bfb1ba550917d0d9cdac4}{Arrow} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Arrow. Celui-\/ci possède 2 charges qui déclenchent avec un léger décalage le lancement de deux projectiles dans la même direction. L\textquotesingle{}utilisateur peut se déplacer pendant sa canalisation. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a2e91e950b16b11c0d613b3a011a4cbf8}{Impact} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Impact. Celui-\/ci déclenche en face de l\textquotesingle{}utilisateur, après un délai, une explosion qui blesse les ennemis pris dans son rayon et les empêche d\textquotesingle{}attaquer ou de se déplacer pendant un court instant. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a4fe8191cc9ebf12f1519d23d58e711ab}{Bomb} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort \hyperlink{class_tentacle_slicers_1_1customs_1_1_bomb}{Bomb}. Celui-\/ci permet de lancer, après une longue canalisation, un gros projectile qui explose lors du premier contact ou lorsqu\textquotesingle{}il expire et blesse les ennemis dans une grande zone autour de lui, et les empêche de bouger pendant un court instant. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_af747af60697de1f8dda3cbe8fe5a1c9d}{Dash} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Dash. Celui-\/ci, à l\textquotesingle{}activation, accélère et rend son utilisateur invincible pendant un court instant et l\textquotesingle{}entoure d\textquotesingle{}une aura qui va ensuite brûler tous les ennemis à proximité durant l\textquotesingle{}effet, ce qui va leur faire perdre de la vie pendant quelques secondes. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a85c4c7a4dd8b935f2f1f412d4f809c22}{Regeneration\+Buff} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Regeneration\+Buff. Celui-\/ci, à l\textquotesingle{}activation, soigne son utilisateur sur une petite période. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a408ee32a021dc16ef9799804cfda39dc}{Vampirism\+Buff} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Vampirism\+Buff. Celui-\/ci, à l\textquotesingle{}activation, augmente énormément le score de vampirisme de son utilisateur pendant un court instant. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a69a71ba970111827a09e04e8b40b48d5}{Strength\+Buff} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Strength\+Buff. Celui-\/ci, à l\textquotesingle{}activation, augmente énormément la force physique de son utilisateur pendant un court instant. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_ac42105a2f08364e32cfd41e3caaff07b}{Invincibility\+Buff} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort Strength\+Buff. Celui-\/ci, à l\textquotesingle{}activation, rend son utilisateur invincible pendant un court instant. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a766be599caf989c80cfe9b892d9e9999}{Green\+Cultist\+Attack} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des cultistes verts. L\textquotesingle{}attaque au corps-\/à-\/corps des cultistes verts et plutôt rapide et inflige de bons dégâts. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a2fd11f64a567bf4b829fafe59fdb2777}{Orange\+Cultist\+Attack} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des cultistes oranges. L\textquotesingle{}attaque au corps-\/à-\/corps des cultistes oranges est plus lente et moins efficace que celle des cultistes verts. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a423a02f284ad48266b68b8952a5f9f6a}{Orange\+Cultist\+Fireball} ()
+\begin{DoxyCompactList}\small\item\em Retourne le sort d\textquotesingle{}atatque à ditance des cultistes oranges. Cette attaque consiste en un projectile (une boule de feu) projeté dans la direction de la cible du cultiste après une canalisation. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_ac53a8734a12767f86c977c48f7ac7c7f}{Cthulhu\+Lightning} ()
+\begin{DoxyCompactList}\small\item\em Retourne un sort d\textquotesingle{}attaque à distance du boss. Celui-\/ci inflige des dégâts dans une zone après un certain délai. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_aa4f86ba1ed765465f478d1bad8021f92}{Cthulhu\+Chains} ()
+\begin{DoxyCompactList}\small\item\em Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_aa7ab3b9198afe02928388f6e7a894508}{Cthulhu\+Meteor} ()
+\begin{DoxyCompactList}\small\item\em Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} \hyperlink{class_tentacle_slicers_1_1customs_1_1_spells_a748b59ef695b5ffc37dc3689d335cc9b}{Cthulhu\+Voidball} ()
+\begin{DoxyCompactList}\small\item\em Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a96c454ab76f463210d5acdc411f8e31b}\label{class_tentacle_slicers_1_1customs_1_1_spells_a96c454ab76f463210d5acdc411f8e31b}} 
+const int {\bfseries Arrow\+Time\+Value} = 700
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a1cffa862e800a6892f7624694c0e4b54}\label{class_tentacle_slicers_1_1customs_1_1_spells_a1cffa862e800a6892f7624694c0e4b54}} 
+const int {\bfseries Dash\+Speed\+Value} = 200
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ace03ac7383ce8ecbe007278c596c6162}\label{class_tentacle_slicers_1_1customs_1_1_spells_ace03ac7383ce8ecbe007278c596c6162}} 
+const int {\bfseries Dash\+Armor\+Value} = 100000
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a8c792b81b3ff761a254ba716d91df9d3}\label{class_tentacle_slicers_1_1customs_1_1_spells_a8c792b81b3ff761a254ba716d91df9d3}} 
+const int {\bfseries Regeneration\+Buff\+Value} = 30
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a9c33916632502b24cce0dd97cb871050}\label{class_tentacle_slicers_1_1customs_1_1_spells_a9c33916632502b24cce0dd97cb871050}} 
+const int {\bfseries Vampirism\+Buff\+Value} = 50
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a314847ec4415a3a31bfafe42506c271d}\label{class_tentacle_slicers_1_1customs_1_1_spells_a314847ec4415a3a31bfafe42506c271d}} 
+const int {\bfseries Strength\+Buff\+Value} = 100
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_aaf81136155bc451f6293733295068790}\label{class_tentacle_slicers_1_1customs_1_1_spells_aaf81136155bc451f6293733295068790}} 
+const int {\bfseries Invincibility\+Buff\+Value} = 100000000
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ae3a69d790bde24b4844b40b174bfb4f0}\label{class_tentacle_slicers_1_1customs_1_1_spells_ae3a69d790bde24b4844b40b174bfb4f0}} 
+const double {\bfseries Cthulhu\+Chains\+Reduction\+Percent} = 0.\+05
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a414e490cc08061ba2d9c3b12a2b2b2ac}\label{class_tentacle_slicers_1_1customs_1_1_spells_a414e490cc08061ba2d9c3b12a2b2b2ac}} 
+const int {\bfseries Cthulhu\+Meteor\+Dispersion} = 300
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ad4f6cd75f83bb6931de35bd5b5976f3a}\label{class_tentacle_slicers_1_1customs_1_1_spells_ad4f6cd75f83bb6931de35bd5b5976f3a}} 
+const double {\bfseries Cthulhu\+Voidball\+Dispersion} = 0.\+5
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ab640b5aed5a31b427047425a77f7e077}\label{class_tentacle_slicers_1_1customs_1_1_spells_ab640b5aed5a31b427047425a77f7e077}} 
+const int {\bfseries Cthulhu\+Voidball\+Number} = 6
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe statique qui rescence les sorts du jeu. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_aeda241fbf33bfb1ba550917d0d9cdac4}\label{class_tentacle_slicers_1_1customs_1_1_spells_aeda241fbf33bfb1ba550917d0d9cdac4}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Arrow@{Arrow}}
+\index{Arrow@{Arrow}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Arrow()}{Arrow()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Arrow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Arrow. Celui-\/ci possède 2 charges qui déclenchent avec un léger décalage le lancement de deux projectiles dans la même direction. L\textquotesingle{}utilisateur peut se déplacer pendant sa canalisation. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a4fe8191cc9ebf12f1519d23d58e711ab}\label{class_tentacle_slicers_1_1customs_1_1_spells_a4fe8191cc9ebf12f1519d23d58e711ab}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Bomb()}{Bomb()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort \hyperlink{class_tentacle_slicers_1_1customs_1_1_bomb}{Bomb}. Celui-\/ci permet de lancer, après une longue canalisation, un gros projectile qui explose lors du premier contact ou lorsqu\textquotesingle{}il expire et blesse les ennemis dans une grande zone autour de lui, et les empêche de bouger pendant un court instant. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_aa4f86ba1ed765465f478d1bad8021f92}\label{class_tentacle_slicers_1_1customs_1_1_spells_aa4f86ba1ed765465f478d1bad8021f92}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Cthulhu\+Chains@{Cthulhu\+Chains}}
+\index{Cthulhu\+Chains@{Cthulhu\+Chains}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Cthulhu\+Chains()}{CthulhuChains()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Cthulhu\+Chains (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ac53a8734a12767f86c977c48f7ac7c7f}\label{class_tentacle_slicers_1_1customs_1_1_spells_ac53a8734a12767f86c977c48f7ac7c7f}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Cthulhu\+Lightning@{Cthulhu\+Lightning}}
+\index{Cthulhu\+Lightning@{Cthulhu\+Lightning}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Cthulhu\+Lightning()}{CthulhuLightning()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Cthulhu\+Lightning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un sort d\textquotesingle{}attaque à distance du boss. Celui-\/ci inflige des dégâts dans une zone après un certain délai. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_aa7ab3b9198afe02928388f6e7a894508}\label{class_tentacle_slicers_1_1customs_1_1_spells_aa7ab3b9198afe02928388f6e7a894508}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Cthulhu\+Meteor@{Cthulhu\+Meteor}}
+\index{Cthulhu\+Meteor@{Cthulhu\+Meteor}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Cthulhu\+Meteor()}{CthulhuMeteor()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Cthulhu\+Meteor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a748b59ef695b5ffc37dc3689d335cc9b}\label{class_tentacle_slicers_1_1customs_1_1_spells_a748b59ef695b5ffc37dc3689d335cc9b}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Cthulhu\+Voidball@{Cthulhu\+Voidball}}
+\index{Cthulhu\+Voidball@{Cthulhu\+Voidball}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Cthulhu\+Voidball()}{CthulhuVoidball()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Cthulhu\+Voidball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un sort d\textquotesingle{}entrave à distance du boss. Celui-\/ci ralentit de plus en plus les joueurs, où qu\textquotesingle{}ils soient. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_af747af60697de1f8dda3cbe8fe5a1c9d}\label{class_tentacle_slicers_1_1customs_1_1_spells_af747af60697de1f8dda3cbe8fe5a1c9d}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Dash@{Dash}}
+\index{Dash@{Dash}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Dash()}{Dash()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Dash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Dash. Celui-\/ci, à l\textquotesingle{}activation, accélère et rend son utilisateur invincible pendant un court instant et l\textquotesingle{}entoure d\textquotesingle{}une aura qui va ensuite brûler tous les ennemis à proximité durant l\textquotesingle{}effet, ce qui va leur faire perdre de la vie pendant quelques secondes. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a766be599caf989c80cfe9b892d9e9999}\label{class_tentacle_slicers_1_1customs_1_1_spells_a766be599caf989c80cfe9b892d9e9999}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Green\+Cultist\+Attack@{Green\+Cultist\+Attack}}
+\index{Green\+Cultist\+Attack@{Green\+Cultist\+Attack}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Green\+Cultist\+Attack()}{GreenCultistAttack()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Green\+Cultist\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des cultistes verts. L\textquotesingle{}attaque au corps-\/à-\/corps des cultistes verts et plutôt rapide et inflige de bons dégâts. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a6d0ec159b32ab1924fcceb617b801f57}\label{class_tentacle_slicers_1_1customs_1_1_spells_a6d0ec159b32ab1924fcceb617b801f57}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Holyball@{Holyball}}
+\index{Holyball@{Holyball}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Holyball()}{Holyball()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Holyball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Holy\+Ball. Celui-\/ci possède 3 charges et permet de lancer un unique projectile après une canalisation. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a2e91e950b16b11c0d613b3a011a4cbf8}\label{class_tentacle_slicers_1_1customs_1_1_spells_a2e91e950b16b11c0d613b3a011a4cbf8}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Impact@{Impact}}
+\index{Impact@{Impact}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Impact()}{Impact()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Impact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Impact. Celui-\/ci déclenche en face de l\textquotesingle{}utilisateur, après un délai, une explosion qui blesse les ennemis pris dans son rayon et les empêche d\textquotesingle{}attaquer ou de se déplacer pendant un court instant. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_ac42105a2f08364e32cfd41e3caaff07b}\label{class_tentacle_slicers_1_1customs_1_1_spells_ac42105a2f08364e32cfd41e3caaff07b}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Invincibility\+Buff@{Invincibility\+Buff}}
+\index{Invincibility\+Buff@{Invincibility\+Buff}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Invincibility\+Buff()}{InvincibilityBuff()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Invincibility\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Strength\+Buff. Celui-\/ci, à l\textquotesingle{}activation, rend son utilisateur invincible pendant un court instant. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_aa6c96bd7d4dbfae6c4e007e5e1a6292c}\label{class_tentacle_slicers_1_1customs_1_1_spells_aa6c96bd7d4dbfae6c4e007e5e1a6292c}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Load@{Load}}
+\index{Load@{Load}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily static void Tentacle\+Slicers.\+customs.\+Spells.\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utilisé pour charger au lancement du programme les spell data. Afin de conserver la comptabilité avec les sauvegardes précédentes, les nouveaux sorts doivent être rajoutés à la suite de ceux déjà présents dans la fonction. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a2fd11f64a567bf4b829fafe59fdb2777}\label{class_tentacle_slicers_1_1customs_1_1_spells_a2fd11f64a567bf4b829fafe59fdb2777}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Orange\+Cultist\+Attack@{Orange\+Cultist\+Attack}}
+\index{Orange\+Cultist\+Attack@{Orange\+Cultist\+Attack}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Orange\+Cultist\+Attack()}{OrangeCultistAttack()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Orange\+Cultist\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des cultistes oranges. L\textquotesingle{}attaque au corps-\/à-\/corps des cultistes oranges est plus lente et moins efficace que celle des cultistes verts. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a423a02f284ad48266b68b8952a5f9f6a}\label{class_tentacle_slicers_1_1customs_1_1_spells_a423a02f284ad48266b68b8952a5f9f6a}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Orange\+Cultist\+Fireball@{Orange\+Cultist\+Fireball}}
+\index{Orange\+Cultist\+Fireball@{Orange\+Cultist\+Fireball}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Orange\+Cultist\+Fireball()}{OrangeCultistFireball()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Orange\+Cultist\+Fireball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort d\textquotesingle{}atatque à ditance des cultistes oranges. Cette attaque consiste en un projectile (une boule de feu) projeté dans la direction de la cible du cultiste après une canalisation. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a1400f7def2ffb9f09f8c171bea304af2}\label{class_tentacle_slicers_1_1customs_1_1_spells_a1400f7def2ffb9f09f8c171bea304af2}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Player\+Attack@{Player\+Attack}}
+\index{Player\+Attack@{Player\+Attack}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Player\+Attack()}{PlayerAttack()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Player\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne l\textquotesingle{}attaque au corps-\/à-\/corps des joueurs. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a85c4c7a4dd8b935f2f1f412d4f809c22}\label{class_tentacle_slicers_1_1customs_1_1_spells_a85c4c7a4dd8b935f2f1f412d4f809c22}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Regeneration\+Buff@{Regeneration\+Buff}}
+\index{Regeneration\+Buff@{Regeneration\+Buff}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Regeneration\+Buff()}{RegenerationBuff()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Regeneration\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Regeneration\+Buff. Celui-\/ci, à l\textquotesingle{}activation, soigne son utilisateur sur une petite période. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a69a71ba970111827a09e04e8b40b48d5}\label{class_tentacle_slicers_1_1customs_1_1_spells_a69a71ba970111827a09e04e8b40b48d5}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Strength\+Buff@{Strength\+Buff}}
+\index{Strength\+Buff@{Strength\+Buff}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Strength\+Buff()}{StrengthBuff()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Strength\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Strength\+Buff. Celui-\/ci, à l\textquotesingle{}activation, augmente énormément la force physique de son utilisateur pendant un court instant. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_spells_a408ee32a021dc16ef9799804cfda39dc}\label{class_tentacle_slicers_1_1customs_1_1_spells_a408ee32a021dc16ef9799804cfda39dc}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}!Vampirism\+Buff@{Vampirism\+Buff}}
+\index{Vampirism\+Buff@{Vampirism\+Buff}!Tentacle\+Slicers\+::customs\+::\+Spells@{Tentacle\+Slicers\+::customs\+::\+Spells}}
+\subsubsection{\texorpdfstring{Vampirism\+Buff()}{VampirismBuff()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} Tentacle\+Slicers.\+customs.\+Spells.\+Vampirism\+Buff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le sort Vampirism\+Buff. Celui-\/ci, à l\textquotesingle{}activation, augmente énormément le score de vampirisme de son utilisateur pendant un court instant. 
+
+\begin{DoxyReturn}{Returns}
+Le sort 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/customs/Spells.\+cs\end{DoxyCompactItemize}

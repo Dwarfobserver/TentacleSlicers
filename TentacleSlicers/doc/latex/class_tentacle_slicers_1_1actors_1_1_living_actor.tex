@@ -1,0 +1,236 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor}{}\section{Tentacle\+Slicers.\+actors.\+Living\+Actor Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_living_actor}\index{Tentacle\+Slicers.\+actors.\+Living\+Actor@{Tentacle\+Slicers.\+actors.\+Living\+Actor}}
+
+
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} pour créer des personnages vivants pouvant être blessés ou soignés, qui sont retirés du monde lorsque leur vie atteint 0. Leur barre de vie peut être affichée temporairement au-\/dessus d\textquotesingle{}eux lorsque leur niveau de vie est modifiée.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Living\+Actor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.590164cm]{class_tentacle_slicers_1_1actors_1_1_living_actor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ad5c2bea3a216b8b7aba0aa65e1c72e56}{Living\+Actor} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, int life\+Max, bool showing\+Life=false)
+\begin{DoxyCompactList}\small\item\em Initialise la vie de l\textquotesingle{}acteur à sa valeur maximale donnée. Si showing\+Life est vrai, l\textquotesingle{}acteur affichera sa barre de vie au-\/dessus de lui un court instant lorsqu\textquotesingle{}elle est modifiée. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a3b86dc36055bcbe1838dd3df0c9274}{Vampirism\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les sorts utilisent ce ratio pour soigner leur possesseur en fonction des dégâts infligés. Initialement, les acteurs vivants ont un ratio de vampirisme nul. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a9b8adc982e25895a4509c870f784b5f1}{Draw} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}acteur et sa barre de vie si son affichage a été demandé à la création de l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+sealed override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}{Set\+Collision} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} actor\+Collision)
+\begin{DoxyCompactList}\small\item\em La fonction \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}{Set\+Collision()} de la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} est légèrement modifiée pour calculer ensuite l\textquotesingle{}ordonnée relative à l\textquotesingle{}acteur pour afficher sa barre de vie, si son affichage a été demandé à la création de l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise la vie de l\textquotesingle{}acteur, ce qui peut le tuer si elle est amenée à zéro, et actualise sa barre de vie si elle avait été demandée à la création de l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a2b73efca826044f8d15bdc94e13cf7}{Revive} ()
+\begin{DoxyCompactList}\small\item\em Ressussite l\textquotesingle{}acteur en lui restaurant sa collision, en lui jouant si possible une animation de type Birth (en donnant Stand comme type d\textquotesingle{}animation par défaut) et en le remettant dans le monde. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}{Damages} (double value)
+\begin{DoxyCompactList}\small\item\em Enlève des points de vie à l\textquotesingle{}acteur et le tue si sa vie est descendue à zéro. La barre de vie est rendue visible pour un court instant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ad91b82ee0b4708cb8cb1b305738dde10}{Heals} (double value)
+\begin{DoxyCompactList}\small\item\em Rajoute des points de vie à l\textquotesingle{}acteur, sans que sa vie maximale ne soit dépassée. La barre de vie est rendue visible pour un court instant. \end{DoxyCompactList}\item 
+int \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_abb76b0632c685efe4592cc8fafa11639}{Life\+Max} ()
+\begin{DoxyCompactList}\small\item\em Retourne le maximum de points de vie de l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_afbfbbe047e1191ec7c71533f7c6a3e62}{Actual\+Life} ()
+\begin{DoxyCompactList}\small\item\em Retourne la vie actuelle de l\textquotesingle{}acteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_ad8ab547f48d94eefa25b70d0c4d811e5}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_ad8ab547f48d94eefa25b70d0c4d811e5}} 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_bounded_double}{Bounded\+Double} {\bfseries Life}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} pour créer des personnages vivants pouvant être blessés ou soignés, qui sont retirés du monde lorsque leur vie atteint 0. Leur barre de vie peut être affichée temporairement au-\/dessus d\textquotesingle{}eux lorsque leur niveau de vie est modifiée. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_ad5c2bea3a216b8b7aba0aa65e1c72e56}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_ad5c2bea3a216b8b7aba0aa65e1c72e56}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Living\+Actor@{Living\+Actor}}
+\index{Living\+Actor@{Living\+Actor}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Living\+Actor()}{LivingActor()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Living\+Actor (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{int}]{life\+Max,  }\item[{bool}]{showing\+Life = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initialise la vie de l\textquotesingle{}acteur à sa valeur maximale donnée. Si showing\+Life est vrai, l\textquotesingle{}acteur affichera sa barre de vie au-\/dessus de lui un court instant lorsqu\textquotesingle{}elle est modifiée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de l\textquotesingle{}acteur dans le monde \\
+\hline
+{\em life\+Max} & La vie maximale de l\textquotesingle{}acteur \\
+\hline
+{\em showing\+Life} & Indique si il faut afficher la vie de l\textquotesingle{}acteur. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_afbfbbe047e1191ec7c71533f7c6a3e62}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_afbfbbe047e1191ec7c71533f7c6a3e62}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Actual\+Life@{Actual\+Life}}
+\index{Actual\+Life@{Actual\+Life}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Actual\+Life()}{ActualLife()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Actual\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne la vie actuelle de l\textquotesingle{}acteur. 
+
+\begin{DoxyReturn}{Returns}
+La vie actuelle de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Damages@{Damages}}
+\index{Damages@{Damages}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Damages()}{Damages()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Damages (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enlève des points de vie à l\textquotesingle{}acteur et le tue si sa vie est descendue à zéro. La barre de vie est rendue visible pour un court instant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Le nombre de points de vie enlevés \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a40d9846096c2aaddb7112631310b240b}{Tentacle\+Slicers.\+actors.\+Player\+Character}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ac596097268c10f823e40533c869ced33}{Tentacle\+Slicers.\+actors.\+Mob}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_aeeb398970bf8433917fe035f5ec47f66}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_aa910b96f987e5aba0fb93b2aeabe6261}{Tentacle\+Slicers.\+customs.\+Knight}, and \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a5a34249a8265891f3c3eb6d469f11b93}{Tentacle\+Slicers.\+customs.\+Knight\+Tomb}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_a9b8adc982e25895a4509c870f784b5f1}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_a9b8adc982e25895a4509c870f784b5f1}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Draw (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche l\textquotesingle{}acteur et sa barre de vie si son affichage a été demandé à la création de l\textquotesingle{}acteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position relative pour afficher l\textquotesingle{}acteur \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a8120affe933e4003bc0866f06589eeac}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_ad91b82ee0b4708cb8cb1b305738dde10}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_ad91b82ee0b4708cb8cb1b305738dde10}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Heals@{Heals}}
+\index{Heals@{Heals}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Heals()}{Heals()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Heals (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rajoute des points de vie à l\textquotesingle{}acteur, sans que sa vie maximale ne soit dépassée. La barre de vie est rendue visible pour un court instant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Le nombre de points de vie rendus \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_abb76b0632c685efe4592cc8fafa11639}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_abb76b0632c685efe4592cc8fafa11639}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Life\+Max@{Life\+Max}}
+\index{Life\+Max@{Life\+Max}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Life\+Max()}{LifeMax()}}
+{\footnotesize\ttfamily int Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Life\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le maximum de points de vie de l\textquotesingle{}acteur. 
+
+\begin{DoxyReturn}{Returns}
+Le maximum de points de vie de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a2b73efca826044f8d15bdc94e13cf7}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a2b73efca826044f8d15bdc94e13cf7}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Revive@{Revive}}
+\index{Revive@{Revive}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Revive()}{Revive()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Revive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ressussite l\textquotesingle{}acteur en lui restaurant sa collision, en lui jouant si possible une animation de type Birth (en donnant Stand comme type d\textquotesingle{}animation par défaut) et en le remettant dans le monde. 
+
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_aa41129d0d5981d185b00a8376505ebf6}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_a32666ab0b1401a669d4c32237c310c3e}{Tentacle\+Slicers.\+customs.\+Knight}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Set\+Collision@{Set\+Collision}}
+\index{Set\+Collision@{Set\+Collision}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Set\+Collision()}{SetCollision()}}
+{\footnotesize\ttfamily sealed override void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Set\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision}}]{actor\+Collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+La fonction \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}{Set\+Collision()} de la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} est légèrement modifiée pour calculer ensuite l\textquotesingle{}ordonnée relative à l\textquotesingle{}acteur pour afficher sa barre de vie, si son affichage a été demandé à la création de l\textquotesingle{}acteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor\+Collision} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a6e1eab5bc50ecb03842f49d0dc3b136e}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise la vie de l\textquotesingle{}acteur, ce qui peut le tuer si elle est amenée à zéro, et actualise sa barre de vie si elle avait été demandée à la création de l\textquotesingle{}acteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}{Tentacle\+Slicers.\+actors.\+Mob}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}{Tentacle\+Slicers.\+actors.\+Player\+Character}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}{Tentacle\+Slicers.\+customs.\+Knight\+Tomb}, and \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_a402aea79e343f8f5a1b153a143edf9fb}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a3b86dc36055bcbe1838dd3df0c9274}\label{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a3b86dc36055bcbe1838dd3df0c9274}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}!Vampirism\+Ratio@{Vampirism\+Ratio}}
+\index{Vampirism\+Ratio@{Vampirism\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Living\+Actor@{Tentacle\+Slicers\+::actors\+::\+Living\+Actor}}
+\subsubsection{\texorpdfstring{Vampirism\+Ratio()}{VampirismRatio()}}
+{\footnotesize\ttfamily virtual double Tentacle\+Slicers.\+actors.\+Living\+Actor.\+Vampirism\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les sorts utilisent ce ratio pour soigner leur possesseur en fonction des dégâts infligés. Initialement, les acteurs vivants ont un ratio de vampirisme nul. 
+
+\begin{DoxyReturn}{Returns}
+Le pourcentage de vie rendu au possesseur par rapport aux dégâts infligés 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_acc7326054ba178ac92ff43ed0fbaab2d}{Tentacle\+Slicers.\+actors.\+Player\+Character}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Living\+Actor.\+cs\end{DoxyCompactItemize}

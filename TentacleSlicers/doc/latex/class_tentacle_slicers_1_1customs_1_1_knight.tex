@@ -1,0 +1,97 @@
+\hypertarget{class_tentacle_slicers_1_1customs_1_1_knight}{}\section{Tentacle\+Slicers.\+customs.\+Knight Class Reference}
+\label{class_tentacle_slicers_1_1customs_1_1_knight}\index{Tentacle\+Slicers.\+customs.\+Knight@{Tentacle\+Slicers.\+customs.\+Knight}}
+
+
+Spécifie la classe de personnages jouables en donnant des animations et une hitbox au personnage. De plus, crée une tombe lors de la mort du personnage.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+customs.\+Knight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.590164cm]{class_tentacle_slicers_1_1customs_1_1_knight}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_ad7f2859f506368ab55ffae03324220ae}{Knight} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, int num, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats} stats=null)
+\begin{DoxyCompactList}\small\item\em Initialise le personnage joueur avec sa hitbox, son attaque au corps-\/à-\/corps, (associée au numéro 0) sa vitesse, ses points de vie et ses animations. Il est possible de créer le personnage en lui donnant ses statistiques. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_aa910b96f987e5aba0fb93b2aeabe6261}{Damages} (double value)
+\begin{DoxyCompactList}\small\item\em Lorsque le personnage est tué, il laisse une tombe à son emplacmeent afin de pouvoir le faire revivre. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_a32666ab0b1401a669d4c32237c310c3e}{Revive} ()
+\begin{DoxyCompactList}\small\item\em Lors de la résurrection du personnage, son booléen permet à nouveau la création d\textquotesingle{}une tombe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_ab8c50b71a8d2b5e5d4b9050f7c4962ba}\label{class_tentacle_slicers_1_1customs_1_1_knight_ab8c50b71a8d2b5e5d4b9050f7c4962ba}} 
+const int {\bfseries Initial\+Speed} = 260
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe de personnages jouables en donnant des animations et une hitbox au personnage. De plus, crée une tombe lors de la mort du personnage. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_ad7f2859f506368ab55ffae03324220ae}\label{class_tentacle_slicers_1_1customs_1_1_knight_ad7f2859f506368ab55ffae03324220ae}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}}
+\subsubsection{\texorpdfstring{Knight()}{Knight()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+customs.\+Knight.\+Knight (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{int}]{num,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_stats}{Player\+Stats}}]{stats = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Initialise le personnage joueur avec sa hitbox, son attaque au corps-\/à-\/corps, (associée au numéro 0) sa vitesse, ses points de vie et ses animations. Il est possible de créer le personnage en lui donnant ses statistiques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de départ du joueur \\
+\hline
+{\em num} & Le numéro du joueur, utilis épour déterminer sa couleur \\
+\hline
+{\em stats} & Les statistiques optionnelles du joueur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_aa910b96f987e5aba0fb93b2aeabe6261}\label{class_tentacle_slicers_1_1customs_1_1_knight_aa910b96f987e5aba0fb93b2aeabe6261}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}!Damages@{Damages}}
+\index{Damages@{Damages}!Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}}
+\subsubsection{\texorpdfstring{Damages()}{Damages()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+customs.\+Knight.\+Damages (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lorsque le personnage est tué, il laisse une tombe à son emplacmeent afin de pouvoir le faire revivre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Dégâts entrants \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a40d9846096c2aaddb7112631310b240b}{Tentacle\+Slicers.\+actors.\+Player\+Character}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_a32666ab0b1401a669d4c32237c310c3e}\label{class_tentacle_slicers_1_1customs_1_1_knight_a32666ab0b1401a669d4c32237c310c3e}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}!Revive@{Revive}}
+\index{Revive@{Revive}!Tentacle\+Slicers\+::customs\+::\+Knight@{Tentacle\+Slicers\+::customs\+::\+Knight}}
+\subsubsection{\texorpdfstring{Revive()}{Revive()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+customs.\+Knight.\+Revive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lors de la résurrection du personnage, son booléen permet à nouveau la création d\textquotesingle{}une tombe. 
+
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a2b73efca826044f8d15bdc94e13cf7}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/customs/Knight.\+cs\end{DoxyCompactItemize}

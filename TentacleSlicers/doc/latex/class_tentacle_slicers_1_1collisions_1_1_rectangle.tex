@@ -1,0 +1,136 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle}{}\section{Tentacle\+Slicers.\+collisions.\+Rectangle Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_rectangle}\index{Tentacle\+Slicers.\+collisions.\+Rectangle@{Tentacle\+Slicers.\+collisions.\+Rectangle}}
+
+
+Une forme dont la zone de collision est rectangulaire. Il s\textquotesingle{}agit de la forme utilisé pour les collisions des acteurs, donc toutes les formes implémentent un test de collision avec les rectangles.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_rectangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle_acfb56947ab8ea94dcba7fb6ce2956b9f}{Rectangle} (double witdh, double height)
+\begin{DoxyCompactList}\small\item\em Crée un rectangle avec les dimensons données. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle_a8d770e1cd3fc4b6315f791f918fa4eaa}{Collides} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Indique si les deux rectangles ssont en collision. \end{DoxyCompactList}\item 
+override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle_a89ed2b7c68bab5fa949388dc7d16cb0d}{Including\+Rectangle} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position)
+\begin{DoxyCompactList}\small\item\em Retourne le rectangle courant (car il s\textquotesingle{}inclut lui-\/même) avec la position indiquée. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle_af1479110f926f911173795bf9c7a5a4c}{Replaces} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Replace la position du rectangle courant en fonction du rectangle indiqué. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_af19b1b5da2211b18a5b2f0dd9be7086b}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_af19b1b5da2211b18a5b2f0dd9be7086b}} 
+double {\bfseries Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_a1aa5df69dd897fb8437365f88793ee40}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_a1aa5df69dd897fb8437365f88793ee40}} 
+double {\bfseries Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Une forme dont la zone de collision est rectangulaire. Il s\textquotesingle{}agit de la forme utilisé pour les collisions des acteurs, donc toutes les formes implémentent un test de collision avec les rectangles. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_acfb56947ab8ea94dcba7fb6ce2956b9f}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_acfb56947ab8ea94dcba7fb6ce2956b9f}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{Rectangle()}{Rectangle()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Rectangle.\+Rectangle (\begin{DoxyParamCaption}\item[{double}]{witdh,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Crée un rectangle avec les dimensons données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em witdh} & La largeur du rectangle \\
+\hline
+{\em height} & La hauteur du rectangle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_a8d770e1cd3fc4b6315f791f918fa4eaa}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_a8d770e1cd3fc4b6315f791f918fa4eaa}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}!Collides@{Collides}}
+\index{Collides@{Collides}!Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{Collides()}{Collides()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+collisions.\+Rectangle.\+Collides (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Indique si les deux rectangles ssont en collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hitbox} & Le rectangle indiqué \\
+\hline
+{\em p1} & Le centre du rectangle courant \\
+\hline
+{\em p2} & Le centre du rectangle indiqué \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si les deux rectangles sont en collision 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a51bde480596aa821d6d927427864ae5c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_a89ed2b7c68bab5fa949388dc7d16cb0d}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_a89ed2b7c68bab5fa949388dc7d16cb0d}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}!Including\+Rectangle@{Including\+Rectangle}}
+\index{Including\+Rectangle@{Including\+Rectangle}!Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{Including\+Rectangle()}{IncludingRectangle()}}
+{\footnotesize\ttfamily override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} Tentacle\+Slicers.\+collisions.\+Rectangle.\+Including\+Rectangle (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne le rectangle courant (car il s\textquotesingle{}inclut lui-\/même) avec la position indiquée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position indiquée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le rectangle courant avec la position indiquée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a00c94b5a1e83d9db6aa3a4cab969fd2c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_rectangle_af1479110f926f911173795bf9c7a5a4c}\label{class_tentacle_slicers_1_1collisions_1_1_rectangle_af1479110f926f911173795bf9c7a5a4c}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}!Replaces@{Replaces}}
+\index{Replaces@{Replaces}!Tentacle\+Slicers\+::collisions\+::\+Rectangle@{Tentacle\+Slicers\+::collisions\+::\+Rectangle}}
+\subsubsection{\texorpdfstring{Replaces()}{Replaces()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+collisions.\+Rectangle.\+Replaces (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Replace la position du rectangle courant en fonction du rectangle indiqué. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hitbox} & Le rectangle indiqué \\
+\hline
+{\em p1} & Le centre du rectangle courant \\
+\hline
+{\em p2} & Le centre du rectangle indiqué \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Rectangle.\+cs\end{DoxyCompactItemize}

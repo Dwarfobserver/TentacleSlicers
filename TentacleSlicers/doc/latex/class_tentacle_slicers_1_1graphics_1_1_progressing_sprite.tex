@@ -1,0 +1,91 @@
+\hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}{}\section{Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite Class Reference}
+\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}\index{Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite@{Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite}}
+
+
+Dessine un sprite d\textquotesingle{}un de ses côtés vers le côté opposé, selon un pourcentage de progression \+: à 0, le sprite n\textquotesingle{}est pas dessiné et à 1, le sprite est totalement dessiné. Il peut être associé à un sprite dessiné derrière lui et qui est toujours dessiné en entier. Les booléens Vertical et Inverted permettent de changer les côtés de départ et fin pour dessiner le sprite.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a3440006da44c22abde8a74d40a2b4d7f}{Progressing\+Sprite} (Bitmap foreground\+Sprite, Bitmap background\+Sprite=null, double percent\+Merge=0, int shift\+Height=0)
+\begin{DoxyCompactList}\small\item\em Crée le \hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}{Progressing\+Sprite} avec le ou les sprites donnés, le décalage et la marge qui dessine une partie des bordures du sprite, quel que soit son pourcentage associé. Par défaut, le sprite est dessiné de gauche à droite et est associé au pourcentage maximal (1). \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_acee169ba719f33614174a7f5e245192d}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine le sprite en fond si il existe, puis le sprite en fonction du pourcentage dans le rectangle calculé selon le pourcentage courant et les booléens Vertical et Inverted, qui déterminent dans quel sens se dessine le sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a432c90adb880b2ab290af0f61a805c03}\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a432c90adb880b2ab290af0f61a805c03}} 
+bool {\bfseries Vertical}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a9bfb2789c54f08660c8c21158805c34c}\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a9bfb2789c54f08660c8c21158805c34c}} 
+bool {\bfseries Inverted}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a80179de4d529b253feedf5be7ea829d6}\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a80179de4d529b253feedf5be7ea829d6}} 
+double {\bfseries Percent}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Dessine un sprite d\textquotesingle{}un de ses côtés vers le côté opposé, selon un pourcentage de progression \+: à 0, le sprite n\textquotesingle{}est pas dessiné et à 1, le sprite est totalement dessiné. Il peut être associé à un sprite dessiné derrière lui et qui est toujours dessiné en entier. Les booléens Vertical et Inverted permettent de changer les côtés de départ et fin pour dessiner le sprite. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a3440006da44c22abde8a74d40a2b4d7f}\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_a3440006da44c22abde8a74d40a2b4d7f}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite}!Progressing\+Sprite@{Progressing\+Sprite}}
+\index{Progressing\+Sprite@{Progressing\+Sprite}!Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite}}
+\subsubsection{\texorpdfstring{Progressing\+Sprite()}{ProgressingSprite()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite.\+Progressing\+Sprite (\begin{DoxyParamCaption}\item[{Bitmap}]{foreground\+Sprite,  }\item[{Bitmap}]{background\+Sprite = {\ttfamily null},  }\item[{double}]{percent\+Merge = {\ttfamily 0},  }\item[{int}]{shift\+Height = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Crée le \hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}{Progressing\+Sprite} avec le ou les sprites donnés, le décalage et la marge qui dessine une partie des bordures du sprite, quel que soit son pourcentage associé. Par défaut, le sprite est dessiné de gauche à droite et est associé au pourcentage maximal (1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em foreground\+Sprite} & Le sprite dessiné en fonction du pourcentage \\
+\hline
+{\em background\+Sprite} & Le sprite optionnel dessiné derrière \\
+\hline
+{\em percent\+Merge} & Le pourcentage du sprite toujours dessiné \\
+\hline
+{\em shift\+Height} & Le décalage \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_acee169ba719f33614174a7f5e245192d}\label{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_acee169ba719f33614174a7f5e245192d}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Progressing\+Sprite}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine le sprite en fond si il existe, puis le sprite en fonction du pourcentage dans le rectangle calculé selon le pourcentage courant et les booléens Vertical et Inverted, qui déterminent dans quel sens se dessine le sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position du sprite \\
+\hline
+{\em g} & L\textquotesingle{}objet graphique permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2a673911c8438b95e4f1f50f06ccaa41}{Tentacle\+Slicers.\+graphics.\+Custom\+Sprite}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/graphics/Progressing\+Sprite.\+cs\end{DoxyCompactItemize}

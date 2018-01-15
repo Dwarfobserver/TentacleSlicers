@@ -1,0 +1,13 @@
+\hypertarget{namespace_tentacle_slicers_1_1interfaces}{}\section{Tentacle\+Slicers.\+interfaces Namespace Reference}
+\label{namespace_tentacle_slicers_1_1interfaces}\index{Tentacle\+Slicers.\+interfaces@{Tentacle\+Slicers.\+interfaces}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{I\+Controller}
+\begin{DoxyCompactList}\small\item\em Les classes qui implémentent la classe \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{I\+Controller} doivent recevoir tous les évènements du clavier, déléguées depuis la fenêtre de l\textquotesingle{}application (si il n\textquotesingle{}ont pas été traités avant). De la même manière qu\textquotesingle{}avec Key\+Pressed, les fonctions Key\+Down et Key\+Up doivent renvoyer vrai si aucune action n\textquotesingle{}a été déclenchée par l\textquotesingle{}évènement. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{I\+Drawable}
+\begin{DoxyCompactList}\small\item\em A chaque itération de la boucle principale, les classes qui implémentent cette interface doivent être dessinées en appelant leur fonction Draw, en passant un point de décalage pour les éléments qui se dessinent avec une position relative, et en passant l\textquotesingle{}objet permettant de dessiner. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_key_pressed}{I\+Key\+Pressed}
+\begin{DoxyCompactList}\small\item\em Les classes qui implémentent cette interface reçoivent des évènements de touches pressées qu\textquotesingle{}elles doivent traiter. Si aucune action n\textquotesingle{}est déclenchée, la fonction Key\+Pressed doit renvoyer vrai pour indiquer qu\textquotesingle{}il y a encore peut-\/être une action à déclencher avec cet évènement. \end{DoxyCompactList}\item 
+interface \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{I\+Tickable}
+\begin{DoxyCompactList}\small\item\em A chaque itération de la boucle principale, les classes qui implémentent cette interface doivent être actualisées en appelant leur fonction Tick. et en indiquant le temps écoulé en millisecondes. \end{DoxyCompactList}\end{DoxyCompactItemize}

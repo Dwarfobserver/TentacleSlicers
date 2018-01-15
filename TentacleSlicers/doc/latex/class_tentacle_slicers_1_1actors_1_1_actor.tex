@@ -1,0 +1,363 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_actor}{}\section{Tentacle\+Slicers.\+actors.\+Actor Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_actor}\index{Tentacle\+Slicers.\+actors.\+Actor@{Tentacle\+Slicers.\+actors.\+Actor}}
+
+
+Classe centrale du jeu, les acteurs sont les seules entités générées dans le monde crée. Ils sont déclinés en sous-\/classes pour représenter les missiles, les joueurs, les ennemis, le décor ou une simple animation.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Actor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.721312cm]{class_tentacle_slicers_1_1actors_1_1_actor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_ab544a07f9d12750f9896e4a604b699f1}{Actor} (Point position)
+\begin{DoxyCompactList}\small\item\em Attribue un identifiant unique au nouvel acteur et le rajoute dans le monde avec la position indiquée. Par défaut, son orientation est tournée vers le bas, il ne génère pas de résidus à sa mort et il appartient à la faction neutre (il n\textquotesingle{}est donc ami ou ennemi avec personne). \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_ae06facc411c8cd44596e59020d131dd7}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}acteur si il possède un Sprite\+Handler à partir de sa position basse. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a13e48a1ca022ce7c971c77f1354e3daf}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise le Sprite\+Handler de l\textquotesingle{}acteur (si il en possède un). \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_ae52e3a2860b172692699d30c0f634041}{Move} (Point shift)
+\begin{DoxyCompactList}\small\item\em Déplace l\textquotesingle{}acteur dans le monde, actualise ses collisions (si il en a) et le retrie dans la liste d\textquotesingle{}acteurs du monde pour tenir compte de sa nouvelle ordonnée dans l\textquotesingle{}ordre d\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_acab921d9a0542c58c4d6a635f8cf93f5}{Replaces} (Point position)
+\begin{DoxyCompactList}\small\item\em Place l\textquotesingle{}acteur à une nouvelle position sans actualiser ses collisions. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_afffc67c1b360fdf0f268469e7016acad}{Kill} ()
+\begin{DoxyCompactList}\small\item\em Retire l\textquotesingle{}acteur du monde, le marque comme mort et crée un résidu si le booléen Residu\+At\+Death est vrai (et si l\textquotesingle{}acteur possède des animations). Si il possède une collision, celle-\/ci est retirée du gestionnaire de collisions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_aa41129d0d5981d185b00a8376505ebf6}{Revive} ()
+\begin{DoxyCompactList}\small\item\em Ressussite l\textquotesingle{}acteur en lui restaurant sa collision, en lui jouant si possible une animation de type Birth (en donnant Stand comme type d\textquotesingle{}animation par défaut) et en le remettant dans le monde. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a6e1eab5bc50ecb03842f49d0dc3b136e}{Set\+Collision} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} actor\+Collision)
+\begin{DoxyCompactList}\small\item\em Retire l\textquotesingle{}acteur du monde pour supprimer son ancienne collision (si il en avait une) du gestionnaire de collision et lui attribue sa nouvelle collision, puis remet l\textquotesingle{}acteur dans le monde. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a50dc47bc896ec330738ba8e810931ad3}{Is\+Dead} ()
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}acteur a déjà été tué, c\textquotesingle{}est-\/à-\/dire retiré du monde. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a4f907e69c2500dff893949f57af1d600}{Friend\+With} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor)
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}actor donné est ami avec l\textquotesingle{}acteur courant. Un acteur neutre n\textquotesingle{}est ami avec personne. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_acc9e6224adeadcc335d7e3b446080b83}{Ennemy\+With} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} actor)
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}actor donné est ennemi avec l\textquotesingle{}acteur courant. Un acteur neutre n\textquotesingle{}est ennemi avec personne. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a8041088479e124a66c24d185f5385b2f}{Physical\+Damages\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les attaques au corps-\/à-\/corps utilisent ce ratio pour augmenter leurs dégâts. Initialement, les acteurs possèdent un ratio neutre. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a83e7b818449b5e92e3a7003c0cc6f571}{Spell\+Power\+Ratio} ()
+\begin{DoxyCompactList}\small\item\em Les sorts utilisent ce ratio pour augmenter l\textquotesingle{}impact de leurs effets. Initialement, les acteurs possèdent un ratio neutre. \end{DoxyCompactList}\item 
+Point \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a780cf5a4c31f30307f67ac0a152ec7c0}{Muzzle} (double gap=0)
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}extrémité de l\textquotesingle{}acteur dans la direction de son orientation actuelle. \end{DoxyCompactList}\item 
+Point \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_aaf93f9e36eee2f41a47cf5c0b954b535}{Bottom} ()
+\begin{DoxyCompactList}\small\item\em Retourne le bas de l\textquotesingle{}acteur, à l\textquotesingle{}extrémité de sa zone de collision. \end{DoxyCompactList}\item 
+int \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a55440b152571f25e7907a1c59b070aac}{Compare\+To} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} other)
+\begin{DoxyCompactList}\small\item\em Trie les acteurs en fonction de leur ordonnée pour les afficher dans le bon ordre. En cas d\textquotesingle{}indécision, l\textquotesingle{}identifiant des acteurs les départagent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a58d01ee43dfd47e861203148419594d9}\label{class_tentacle_slicers_1_1actors_1_1_actor_a58d01ee43dfd47e861203148419594d9}} 
+Point {\bfseries Speed\+Vector}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a6645a382482913a4a87a080ca1f20731}\label{class_tentacle_slicers_1_1actors_1_1_actor_a6645a382482913a4a87a080ca1f20731}} 
+Point {\bfseries Orientation}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a4d5b50437428292c1ac5b4682e68b22c}\label{class_tentacle_slicers_1_1actors_1_1_actor_a4d5b50437428292c1ac5b4682e68b22c}} 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler}{Sprite\+Handler} {\bfseries Sprite\+Handler}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a6173e1244f0bbbefc0a29a46289ad743}\label{class_tentacle_slicers_1_1actors_1_1_actor_a6173e1244f0bbbefc0a29a46289ad743}} 
+int {\bfseries Speed}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a160cec86517bc5eecb8f3aa11d3afb2c}\label{class_tentacle_slicers_1_1actors_1_1_actor_a160cec86517bc5eecb8f3aa11d3afb2c}} 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_residu_data}{Residu\+Data} {\bfseries Residu\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a8ac01513637a53735f313b67734542ca}\label{class_tentacle_slicers_1_1actors_1_1_actor_a8ac01513637a53735f313b67734542ca}} 
+long {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_aa293b5d0dd20935fc7313dd6f60c3819}\label{class_tentacle_slicers_1_1actors_1_1_actor_aa293b5d0dd20935fc7313dd6f60c3819}} 
+\hyperlink{namespace_tentacle_slicers_1_1actors_aaae1293c828d51288c24ab9156ff5475}{Faction} {\bfseries Faction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a42db450bc7938adb83bc674642335850}\label{class_tentacle_slicers_1_1actors_1_1_actor_a42db450bc7938adb83bc674642335850}} 
+Point {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a7c41b33fbb33abdb7eb652ab61b690ef}\label{class_tentacle_slicers_1_1actors_1_1_actor_a7c41b33fbb33abdb7eb652ab61b690ef}} 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision} {\bfseries Collision}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe centrale du jeu, les acteurs sont les seules entités générées dans le monde crée. Ils sont déclinés en sous-\/classes pour représenter les missiles, les joueurs, les ennemis, le décor ou une simple animation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_ab544a07f9d12750f9896e4a604b699f1}\label{class_tentacle_slicers_1_1actors_1_1_actor_ab544a07f9d12750f9896e4a604b699f1}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Actor@{Actor}}
+\index{Actor@{Actor}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Actor()}{Actor()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Actor.\+Actor (\begin{DoxyParamCaption}\item[{Point}]{position }\end{DoxyParamCaption})}
+
+
+
+Attribue un identifiant unique au nouvel acteur et le rajoute dans le monde avec la position indiquée. Par défaut, son orientation est tournée vers le bas, il ne génère pas de résidus à sa mort et il appartient à la faction neutre (il n\textquotesingle{}est donc ami ou ennemi avec personne). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de l\textquotesingle{}acteur dans le monde \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_aaf93f9e36eee2f41a47cf5c0b954b535}\label{class_tentacle_slicers_1_1actors_1_1_actor_aaf93f9e36eee2f41a47cf5c0b954b535}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Bottom@{Bottom}}
+\index{Bottom@{Bottom}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Bottom()}{Bottom()}}
+{\footnotesize\ttfamily Point Tentacle\+Slicers.\+actors.\+Actor.\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le bas de l\textquotesingle{}acteur, à l\textquotesingle{}extrémité de sa zone de collision. 
+
+\begin{DoxyReturn}{Returns}
+Le bas de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a55440b152571f25e7907a1c59b070aac}\label{class_tentacle_slicers_1_1actors_1_1_actor_a55440b152571f25e7907a1c59b070aac}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Compare\+To@{Compare\+To}}
+\index{Compare\+To@{Compare\+To}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Compare\+To()}{CompareTo()}}
+{\footnotesize\ttfamily int Tentacle\+Slicers.\+actors.\+Actor.\+Compare\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{other }\end{DoxyParamCaption})}
+
+
+
+Trie les acteurs en fonction de leur ordonnée pour les afficher dans le bon ordre. En cas d\textquotesingle{}indécision, l\textquotesingle{}identifiant des acteurs les départagent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & L\textquotesingle{}acteur à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si il s\textquotesingle{}agit du même acteur, 1 si l\textquotesingle{}acteur courant est plus bas, -\/1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_ae06facc411c8cd44596e59020d131dd7}\label{class_tentacle_slicers_1_1actors_1_1_actor_ae06facc411c8cd44596e59020d131dd7}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Actor.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche l\textquotesingle{}acteur si il possède un Sprite\+Handler à partir de sa position basse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position relative pour afficher l\textquotesingle{}acteur \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a9b8adc982e25895a4509c870f784b5f1}{Tentacle\+Slicers.\+actors.\+Living\+Actor}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a8120affe933e4003bc0866f06589eeac}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_acc9e6224adeadcc335d7e3b446080b83}\label{class_tentacle_slicers_1_1actors_1_1_actor_acc9e6224adeadcc335d7e3b446080b83}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Ennemy\+With@{Ennemy\+With}}
+\index{Ennemy\+With@{Ennemy\+With}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Ennemy\+With()}{EnnemyWith()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Actor.\+Ennemy\+With (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}actor donné est ennemi avec l\textquotesingle{}acteur courant. Un acteur neutre n\textquotesingle{}est ennemi avec personne. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur avec lequel on vérifie l\textquotesingle{}ennemi \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si les deux acteurs sont ennnemis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a4f907e69c2500dff893949f57af1d600}\label{class_tentacle_slicers_1_1actors_1_1_actor_a4f907e69c2500dff893949f57af1d600}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Friend\+With@{Friend\+With}}
+\index{Friend\+With@{Friend\+With}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Friend\+With()}{FriendWith()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Actor.\+Friend\+With (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}}]{actor }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}actor donné est ami avec l\textquotesingle{}acteur courant. Un acteur neutre n\textquotesingle{}est ami avec personne. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor} & L\textquotesingle{}acteur avec lequel on vérifie l\textquotesingle{}amitié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si les deux acteurs sont amis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a50dc47bc896ec330738ba8e810931ad3}\label{class_tentacle_slicers_1_1actors_1_1_actor_a50dc47bc896ec330738ba8e810931ad3}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Is\+Dead@{Is\+Dead}}
+\index{Is\+Dead@{Is\+Dead}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Is\+Dead()}{IsDead()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Actor.\+Is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}acteur a déjà été tué, c\textquotesingle{}est-\/à-\/dire retiré du monde. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}état de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_afffc67c1b360fdf0f268469e7016acad}\label{class_tentacle_slicers_1_1actors_1_1_actor_afffc67c1b360fdf0f268469e7016acad}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Kill@{Kill}}
+\index{Kill@{Kill}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Actor.\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retire l\textquotesingle{}acteur du monde, le marque comme mort et crée un résidu si le booléen Residu\+At\+Death est vrai (et si l\textquotesingle{}acteur possède des animations). Si il possède une collision, celle-\/ci est retirée du gestionnaire de collisions. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_ae52e3a2860b172692699d30c0f634041}\label{class_tentacle_slicers_1_1actors_1_1_actor_ae52e3a2860b172692699d30c0f634041}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Move@{Move}}
+\index{Move@{Move}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Actor.\+Move (\begin{DoxyParamCaption}\item[{Point}]{shift }\end{DoxyParamCaption})}
+
+
+
+Déplace l\textquotesingle{}acteur dans le monde, actualise ses collisions (si il en a) et le retrie dans la liste d\textquotesingle{}acteurs du monde pour tenir compte de sa nouvelle ordonnée dans l\textquotesingle{}ordre d\textquotesingle{}affichage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & Les coordonnées du point correspondent au déplacement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a780cf5a4c31f30307f67ac0a152ec7c0}\label{class_tentacle_slicers_1_1actors_1_1_actor_a780cf5a4c31f30307f67ac0a152ec7c0}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Muzzle@{Muzzle}}
+\index{Muzzle@{Muzzle}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Muzzle()}{Muzzle()}}
+{\footnotesize\ttfamily Point Tentacle\+Slicers.\+actors.\+Actor.\+Muzzle (\begin{DoxyParamCaption}\item[{double}]{gap = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}extrémité de l\textquotesingle{}acteur dans la direction de son orientation actuelle. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}extrémité de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a8041088479e124a66c24d185f5385b2f}\label{class_tentacle_slicers_1_1actors_1_1_actor_a8041088479e124a66c24d185f5385b2f}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}}
+\index{Physical\+Damages\+Ratio@{Physical\+Damages\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Physical\+Damages\+Ratio()}{PhysicalDamagesRatio()}}
+{\footnotesize\ttfamily virtual double Tentacle\+Slicers.\+actors.\+Actor.\+Physical\+Damages\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les attaques au corps-\/à-\/corps utilisent ce ratio pour augmenter leurs dégâts. Initialement, les acteurs possèdent un ratio neutre. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de multiplication des dégâts 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a9a27f7eb262346d1e1837df5316823f2}{Tentacle\+Slicers.\+actors.\+Mob}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a1e6201247e550f29f061ac87c88c70f6}{Tentacle\+Slicers.\+actors.\+Player\+Character}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_acab921d9a0542c58c4d6a635f8cf93f5}\label{class_tentacle_slicers_1_1actors_1_1_actor_acab921d9a0542c58c4d6a635f8cf93f5}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Replaces@{Replaces}}
+\index{Replaces@{Replaces}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Replaces()}{Replaces()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Actor.\+Replaces (\begin{DoxyParamCaption}\item[{Point}]{position }\end{DoxyParamCaption})}
+
+
+
+Place l\textquotesingle{}acteur à une nouvelle position sans actualiser ses collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La nouvelle position de l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_aa41129d0d5981d185b00a8376505ebf6}\label{class_tentacle_slicers_1_1actors_1_1_actor_aa41129d0d5981d185b00a8376505ebf6}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Revive@{Revive}}
+\index{Revive@{Revive}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Revive()}{Revive()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Actor.\+Revive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ressussite l\textquotesingle{}acteur en lui restaurant sa collision, en lui jouant si possible une animation de type Birth (en donnant Stand comme type d\textquotesingle{}animation par défaut) et en le remettant dans le monde. 
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a7a2b73efca826044f8d15bdc94e13cf7}{Tentacle\+Slicers.\+actors.\+Living\+Actor}, and \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_a32666ab0b1401a669d4c32237c310c3e}{Tentacle\+Slicers.\+customs.\+Knight}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a6e1eab5bc50ecb03842f49d0dc3b136e}\label{class_tentacle_slicers_1_1actors_1_1_actor_a6e1eab5bc50ecb03842f49d0dc3b136e}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Set\+Collision@{Set\+Collision}}
+\index{Set\+Collision@{Set\+Collision}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Set\+Collision()}{SetCollision()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Actor.\+Set\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision}}]{actor\+Collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retire l\textquotesingle{}acteur du monde pour supprimer son ancienne collision (si il en avait une) du gestionnaire de collision et lui attribue sa nouvelle collision, puis remet l\textquotesingle{}acteur dans le monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actor\+Collision} & La nouvelle collision de l\textquotesingle{}acteur \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_missile_a978a6d6f78b7059b86747b9fbaf7f9fc}{Tentacle\+Slicers.\+actors.\+Missile}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_ac5f070aa8e36c2815070a654a242b9ef}{Tentacle\+Slicers.\+actors.\+Living\+Actor}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_powerup_aed821572dc4831af53c26150736986d5}{Tentacle\+Slicers.\+actors.\+Powerup}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a83e7b818449b5e92e3a7003c0cc6f571}\label{class_tentacle_slicers_1_1actors_1_1_actor_a83e7b818449b5e92e3a7003c0cc6f571}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Spell\+Power\+Ratio@{Spell\+Power\+Ratio}}
+\index{Spell\+Power\+Ratio@{Spell\+Power\+Ratio}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Spell\+Power\+Ratio()}{SpellPowerRatio()}}
+{\footnotesize\ttfamily virtual double Tentacle\+Slicers.\+actors.\+Actor.\+Spell\+Power\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Les sorts utilisent ce ratio pour augmenter l\textquotesingle{}impact de leurs effets. Initialement, les acteurs possèdent un ratio neutre. 
+
+\begin{DoxyReturn}{Returns}
+Le facteur de puissance des sorts 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_abdd7f17fd41371465d7f6b56bf91567c}{Tentacle\+Slicers.\+actors.\+Mob}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_aaeb9cd192c0caf68ed7aa994ebb6daa6}{Tentacle\+Slicers.\+actors.\+Player\+Character}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_actor_a13e48a1ca022ce7c971c77f1354e3daf}\label{class_tentacle_slicers_1_1actors_1_1_actor_a13e48a1ca022ce7c971c77f1354e3daf}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Actor@{Tentacle\+Slicers\+::actors\+::\+Actor}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Actor.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise le Sprite\+Handler de l\textquotesingle{}acteur (si il en possède un). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}{Tentacle\+Slicers.\+actors.\+Mob}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}{Tentacle\+Slicers.\+actors.\+Player\+Character}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_missile_ad07d0a9fe7aa8abce9aa5df78ebbb8be}{Tentacle\+Slicers.\+actors.\+Missile}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tentacle\+Slicers.\+actors.\+Living\+Actor}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}{Tentacle\+Slicers.\+customs.\+Knight\+Tomb}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_a402aea79e343f8f5a1b153a143edf9fb}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_bomb_aefe2c2dcf1c3159e161f781c4d0d08d7}{Tentacle\+Slicers.\+customs.\+Bomb}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_aeae36dfeadd7f8b7ec6a278ab4fae019}{Tentacle\+Slicers.\+actors.\+Explosion}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_residu_a429af1b4c0a6bdbb4cb2e42a1f3ba571}{Tentacle\+Slicers.\+actors.\+Residu}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Actor.\+cs\end{DoxyCompactItemize}

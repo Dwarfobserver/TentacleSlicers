@@ -1,0 +1,132 @@
+\hypertarget{class_tentacle_slicers_1_1maps_1_1_map}{}\section{Tentacle\+Slicers.\+maps.\+Map Class Reference}
+\label{class_tentacle_slicers_1_1maps_1_1_map}\index{Tentacle\+Slicers.\+maps.\+Map@{Tentacle\+Slicers.\+maps.\+Map}}
+
+
+Représente les données chargées par les fichiers .map, qui n\textquotesingle{}évolueront pas au cours d\textquotesingle{}une partie \+: Les textures de la map, ses murs et collisions, ses deux points d\textquotesingle{}apparition pour les joueurs et ceux de leurs adversaires. La création d\textquotesingle{}une map est détaillée dans le dossier resources/maps avec le fichier readme.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+maps.\+Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1maps_1_1_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1maps_1_1_map_a277eb8c716c31557142ab758f8c1c701}{Map} (int num)
+\begin{DoxyCompactList}\small\item\em Charge le fichier .map du dossier resources/maps ayant le numéro indiqué. Enregistre le nom, la taille et l\textquotesingle{}image de fond de la map. Puis, parcourt les cases de la map pour enregistrer les positions d\textquotesingle{}apparition des joueurs, des mobs, des boss et des murs (invisibles ou non). Lors du parcourt, les murs sont crées dans le monde. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1maps_1_1_map_ac3ae7e9bb364c2cdf5d718315dd3fc3f}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image de fond de la map. L\textquotesingle{}image doit être dessinée en premier pour que les autres acteurs ou composants s\textquotesingle{}affichent par dessus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ int, string $>$ \hyperlink{class_tentacle_slicers_1_1maps_1_1_map_a2d27d0e714bd8f4874281cbed81af861}{Map\+Names} ()
+\begin{DoxyCompactList}\small\item\em Retourne le numéro de chaque map avec son nom associé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a0e9ad627c470f164e6db9caa5a46aa71}\label{class_tentacle_slicers_1_1maps_1_1_map_a0e9ad627c470f164e6db9caa5a46aa71}} 
+const string {\bfseries Map\+Path} = \char`\"{}../../resources/maps/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a20bcc2da6af3fa02d1489c12d517a3b4}\label{class_tentacle_slicers_1_1maps_1_1_map_a20bcc2da6af3fa02d1489c12d517a3b4}} 
+const string {\bfseries Terrains} = \char`\"{}terrains/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a90e099af009c1c90b3e127830df83765}\label{class_tentacle_slicers_1_1maps_1_1_map_a90e099af009c1c90b3e127830df83765}} 
+const string {\bfseries Backgrounds} = \char`\"{}backgrounds/\char`\"{}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_adc74fb3b3b997c5985c35653602bef94}\label{class_tentacle_slicers_1_1maps_1_1_map_adc74fb3b3b997c5985c35653602bef94}} 
+const int {\bfseries Size} = 92
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_abc093cbb0a6be23bceacb1e9f1c445e8}\label{class_tentacle_slicers_1_1maps_1_1_map_abc093cbb0a6be23bceacb1e9f1c445e8}} 
+int {\bfseries Num}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a05640dfe24ea35ec533d51b954d6e5a4}\label{class_tentacle_slicers_1_1maps_1_1_map_a05640dfe24ea35ec533d51b954d6e5a4}} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_add459a34a9aee4f998583226099159a3}\label{class_tentacle_slicers_1_1maps_1_1_map_add459a34a9aee4f998583226099159a3}} 
+int {\bfseries Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_ae4c02d856e4a543a7472651fb76df2fc}\label{class_tentacle_slicers_1_1maps_1_1_map_ae4c02d856e4a543a7472651fb76df2fc}} 
+int {\bfseries Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_aa6ae1bd733fe8c64600142149ca7e9cf}\label{class_tentacle_slicers_1_1maps_1_1_map_aa6ae1bd733fe8c64600142149ca7e9cf}} 
+bool \mbox{[},\mbox{]} {\bfseries Walls\+Matrix}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a476341d6e740af623a283164c337f088}\label{class_tentacle_slicers_1_1maps_1_1_map_a476341d6e740af623a283164c337f088}} 
+List$<$ Point $>$ {\bfseries Player\+Spawns}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a172716844e5ebc5985ba1a9deeb4d5f2}\label{class_tentacle_slicers_1_1maps_1_1_map_a172716844e5ebc5985ba1a9deeb4d5f2}} 
+List$<$ Point $>$ {\bfseries Gateways}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a26b7801de74d437f412a804e27d6d3f5}\label{class_tentacle_slicers_1_1maps_1_1_map_a26b7801de74d437f412a804e27d6d3f5}} 
+Point {\bfseries Boss\+Spawn}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Représente les données chargées par les fichiers .map, qui n\textquotesingle{}évolueront pas au cours d\textquotesingle{}une partie \+: Les textures de la map, ses murs et collisions, ses deux points d\textquotesingle{}apparition pour les joueurs et ceux de leurs adversaires. La création d\textquotesingle{}une map est détaillée dans le dossier resources/maps avec le fichier readme. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a277eb8c716c31557142ab758f8c1c701}\label{class_tentacle_slicers_1_1maps_1_1_map_a277eb8c716c31557142ab758f8c1c701}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}!Map@{Map}}
+\index{Map@{Map}!Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}}
+\subsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+maps.\+Map.\+Map (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Charge le fichier .map du dossier resources/maps ayant le numéro indiqué. Enregistre le nom, la taille et l\textquotesingle{}image de fond de la map. Puis, parcourt les cases de la map pour enregistrer les positions d\textquotesingle{}apparition des joueurs, des mobs, des boss et des murs (invisibles ou non). Lors du parcourt, les murs sont crées dans le monde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Le numéro de la map à charger \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_ac3ae7e9bb364c2cdf5d718315dd3fc3f}\label{class_tentacle_slicers_1_1maps_1_1_map_ac3ae7e9bb364c2cdf5d718315dd3fc3f}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+maps.\+Map.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Dessine l\textquotesingle{}image de fond de la map. L\textquotesingle{}image doit être dessinée en premier pour que les autres acteurs ou composants s\textquotesingle{}affichent par dessus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1maps_1_1_map_a2d27d0e714bd8f4874281cbed81af861}\label{class_tentacle_slicers_1_1maps_1_1_map_a2d27d0e714bd8f4874281cbed81af861}} 
+\index{Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}!Map\+Names@{Map\+Names}}
+\index{Map\+Names@{Map\+Names}!Tentacle\+Slicers\+::maps\+::\+Map@{Tentacle\+Slicers\+::maps\+::\+Map}}
+\subsubsection{\texorpdfstring{Map\+Names()}{MapNames()}}
+{\footnotesize\ttfamily static Dictionary$<$int, string$>$ Tentacle\+Slicers.\+maps.\+Map.\+Map\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne le numéro de chaque map avec son nom associé. 
+
+\begin{DoxyReturn}{Returns}
+Le numéro avec le nom de chaque map 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/maps/Map.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\hypertarget{class_tentacle_slicers_1_1states_1_1_state}{}\section{Tentacle\+Slicers.\+states.\+State Class Reference}
+\label{class_tentacle_slicers_1_1states_1_1_state}\index{Tentacle\+Slicers.\+states.\+State@{Tentacle\+Slicers.\+states.\+State}}
+
+
+Objet temporaire qui affecte son possesseur lors de son actualisation et / ou lorsqu\textquotesingle{}il expire. Il peut aussi afficher une image jusqu\textquotesingle{}à son expiration.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+states.\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1states_1_1_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1states_1_1_state_a405645215bbd1ac34d5b0a209366da29}{State} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor} owner, \hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} data, object arg)
+\begin{DoxyCompactList}\small\item\em Crée l\textquotesingle{}état avec les données fournies et en l\textquotesingle{}associant à un acteur. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1states_1_1_state_ae9c5187fb53be4138e615a0c26b54f0a}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}image de l\textquotesingle{}état, si elle existe. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1states_1_1_state_a0196a4dcb4894e5d0de3387bc9cfcf26}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise l\textquotesingle{}état et déclenche son effet d\textquotesingle{}actualisation. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1states_1_1_state_a07bdea4c02bbee510c5323157459226f}{Is\+Finished} ()
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}état est terminé. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1states_1_1_state_a7405f92e5a7163f6adfbc755eed537a1}{Expires} ()
+\begin{DoxyCompactList}\small\item\em Déclenche l\textquotesingle{}effet d\textquotesingle{}expiration de l\textquotesingle{}état, si il existe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_a891bff3231c4fd22b6757e1630c0c9d6}\label{class_tentacle_slicers_1_1states_1_1_state_a891bff3231c4fd22b6757e1630c0c9d6}} 
+static readonly string {\bfseries Image\+Path} = Sprite\+Handler.\+Image\+Path + \char`\"{}states/\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Objet temporaire qui affecte son possesseur lors de son actualisation et / ou lorsqu\textquotesingle{}il expire. Il peut aussi afficher une image jusqu\textquotesingle{}à son expiration. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_a405645215bbd1ac34d5b0a209366da29}\label{class_tentacle_slicers_1_1states_1_1_state_a405645215bbd1ac34d5b0a209366da29}} 
+\index{Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}!State@{State}}
+\index{State@{State}!Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}}
+\subsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+states.\+State.\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{Controlled\+Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data}}]{data,  }\item[{object}]{arg }\end{DoxyParamCaption})}
+
+
+
+Crée l\textquotesingle{}état avec les données fournies et en l\textquotesingle{}associant à un acteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & L\textquotesingle{}acteur associé \\
+\hline
+{\em data} & les données \\
+\hline
+{\em arg} & Le paramètre optionnel \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_ae9c5187fb53be4138e615a0c26b54f0a}\label{class_tentacle_slicers_1_1states_1_1_state_ae9c5187fb53be4138e615a0c26b54f0a}} 
+\index{Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+states.\+State.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}image de l\textquotesingle{}état, si elle existe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position où est dessiné l\textquotesingle{}acteur associé \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_a7405f92e5a7163f6adfbc755eed537a1}\label{class_tentacle_slicers_1_1states_1_1_state_a7405f92e5a7163f6adfbc755eed537a1}} 
+\index{Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}!Expires@{Expires}}
+\index{Expires@{Expires}!Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}}
+\subsubsection{\texorpdfstring{Expires()}{Expires()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+states.\+State.\+Expires (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Déclenche l\textquotesingle{}effet d\textquotesingle{}expiration de l\textquotesingle{}état, si il existe. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_a07bdea4c02bbee510c5323157459226f}\label{class_tentacle_slicers_1_1states_1_1_state_a07bdea4c02bbee510c5323157459226f}} 
+\index{Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}!Is\+Finished@{Is\+Finished}}
+\index{Is\+Finished@{Is\+Finished}!Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}}
+\subsubsection{\texorpdfstring{Is\+Finished()}{IsFinished()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+states.\+State.\+Is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}état est terminé. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}état est terminé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1states_1_1_state_a0196a4dcb4894e5d0de3387bc9cfcf26}\label{class_tentacle_slicers_1_1states_1_1_state_a0196a4dcb4894e5d0de3387bc9cfcf26}} 
+\index{Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::states\+::\+State@{Tentacle\+Slicers\+::states\+::\+State}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+states.\+State.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})}
+
+
+
+Actualise l\textquotesingle{}état et déclenche son effet d\textquotesingle{}actualisation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_tickable}{Tentacle\+Slicers.\+interfaces.\+I\+Tickable}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/states/State.\+cs\end{DoxyCompactItemize}

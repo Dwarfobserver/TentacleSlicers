@@ -1,0 +1,84 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_collision_functions}{}\section{Tentacle\+Slicers.\+collisions.\+Collision\+Functions Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_collision_functions}\index{Tentacle\+Slicers.\+collisions.\+Collision\+Functions@{Tentacle\+Slicers.\+collisions.\+Collision\+Functions}}
+
+
+Classe mère des classes qui testent les collisions entre les différentes formes. Donne accès à une fonction pour récupérer les acteurs en collision avec une forme donnée, et une fonction pour ses classe filles qui garde parmi une liste d\textquotesingle{}acteurs ceux qui sont en collision avec une forme donnée.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Collision\+Functions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_collision_functions}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ \hyperlink{class_tentacle_slicers_1_1collisions_1_1_collision_functions_ae449c2800a053c729dc4010535cdb19f}{Get\+Colliding\+Actors} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form}{Form} form)
+\begin{DoxyCompactList}\small\item\em Récupère les acteurs proches de la forme dans le gestionnaire de collision et renvoie ceux qui sont en collision avec la forme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_collision_functions_af72a148cb99cede52981b5e9080dfc30}\label{class_tentacle_slicers_1_1collisions_1_1_collision_functions_af72a148cb99cede52981b5e9080dfc30}} 
+static \hyperlink{class_tentacle_slicers_1_1maps_1_1_squares_handler}{Squares\+Handler} {\bfseries Squares\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ \hyperlink{class_tentacle_slicers_1_1collisions_1_1_collision_functions_af02ae1365e63bae367e3549ce009c5e0}{Keep\+Colliding\+Actors} (List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$ actors, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form}{Form} form)
+\begin{DoxyCompactList}\small\item\em Parcourt le sacteurs donnés pour renvoyer uniquement ceux qui sont en collision avec la forme à sa position indiquée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe mère des classes qui testent les collisions entre les différentes formes. Donne accès à une fonction pour récupérer les acteurs en collision avec une forme donnée, et une fonction pour ses classe filles qui garde parmi une liste d\textquotesingle{}acteurs ceux qui sont en collision avec une forme donnée. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_collision_functions_ae449c2800a053c729dc4010535cdb19f}\label{class_tentacle_slicers_1_1collisions_1_1_collision_functions_ae449c2800a053c729dc4010535cdb19f}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions@{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions}!Get\+Colliding\+Actors@{Get\+Colliding\+Actors}}
+\index{Get\+Colliding\+Actors@{Get\+Colliding\+Actors}!Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions@{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions}}
+\subsubsection{\texorpdfstring{Get\+Colliding\+Actors()}{GetCollidingActors()}}
+{\footnotesize\ttfamily static List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}$>$ Tentacle\+Slicers.\+collisions.\+Collision\+Functions.\+Get\+Colliding\+Actors (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_form}{Form}}]{form }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Récupère les acteurs proches de la forme dans le gestionnaire de collision et renvoie ceux qui sont en collision avec la forme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de la forme \\
+\hline
+{\em form} & La forme indiquée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+les acteurs en collision avec la forme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_collision_functions_af02ae1365e63bae367e3549ce009c5e0}\label{class_tentacle_slicers_1_1collisions_1_1_collision_functions_af02ae1365e63bae367e3549ce009c5e0}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions@{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions}!Keep\+Colliding\+Actors@{Keep\+Colliding\+Actors}}
+\index{Keep\+Colliding\+Actors@{Keep\+Colliding\+Actors}!Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions@{Tentacle\+Slicers\+::collisions\+::\+Collision\+Functions}}
+\subsubsection{\texorpdfstring{Keep\+Colliding\+Actors()}{KeepCollidingActors()}}
+{\footnotesize\ttfamily static List$<$\hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor}$>$ Tentacle\+Slicers.\+collisions.\+Collision\+Functions.\+Keep\+Colliding\+Actors (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} $>$}]{actors,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_form}{Form}}]{form }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Parcourt le sacteurs donnés pour renvoyer uniquement ceux qui sont en collision avec la forme à sa position indiquée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actors} & La collection d\textquotesingle{}acteurs à tester \\
+\hline
+{\em position} & La position de la forme \\
+\hline
+{\em form} & La forme indiquée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+les acteurs, parmi ceux donnés, qui sont en collision avec la forme 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Collision\+Functions.\+cs\end{DoxyCompactItemize}

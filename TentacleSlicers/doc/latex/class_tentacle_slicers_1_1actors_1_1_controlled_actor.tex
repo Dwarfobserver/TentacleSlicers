@@ -1,0 +1,278 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor}{}\section{Tentacle\+Slicers.\+actors.\+Controlled\+Actor Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor}\index{Tentacle\+Slicers.\+actors.\+Controlled\+Actor@{Tentacle\+Slicers.\+actors.\+Controlled\+Actor}}
+
+
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour les personnages en jeu, des joueurs ou de l\textquotesingle{}ordinateur. Implémente leur déplacements et états.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Controlled\+Actor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.590164cm]{class_tentacle_slicers_1_1actors_1_1_controlled_actor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a8120affe933e4003bc0866f06589eeac}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}acteur selon la classe mère et ajoute les possibles affichages de ses états courants. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise les sorts et les états de l\textquotesingle{}acteur puis appelle la fonction \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}{Tick()} de sa classe mère. Ensuite, si l\textquotesingle{}acteur possède un Anmation\+Handler, on lui assigne comme type d\textquotesingle{}animation par défaut la valeur Idle\+Animation si il est immobile, Moving\+Animtaion sinon. Enfin, si les mouvements de l\textquotesingle{}acteur ne sont pas bloqués, on le déplace suivant son vecteur de vitesse et le temps écoulé. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a2dece877131bcd6f29898b3b7c594524}{Lock\+Moves} ()
+\begin{DoxyCompactList}\small\item\em Bloque les mouvements de l\textquotesingle{}acteur. Pour que l\textquotesingle{}effet soit temporaire, il faut appeler \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a14547b4a4eff36c7d604d102b1ab30e3}{Unlock\+Moves()} lorsque l\textquotesingle{}on souhaite débloquer l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a61e01e8419547521e6ed595bb4ca6226}{Lock\+Casts} ()
+\begin{DoxyCompactList}\small\item\em Empêche l\textquotesingle{}acteur de lancer des sorts. Pour que l\textquotesingle{}effet soit temporaire, il faut appeler \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a046c8e6ce7e9d5a2cf7520939cba40a0}{Unlock\+Casts()} lorsque l\textquotesingle{}on souhaite débloquer l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a14547b4a4eff36c7d604d102b1ab30e3}{Unlock\+Moves} ()
+\begin{DoxyCompactList}\small\item\em Appelé après \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a2dece877131bcd6f29898b3b7c594524}{Lock\+Moves()} afin de permetre à nouveau à l\textquotesingle{}acteur de se déplacer. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a046c8e6ce7e9d5a2cf7520939cba40a0}{Unlock\+Casts} ()
+\begin{DoxyCompactList}\small\item\em Appelé après \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a61e01e8419547521e6ed595bb4ca6226}{Lock\+Casts()} afin de permetre à nouveau à l\textquotesingle{}acteur de lancer des sorts. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a024f5552c29ca8f5c59c1c14ce7e759d}{Moves\+Blocked} ()
+\begin{DoxyCompactList}\small\item\em Indique si les mouvements de l\textquotesingle{}acteur sont bloqués. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a0b22d71ca852533f95c02bb214de6567}{Casts\+Locked} ()
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}acteur peut lancer des sorts. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_afcfec115f484efa6142c2f82e1a1f4d5}{Create\+Spell} (int num\+Spell, \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data} data)
+\begin{DoxyCompactList}\small\item\em Ajoute un sort à l\textquotesingle{}acteur et l\textquotesingle{}associe à un indice (positif), de préférence proche de 0. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell}{Spell} \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ad5f70ea26f58c0fe2145066c9afcc4de}{Get\+Spell} (int num\+Spell)
+\begin{DoxyCompactList}\small\item\em Retourne le sort de l\textquotesingle{}acteur associé au numéro fourni lors de sa création. \end{DoxyCompactList}\item 
+int \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa98186daa9934f26ffa8a1cb06b1cbc8}{Get\+Nb\+Spells} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de sorts que possède l\textquotesingle{}acteur au maximum. La valeur renvoyée -\/ 1 donne l\textquotesingle{}indice du dernier sort de l\textquotesingle{}adcteur, mais il n\textquotesingle{}est pas certifié que les indices inférieurs référencent un sort. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a1a596b1707287204516bbd7e5489fd85}{Create\+State} (\hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data} data, object arg=null)
+\begin{DoxyCompactList}\small\item\em Ajoute un état à l\textquotesingle{}acteur. Utilisé par exemple pour l\textquotesingle{}empêcher de lancer des sorts, de se déplacer ou pour augmenter temporairement ses caractéristiques. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae47a0e6c043c7ad9f3baa49e46fda3c2}{Clean\+States} ()
+\begin{DoxyCompactList}\small\item\em Supprime tous les effets présents en déclenchant leur effet d\textquotesingle{}expiration. Utilisé notamment pour récupérer les caractéristiques du joueur à sauvegarder, afin de ne pas comptabiliser des caractéristiques temporaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae314ebe27f3a906ca6aff7b0f290d278}{Controlled\+Actor} (Point position)
+\begin{DoxyCompactList}\small\item\em Initialise les gestionnaires de sorts et d\textquotesingle{}états. Par défaut, l\textquotesingle{}acteur peut bouger et lancer des sorts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a09d03925d78f5ab41cc0166af1024dd6}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a09d03925d78f5ab41cc0166af1024dd6}} 
+readonly \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_handler}{Spell\+Handler} {\bfseries Spell\+Handler}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour les personnages en jeu, des joueurs ou de l\textquotesingle{}ordinateur. Implémente leur déplacements et états. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae314ebe27f3a906ca6aff7b0f290d278}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae314ebe27f3a906ca6aff7b0f290d278}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Controlled\+Actor@{Controlled\+Actor}}
+\index{Controlled\+Actor@{Controlled\+Actor}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Controlled\+Actor()}{ControlledActor()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Controlled\+Actor (\begin{DoxyParamCaption}\item[{Point}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialise les gestionnaires de sorts et d\textquotesingle{}états. Par défaut, l\textquotesingle{}acteur peut bouger et lancer des sorts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de l\textquotesingle{}acteur dans le monde \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a0b22d71ca852533f95c02bb214de6567}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a0b22d71ca852533f95c02bb214de6567}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Casts\+Locked@{Casts\+Locked}}
+\index{Casts\+Locked@{Casts\+Locked}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Casts\+Locked()}{CastsLocked()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Casts\+Locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si l\textquotesingle{}acteur peut lancer des sorts. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}acteur ne peut pas lancer de sorts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae47a0e6c043c7ad9f3baa49e46fda3c2}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ae47a0e6c043c7ad9f3baa49e46fda3c2}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Clean\+States@{Clean\+States}}
+\index{Clean\+States@{Clean\+States}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Clean\+States()}{CleanStates()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Clean\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Supprime tous les effets présents en déclenchant leur effet d\textquotesingle{}expiration. Utilisé notamment pour récupérer les caractéristiques du joueur à sauvegarder, afin de ne pas comptabiliser des caractéristiques temporaires. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_afcfec115f484efa6142c2f82e1a1f4d5}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_afcfec115f484efa6142c2f82e1a1f4d5}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Create\+Spell@{Create\+Spell}}
+\index{Create\+Spell@{Create\+Spell}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Create\+Spell()}{CreateSpell()}}
+{\footnotesize\ttfamily virtual void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Create\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell,  }\item[{\hyperlink{class_tentacle_slicers_1_1spells_1_1_spell_data}{Spell\+Data}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Ajoute un sort à l\textquotesingle{}acteur et l\textquotesingle{}associe à un indice (positif), de préférence proche de 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & Le numéro associé au sort \\
+\hline
+{\em data} & Les informations pour créer le sort \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_a7d7616298f1762e11f8824f0b77dec64}{Tentacle\+Slicers.\+actors.\+Player\+Character}, and \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_a79c96a3a4ea1b3a874e28a467683dd39}{Tentacle\+Slicers.\+actors.\+Mob}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a1a596b1707287204516bbd7e5489fd85}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a1a596b1707287204516bbd7e5489fd85}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Create\+State@{Create\+State}}
+\index{Create\+State@{Create\+State}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Create\+State()}{CreateState()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Create\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1states_1_1_state_data}{State\+Data}}]{data,  }\item[{object}]{arg = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Ajoute un état à l\textquotesingle{}acteur. Utilisé par exemple pour l\textquotesingle{}empêcher de lancer des sorts, de se déplacer ou pour augmenter temporairement ses caractéristiques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Les informations concernant l\textquotesingle{}état à créer \\
+\hline
+{\em arg} & L\textquotesingle{}agument optionnel pour créer l\textquotesingle{}état \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a8120affe933e4003bc0866f06589eeac}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a8120affe933e4003bc0866f06589eeac}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche l\textquotesingle{}acteur selon la classe mère et ajoute les possibles affichages de ses états courants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position relative pour afficher l\textquotesingle{}acteur \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_ae06facc411c8cd44596e59020d131dd7}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a9b8adc982e25895a4509c870f784b5f1}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa98186daa9934f26ffa8a1cb06b1cbc8}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa98186daa9934f26ffa8a1cb06b1cbc8}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Get\+Nb\+Spells@{Get\+Nb\+Spells}}
+\index{Get\+Nb\+Spells@{Get\+Nb\+Spells}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Get\+Nb\+Spells()}{GetNbSpells()}}
+{\footnotesize\ttfamily int Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Get\+Nb\+Spells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le nombre de sorts que possède l\textquotesingle{}acteur au maximum. La valeur renvoyée -\/ 1 donne l\textquotesingle{}indice du dernier sort de l\textquotesingle{}adcteur, mais il n\textquotesingle{}est pas certifié que les indices inférieurs référencent un sort. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de sorts de l\textquotesingle{}acteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ad5f70ea26f58c0fe2145066c9afcc4de}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_ad5f70ea26f58c0fe2145066c9afcc4de}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Get\+Spell@{Get\+Spell}}
+\index{Get\+Spell@{Get\+Spell}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Get\+Spell()}{GetSpell()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1spells_1_1_spell}{Spell} Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Get\+Spell (\begin{DoxyParamCaption}\item[{int}]{num\+Spell }\end{DoxyParamCaption})}
+
+
+
+Retourne le sort de l\textquotesingle{}acteur associé au numéro fourni lors de sa création. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Spell} & L\textquotesingle{}indice du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le sort associé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a61e01e8419547521e6ed595bb4ca6226}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a61e01e8419547521e6ed595bb4ca6226}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Lock\+Casts@{Lock\+Casts}}
+\index{Lock\+Casts@{Lock\+Casts}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Lock\+Casts()}{LockCasts()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Lock\+Casts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empêche l\textquotesingle{}acteur de lancer des sorts. Pour que l\textquotesingle{}effet soit temporaire, il faut appeler \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a046c8e6ce7e9d5a2cf7520939cba40a0}{Unlock\+Casts()} lorsque l\textquotesingle{}on souhaite débloquer l\textquotesingle{}acteur. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a2dece877131bcd6f29898b3b7c594524}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a2dece877131bcd6f29898b3b7c594524}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Lock\+Moves@{Lock\+Moves}}
+\index{Lock\+Moves@{Lock\+Moves}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Lock\+Moves()}{LockMoves()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Lock\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bloque les mouvements de l\textquotesingle{}acteur. Pour que l\textquotesingle{}effet soit temporaire, il faut appeler \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a14547b4a4eff36c7d604d102b1ab30e3}{Unlock\+Moves()} lorsque l\textquotesingle{}on souhaite débloquer l\textquotesingle{}acteur. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a024f5552c29ca8f5c59c1c14ce7e759d}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a024f5552c29ca8f5c59c1c14ce7e759d}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Moves\+Blocked@{Moves\+Blocked}}
+\index{Moves\+Blocked@{Moves\+Blocked}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Moves\+Blocked()}{MovesBlocked()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Moves\+Blocked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si les mouvements de l\textquotesingle{}acteur sont bloqués. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si l\textquotesingle{}acteur ne peut pas se déplacer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise les sorts et les états de l\textquotesingle{}acteur puis appelle la fonction \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_aa66cbbda81610ee2610e540e59725a39}{Tick()} de sa classe mère. Ensuite, si l\textquotesingle{}acteur possède un Anmation\+Handler, on lui assigne comme type d\textquotesingle{}animation par défaut la valeur Idle\+Animation si il est immobile, Moving\+Animtaion sinon. Enfin, si les mouvements de l\textquotesingle{}acteur ne sont pas bloqués, on le déplace suivant son vecteur de vitesse et le temps écoulé. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a13e48a1ca022ce7c971c77f1354e3daf}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+
+
+Reimplemented in \hyperlink{class_tentacle_slicers_1_1actors_1_1_mob_ad3e79cfdf2a28f8eb6363f0567bdcaaf}{Tentacle\+Slicers.\+actors.\+Mob}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character_ae5043ba6bbb1d2007f0f29f61e28369c}{Tentacle\+Slicers.\+actors.\+Player\+Character}, \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tentacle\+Slicers.\+actors.\+Living\+Actor}, \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}{Tentacle\+Slicers.\+customs.\+Knight\+Tomb}, and \hyperlink{class_tentacle_slicers_1_1customs_1_1_cthulhu_ghost_a402aea79e343f8f5a1b153a143edf9fb}{Tentacle\+Slicers.\+customs.\+Cthulhu\+Ghost}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a046c8e6ce7e9d5a2cf7520939cba40a0}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a046c8e6ce7e9d5a2cf7520939cba40a0}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Unlock\+Casts@{Unlock\+Casts}}
+\index{Unlock\+Casts@{Unlock\+Casts}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Unlock\+Casts()}{UnlockCasts()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Unlock\+Casts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Appelé après \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a61e01e8419547521e6ed595bb4ca6226}{Lock\+Casts()} afin de permetre à nouveau à l\textquotesingle{}acteur de lancer des sorts. 
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a14547b4a4eff36c7d604d102b1ab30e3}\label{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a14547b4a4eff36c7d604d102b1ab30e3}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}!Unlock\+Moves@{Unlock\+Moves}}
+\index{Unlock\+Moves@{Unlock\+Moves}!Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor@{Tentacle\+Slicers\+::actors\+::\+Controlled\+Actor}}
+\subsubsection{\texorpdfstring{Unlock\+Moves()}{UnlockMoves()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+actors.\+Controlled\+Actor.\+Unlock\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Appelé après \hyperlink{class_tentacle_slicers_1_1actors_1_1_controlled_actor_a2dece877131bcd6f29898b3b7c594524}{Lock\+Moves()} afin de permetre à nouveau à l\textquotesingle{}acteur de se déplacer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Controlled\+Actor.\+cs\end{DoxyCompactItemize}

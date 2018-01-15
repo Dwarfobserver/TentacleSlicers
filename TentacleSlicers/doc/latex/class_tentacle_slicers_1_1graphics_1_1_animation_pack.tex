@@ -1,0 +1,105 @@
+\hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack}{}\section{Tentacle\+Slicers.\+graphics.\+Animation\+Pack Class Reference}
+\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack}\index{Tentacle\+Slicers.\+graphics.\+Animation\+Pack@{Tentacle\+Slicers.\+graphics.\+Animation\+Pack}}
+
+
+Stocke et organise une ou plusieurs animations, en ne gardant qu\textquotesingle{}une animation par type d\textquotesingle{}animation.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a5285e1eedcba48b991309be20569906f}{Animation\+Pack} (\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} animation)
+\begin{DoxyCompactList}\small\item\em Crée un pack d\textquotesingle{}animation à partir d\textquotesingle{}une animtion, qui est définie comme l\textquotesingle{}aniamtion par défaut du pack. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a3af88f0914cd8bda260d0faf12f2a1a6}{Animation\+Pack} (string folder, int height\+Shift=0)
+\begin{DoxyCompactList}\small\item\em Crée (donc charge) toutes les animations dans le dossier indiqué et les assossie à leur type. La permière animation chargée (dans l\textquotesingle{}ordre de déclaration des types d\textquotesingle{}animations) définit l\textquotesingle{}animation par défaut du pack, donc généralement stand. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack_aa5912590d9054955b33919ecc99c2f49}{Get\+Animation} (\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} type)
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}animaton du type demandé si elle existe, sinon l\textquotesingle{}animation par défaut. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a0c54409bced801c3e5692a8b43837e89}{Add\+Animation} (\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} animation)
+\begin{DoxyCompactList}\small\item\em Ajoute une animation au pack. Si une animation de même type était déjà stockée, elle est écrasée par la nouvelle animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a834c686c787455ee76ae72c07d7e6065}\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a834c686c787455ee76ae72c07d7e6065}} 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} {\bfseries Default\+Animation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stocke et organise une ou plusieurs animations, en ne gardant qu\textquotesingle{}une animation par type d\textquotesingle{}animation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a5285e1eedcba48b991309be20569906f}\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a5285e1eedcba48b991309be20569906f}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}!Animation\+Pack@{Animation\+Pack}}
+\index{Animation\+Pack@{Animation\+Pack}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}}
+\subsubsection{\texorpdfstring{Animation\+Pack()}{AnimationPack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Animation\+Pack.\+Animation\+Pack (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation}}]{animation }\end{DoxyParamCaption})}
+
+
+
+Crée un pack d\textquotesingle{}animation à partir d\textquotesingle{}une animtion, qui est définie comme l\textquotesingle{}aniamtion par défaut du pack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animation} & L\textquotesingle{}animation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a3af88f0914cd8bda260d0faf12f2a1a6}\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a3af88f0914cd8bda260d0faf12f2a1a6}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}!Animation\+Pack@{Animation\+Pack}}
+\index{Animation\+Pack@{Animation\+Pack}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}}
+\subsubsection{\texorpdfstring{Animation\+Pack()}{AnimationPack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Animation\+Pack.\+Animation\+Pack (\begin{DoxyParamCaption}\item[{string}]{folder,  }\item[{int}]{height\+Shift = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Crée (donc charge) toutes les animations dans le dossier indiqué et les assossie à leur type. La permière animation chargée (dans l\textquotesingle{}ordre de déclaration des types d\textquotesingle{}animations) définit l\textquotesingle{}animation par défaut du pack, donc généralement stand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder} & Le dossier à charger \\
+\hline
+{\em height\+Shift} & Le décalage en hauteur des sprites \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a0c54409bced801c3e5692a8b43837e89}\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack_a0c54409bced801c3e5692a8b43837e89}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}!Add\+Animation@{Add\+Animation}}
+\index{Add\+Animation@{Add\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}}
+\subsubsection{\texorpdfstring{Add\+Animation()}{AddAnimation()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+graphics.\+Animation\+Pack.\+Add\+Animation (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation}}]{animation }\end{DoxyParamCaption})}
+
+
+
+Ajoute une animation au pack. Si une animation de même type était déjà stockée, elle est écrasée par la nouvelle animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em animation} & la nouvelle animation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_animation_pack_aa5912590d9054955b33919ecc99c2f49}\label{class_tentacle_slicers_1_1graphics_1_1_animation_pack_aa5912590d9054955b33919ecc99c2f49}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}!Get\+Animation@{Get\+Animation}}
+\index{Get\+Animation@{Get\+Animation}!Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack@{Tentacle\+Slicers\+::graphics\+::\+Animation\+Pack}}
+\subsubsection{\texorpdfstring{Get\+Animation()}{GetAnimation()}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation} Tentacle\+Slicers.\+graphics.\+Animation\+Pack.\+Get\+Animation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}animaton du type demandé si elle existe, sinon l\textquotesingle{}animation par défaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Le type demandé \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}animation correspondante ou par défaut 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/graphics/Animation\+Pack.\+cs\end{DoxyCompactItemize}

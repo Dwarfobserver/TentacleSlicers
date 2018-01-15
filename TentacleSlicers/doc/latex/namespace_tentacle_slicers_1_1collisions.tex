@@ -1,0 +1,49 @@
+\hypertarget{namespace_tentacle_slicers_1_1collisions}{}\section{Tentacle\+Slicers.\+collisions Namespace Reference}
+\label{namespace_tentacle_slicers_1_1collisions}\index{Tentacle\+Slicers.\+collisions@{Tentacle\+Slicers.\+collisions}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_actor_collision}{Actor\+Collision}
+\begin{DoxyCompactList}\small\item\em Déclenche les effets de la collision d\textquotesingle{}un acteur et le place dans le gestionnaire de collisions. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_circle}{Circle}
+\begin{DoxyCompactList}\small\item\em Une forme dont la zone de collision est un cercle. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_collision_functions}{Collision\+Functions}
+\begin{DoxyCompactList}\small\item\em Classe mère des classes qui testent les collisions entre les différentes formes. Donne accès à une fonction pour récupérer les acteurs en collision avec une forme donnée, et une fonction pour ses classe filles qui garde parmi une liste d\textquotesingle{}acteurs ceux qui sont en collision avec une forme donnée. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form}{Form}
+\begin{DoxyCompactList}\small\item\em Représente une forme géométrique qui peut entrer en collision avec les hitbox rectangulaires des acteurs. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_hitbox}{Hitbox}
+\begin{DoxyCompactList}\small\item\em Définit une hitbox rectangulaire. Cette classe permet de tester une collision de hitbox et de replacer un Actor. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rayon_caster}{Rayon\+Caster}
+\begin{DoxyCompactList}\small\item\em Facilite le test de collision des segments en stockant le résultat des collisions d\textquotesingle{}un segment crée entre deux points \+: Colliding\+Actors stocke la liste des acteurs touchés, triés par leur distance depuis la source du segment (le premier acteur est le plus proche du segment), Impacts stocke pour chaque acteur touché le premier point d\textquotesingle{}impact où le segment touche l\textquotesingle{}acteur. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}
+\begin{DoxyCompactList}\small\item\em Une forme dont la zone de collision est rectangulaire. Il s\textquotesingle{}agit de la forme utilisé pour les collisions des acteurs, donc toutes les formes implémentent un test de collision avec les rectangles. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1collisions_1_1_segment}{Segment}
+\begin{DoxyCompactList}\small\item\em Une forme dont la zone de collision est un segment, d\textquotesingle{}épaisseur nulle. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle}
+\begin{DoxyCompactList}\small\item\em Permet la transmission simple d\textquotesingle{}un rectangle et de son centre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}{Hitbox\+Type} \{ \newline
+{\bfseries Immaterial}, 
+{\bfseries Light}, 
+{\bfseries Player}, 
+{\bfseries Medium}, 
+\newline
+{\bfseries Heavy}, 
+{\bfseries Unmovable}
+ \}\begin{DoxyCompactList}\small\item\em Classifie les hitbox des Actor et définit si elles se replacent par rapport à une autre hitbox. Immaterial ne se replace jamais et ne replace personne. Unmovable ne se replace jamais et force l\textquotesingle{}autre hitbox si elle n\textquotesingle{}est pas Immaterial ou Unmovable à se replacer. Light, Player, Medium et Heavy vont se replacer face à une hitbox plus lourde (ou de même nature si c\textquotesingle{}est elle qui a bougé, la priorité est supérieure pour la hitbox immobile) et vont forcer les hitbox plus légères à se replacer (en dehors de Immaterial). Player est donc situé, en terme de poids, entre les hitbox Light et les hitbox Medium. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}\label{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}} 
+\index{Tentacle\+Slicers\+::collisions@{Tentacle\+Slicers\+::collisions}!Hitbox\+Type@{Hitbox\+Type}}
+\index{Hitbox\+Type@{Hitbox\+Type}!Tentacle\+Slicers\+::collisions@{Tentacle\+Slicers\+::collisions}}
+\subsubsection{\texorpdfstring{Hitbox\+Type}{HitboxType}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_tentacle_slicers_1_1collisions_aa7fd5cb9caf0a56384804b6bc00a6f0e}{Tentacle\+Slicers.\+collisions.\+Hitbox\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Classifie les hitbox des Actor et définit si elles se replacent par rapport à une autre hitbox. Immaterial ne se replace jamais et ne replace personne. Unmovable ne se replace jamais et force l\textquotesingle{}autre hitbox si elle n\textquotesingle{}est pas Immaterial ou Unmovable à se replacer. Light, Player, Medium et Heavy vont se replacer face à une hitbox plus lourde (ou de même nature si c\textquotesingle{}est elle qui a bougé, la priorité est supérieure pour la hitbox immobile) et vont forcer les hitbox plus légères à se replacer (en dehors de Immaterial). Player est donc situé, en terme de poids, entre les hitbox Light et les hitbox Medium. 
+

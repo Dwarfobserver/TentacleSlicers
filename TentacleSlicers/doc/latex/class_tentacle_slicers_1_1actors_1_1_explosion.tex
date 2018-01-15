@@ -1,0 +1,75 @@
+\hypertarget{class_tentacle_slicers_1_1actors_1_1_explosion}{}\section{Tentacle\+Slicers.\+actors.\+Explosion Class Reference}
+\label{class_tentacle_slicers_1_1actors_1_1_explosion}\index{Tentacle\+Slicers.\+actors.\+Explosion@{Tentacle\+Slicers.\+actors.\+Explosion}}
+
+
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour créer une explosion, qui applique son effet et ses dégâts à tous les ennemis de son lanceur dans sa zone d\textquotesingle{}effet, puis s\textquotesingle{}auto-\/détruit et laisse un résidu de mort.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+actors.\+Explosion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.456140cm]{class_tentacle_slicers_1_1actors_1_1_explosion}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_a9e1355a2064d65ee17c91414e9586fff}{Explosion} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position, \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor} owner, \hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_data}{Explosion\+Data} data)
+\begin{DoxyCompactList}\small\item\em Créer l\textquotesingle{}explosion lancée par l\textquotesingle{}acteur indiqué à la position donnée, avec les données fournies. Ainsi, le délai d\textquotesingle{}explosion, les dégâts de l\textquotesingle{}explosion (modifiés par les caractéristiques du lanceur), ses animations Birth et Death ainsi que son éventuel effet appliqué aux ennemis touchés sont définis. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_aeae36dfeadd7f8b7ec6a278ab4fae019}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Vérifie si le délai est écoulé, auquel cas déclenche l\textquotesingle{}explosion, ce qui tue l\textquotesingle{}actor courant (et laisse son résidu de mort) et affecte tous les ennemis dans le rayon de l\textquotesingle{}explosion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Spécifie la classe \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor}{Actor} pour créer une explosion, qui applique son effet et ses dégâts à tous les ennemis de son lanceur dans sa zone d\textquotesingle{}effet, puis s\textquotesingle{}auto-\/détruit et laisse un résidu de mort. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_explosion_a9e1355a2064d65ee17c91414e9586fff}\label{class_tentacle_slicers_1_1actors_1_1_explosion_a9e1355a2064d65ee17c91414e9586fff}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Explosion@{Tentacle\+Slicers\+::actors\+::\+Explosion}!Explosion@{Explosion}}
+\index{Explosion@{Explosion}!Tentacle\+Slicers\+::actors\+::\+Explosion@{Tentacle\+Slicers\+::actors\+::\+Explosion}}
+\subsubsection{\texorpdfstring{Explosion()}{Explosion()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+actors.\+Explosion.\+Explosion (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor}{Living\+Actor}}]{owner,  }\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_explosion_data}{Explosion\+Data}}]{data }\end{DoxyParamCaption})}
+
+
+
+Créer l\textquotesingle{}explosion lancée par l\textquotesingle{}acteur indiqué à la position donnée, avec les données fournies. Ainsi, le délai d\textquotesingle{}explosion, les dégâts de l\textquotesingle{}explosion (modifiés par les caractéristiques du lanceur), ses animations Birth et Death ainsi que son éventuel effet appliqué aux ennemis touchés sont définis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & La position de l\textquotesingle{}explosion \\
+\hline
+{\em owner} & Le lanceur de l\textquotesingle{}explosion \\
+\hline
+{\em data} & Les données de l\textquotesingle{}explosion \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1actors_1_1_explosion_aeae36dfeadd7f8b7ec6a278ab4fae019}\label{class_tentacle_slicers_1_1actors_1_1_explosion_aeae36dfeadd7f8b7ec6a278ab4fae019}} 
+\index{Tentacle\+Slicers\+::actors\+::\+Explosion@{Tentacle\+Slicers\+::actors\+::\+Explosion}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::actors\+::\+Explosion@{Tentacle\+Slicers\+::actors\+::\+Explosion}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+actors.\+Explosion.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Vérifie si le délai est écoulé, auquel cas déclenche l\textquotesingle{}explosion, ce qui tue l\textquotesingle{}actor courant (et laisse son résidu de mort) et affecte tous les ennemis dans le rayon de l\textquotesingle{}explosion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_actor_a13e48a1ca022ce7c971c77f1354e3daf}{Tentacle\+Slicers.\+actors.\+Actor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/actors/Explosion.\+cs\end{DoxyCompactItemize}

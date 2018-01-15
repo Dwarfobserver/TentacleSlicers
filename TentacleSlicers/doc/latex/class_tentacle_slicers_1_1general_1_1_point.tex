@@ -1,0 +1,293 @@
+\hypertarget{class_tentacle_slicers_1_1general_1_1_point}{}\section{Tentacle\+Slicers.\+general.\+Point Class Reference}
+\label{class_tentacle_slicers_1_1general_1_1_point}\index{Tentacle\+Slicers.\+general.\+Point@{Tentacle\+Slicers.\+general.\+Point}}
+
+
+Permet de stocker deux valuers flottantes (deux doubles). Ces données sont rendues plus facilement manipualables grâce aux différenes fonctions de la classe.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point_a151224e258dcc89d3c970de7104d7cf2}{Point} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Crée le point d\textquotesingle{}après les coordonnées données \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point_a9a664c443df2dfd25840318a85c804e0}{Point} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p)
+\begin{DoxyCompactList}\small\item\em Copie le point donné. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a046c50bd6fdaf4f289ee8157851a2011}{Is\+Null} ()
+\begin{DoxyCompactList}\small\item\em Indique si les deux coordonnées du point sont nulles. \end{DoxyCompactList}\item 
+double \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a78f6727f6e2594e6fd05858ef0fabb7a}{Length} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p)
+\begin{DoxyCompactList}\small\item\em Retourne la distance euclidienne en pixels entre le point courant et le point donné. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_aeaf223f4a4242ee95a1937e4435ed420}{Get\+Orientation} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} target)
+\begin{DoxyCompactList}\small\item\em Retourne le point contenant le cosinus et le sinus de l\textquotesingle{}angle du segment allant du point courant au point donné. \end{DoxyCompactList}\item 
+\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_acf9889a5ce17e162d19b33354e625e54}{Get\+Orientation} ()
+\begin{DoxyCompactList}\small\item\em Retourne le point contenant le cosinus et le sinus de l\textquotesingle{}angle du segment allant de (0, 0) vers le point courant. \end{DoxyCompactList}\item 
+override string \hyperlink{class_tentacle_slicers_1_1general_1_1_point_ae2810edb6f1fdc509f537bdb47617dbb}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Retourne les coordonnées du point \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_aa3a4315cd28f6c91a471120f5e45869c}{operator+} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Retourne un point dont les coordonnées sont la somme des deux points indiqués. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a6dfc5efa00ae6d581418027b22b4d3ed}{operator-\/} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Retourne un point dont les coordonnées sont la soustraction de p2 à p1. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a56d010f0b60368b82de8cbb7b78116e8}{operator$\ast$} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p, double value)
+\begin{DoxyCompactList}\small\item\em Retourne un point dont les cordonnées sont égales aux coordonnées du point donné multipliées par le facteur donné. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_afbbd8d74146828a2dceb4aa1c47752a3}{operator/} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p, double value)
+\begin{DoxyCompactList}\small\item\em Retourne un point dont les cordonnées sont égales aux coordonnées du point donné divisées par le facteur donné. \end{DoxyCompactList}\item 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a5b407645cb8640246167e7c5babb5077}{operator-\/} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p)
+\begin{DoxyCompactList}\small\item\em Retourne un point dont les coodonnées sont l\textquotesingle{}opposé des coordonnées du point donné. \end{DoxyCompactList}\item 
+static implicit \hyperlink{class_tentacle_slicers_1_1general_1_1_point_a65efc1d175521859132daa1046577d89}{operator System.\+Drawing.\+Point} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p)
+\begin{DoxyCompactList}\small\item\em Change les coordonnées du point en entiers puis les passe dans la structure \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} de System.\+Drawing. Utilisé pour dessiner ave les fonctions de System.\+Drawing en utilisant cette classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_ad67ac977492e558d4c0af813d2b4de7f}\label{class_tentacle_slicers_1_1general_1_1_point_ad67ac977492e558d4c0af813d2b4de7f}} 
+static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} {\bfseries Null} = new \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}(0, 0)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_aeebf5268d455b430e054156b5532f050}\label{class_tentacle_slicers_1_1general_1_1_point_aeebf5268d455b430e054156b5532f050}} 
+double {\bfseries X}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a329e474e30e55722e26c9861da6be350}\label{class_tentacle_slicers_1_1general_1_1_point_a329e474e30e55722e26c9861da6be350}} 
+double {\bfseries Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Permet de stocker deux valuers flottantes (deux doubles). Ces données sont rendues plus facilement manipualables grâce aux différenes fonctions de la classe. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a151224e258dcc89d3c970de7104d7cf2}\label{class_tentacle_slicers_1_1general_1_1_point_a151224e258dcc89d3c970de7104d7cf2}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Point@{Point}}
+\index{Point@{Point}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+general.\+Point.\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Crée le point d\textquotesingle{}après les coordonnées données 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & L\textquotesingle{}abscisse du point \\
+\hline
+{\em y} & L\textquotesingle{}ordonnée du point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a9a664c443df2dfd25840318a85c804e0}\label{class_tentacle_slicers_1_1general_1_1_point_a9a664c443df2dfd25840318a85c804e0}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Point@{Point}}
+\index{Point@{Point}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+general.\+Point.\+Point (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p }\end{DoxyParamCaption})}
+
+
+
+Copie le point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point à copier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_aeaf223f4a4242ee95a1937e4435ed420}\label{class_tentacle_slicers_1_1general_1_1_point_aeaf223f4a4242ee95a1937e4435ed420}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Get\+Orientation@{Get\+Orientation}}
+\index{Get\+Orientation@{Get\+Orientation}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Get\+Orientation()}{GetOrientation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+Get\+Orientation (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{target }\end{DoxyParamCaption})}
+
+
+
+Retourne le point contenant le cosinus et le sinus de l\textquotesingle{}angle du segment allant du point courant au point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Le point déterminant la cible du segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le cosinus et le sinus de l\textquotesingle{}angle du segment formé par les deux points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_acf9889a5ce17e162d19b33354e625e54}\label{class_tentacle_slicers_1_1general_1_1_point_acf9889a5ce17e162d19b33354e625e54}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Get\+Orientation@{Get\+Orientation}}
+\index{Get\+Orientation@{Get\+Orientation}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Get\+Orientation()}{GetOrientation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+Get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne le point contenant le cosinus et le sinus de l\textquotesingle{}angle du segment allant de (0, 0) vers le point courant. 
+
+\begin{DoxyReturn}{Returns}
+Le cosinus et le sinus de l\textquotesingle{}angle du segment entre (0, 0) et le point courant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a046c50bd6fdaf4f289ee8157851a2011}\label{class_tentacle_slicers_1_1general_1_1_point_a046c50bd6fdaf4f289ee8157851a2011}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Is\+Null@{Is\+Null}}
+\index{Is\+Null@{Is\+Null}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Is\+Null()}{IsNull()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+general.\+Point.\+Is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si les deux coordonnées du point sont nulles. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si les deux coordonnées du point sont égales à zéro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a78f6727f6e2594e6fd05858ef0fabb7a}\label{class_tentacle_slicers_1_1general_1_1_point_a78f6727f6e2594e6fd05858ef0fabb7a}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!Length@{Length}}
+\index{Length@{Length}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{Length()}{Length()}}
+{\footnotesize\ttfamily double Tentacle\+Slicers.\+general.\+Point.\+Length (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p }\end{DoxyParamCaption})}
+
+
+
+Retourne la distance euclidienne en pixels entre le point courant et le point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point donné \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La distance euclidienne entre les deux points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a65efc1d175521859132daa1046577d89}\label{class_tentacle_slicers_1_1general_1_1_point_a65efc1d175521859132daa1046577d89}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator System.\+Drawing.\+Point@{operator System.\+Drawing.\+Point}}
+\index{operator System.\+Drawing.\+Point@{operator System.\+Drawing.\+Point}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator System.\+Drawing.\+Point()}{operator System.Drawing.Point()}}
+{\footnotesize\ttfamily static implicit Tentacle\+Slicers.\+general.\+Point.\+operator System.\+Drawing.\+Point (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Change les coordonnées du point en entiers puis les passe dans la structure \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} de System.\+Drawing. Utilisé pour dessiner ave les fonctions de System.\+Drawing en utilisant cette classe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point à convertir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La structure point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a56d010f0b60368b82de8cbb7b78116e8}\label{class_tentacle_slicers_1_1general_1_1_point_a56d010f0b60368b82de8cbb7b78116e8}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un point dont les cordonnées sont égales aux coordonnées du point donné multipliées par le facteur donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point à multiplier \\
+\hline
+{\em value} & Le facteur de multiplication \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le point correspondant au point multiplié par le facteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_aa3a4315cd28f6c91a471120f5e45869c}\label{class_tentacle_slicers_1_1general_1_1_point_aa3a4315cd28f6c91a471120f5e45869c}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+operator+ (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un point dont les coordonnées sont la somme des deux points indiqués. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} à additionner \\
+\hline
+{\em p2} & \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} à additionner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le point correspondant à la somme des deux points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a6dfc5efa00ae6d581418027b22b4d3ed}\label{class_tentacle_slicers_1_1general_1_1_point_a6dfc5efa00ae6d581418027b22b4d3ed}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un point dont les coordonnées sont la soustraction de p2 à p1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} à soustraire \\
+\hline
+{\em p2} & \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} soustrayant le premier point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le point correspondant à la soustraction de p2 à p1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_a5b407645cb8640246167e7c5babb5077}\label{class_tentacle_slicers_1_1general_1_1_point_a5b407645cb8640246167e7c5babb5077}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+operator-\/ (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un point dont les coodonnées sont l\textquotesingle{}opposé des coordonnées du point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point dont l\textquotesingle{}opposé est requis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}opposé du point donné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_afbbd8d74146828a2dceb4aa1c47752a3}\label{class_tentacle_slicers_1_1general_1_1_point_afbbd8d74146828a2dceb4aa1c47752a3}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!operator/@{operator/}}
+\index{operator/@{operator/}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily static \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} Tentacle\+Slicers.\+general.\+Point.\+operator/ (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne un point dont les cordonnées sont égales aux coordonnées du point donné divisées par le facteur donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point à diviser \\
+\hline
+{\em value} & Le facteur de division \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le point correspondant au point divisé par le facteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1general_1_1_point_ae2810edb6f1fdc509f537bdb47617dbb}\label{class_tentacle_slicers_1_1general_1_1_point_ae2810edb6f1fdc509f537bdb47617dbb}} 
+\index{Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Tentacle\+Slicers\+::general\+::\+Point@{Tentacle\+Slicers\+::general\+::\+Point}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string Tentacle\+Slicers.\+general.\+Point.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne les coordonnées du point 
+
+\begin{DoxyReturn}{Returns}
+Les coordonnées du point 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/general/Point.\+cs\end{DoxyCompactItemize}

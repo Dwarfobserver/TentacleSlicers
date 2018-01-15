@@ -1,0 +1,101 @@
+\hypertarget{class_tentacle_slicers_1_1collisions_1_1_circle}{}\section{Tentacle\+Slicers.\+collisions.\+Circle Class Reference}
+\label{class_tentacle_slicers_1_1collisions_1_1_circle}\index{Tentacle\+Slicers.\+collisions.\+Circle@{Tentacle\+Slicers.\+collisions.\+Circle}}
+
+
+Une forme dont la zone de collision est un cercle.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+collisions.\+Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tentacle_slicers_1_1collisions_1_1_circle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1collisions_1_1_circle_a37560db1d37806aed9854613f3d815b2}{Circle} (double rayon)
+\begin{DoxyCompactList}\small\item\em Crée un cercle avec le rayon indiqué. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_tentacle_slicers_1_1collisions_1_1_circle_ab10bf9ec3edacdee45d26ea035dae849}{Collides} (\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle} hitbox, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p1, \hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Indique si le cerce est en collision avec le rectangle indiqué. \end{DoxyCompactList}\item 
+override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} \hyperlink{class_tentacle_slicers_1_1collisions_1_1_circle_a6bf295c6a8768b43e53f37a349678d37}{Including\+Rectangle} (\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point} position)
+\begin{DoxyCompactList}\small\item\em Retourne un rectangle incluant le cercle à la position indiquée. Le rectangle a pour largeur et hauteur le diamètre du cercle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Une forme dont la zone de collision est un cercle. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_circle_a37560db1d37806aed9854613f3d815b2}\label{class_tentacle_slicers_1_1collisions_1_1_circle_a37560db1d37806aed9854613f3d815b2}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}}
+\subsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+collisions.\+Circle.\+Circle (\begin{DoxyParamCaption}\item[{double}]{rayon }\end{DoxyParamCaption})}
+
+
+
+Crée un cercle avec le rayon indiqué. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rayon} & Le rayon du cercle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_circle_ab10bf9ec3edacdee45d26ea035dae849}\label{class_tentacle_slicers_1_1collisions_1_1_circle_ab10bf9ec3edacdee45d26ea035dae849}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}!Collides@{Collides}}
+\index{Collides@{Collides}!Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}}
+\subsubsection{\texorpdfstring{Collides()}{Collides()}}
+{\footnotesize\ttfamily override bool Tentacle\+Slicers.\+collisions.\+Circle.\+Collides (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1collisions_1_1_rectangle}{Rectangle}}]{hitbox,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p1,  }\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Indique si le cerce est en collision avec le rectangle indiqué. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hitbox} & Le rectangle testé \\
+\hline
+{\em p1} & Le centre du cercle \\
+\hline
+{\em p2} & Le centre du rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si le cercle et le rectangle sont en collision 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a51bde480596aa821d6d927427864ae5c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1collisions_1_1_circle_a6bf295c6a8768b43e53f37a349678d37}\label{class_tentacle_slicers_1_1collisions_1_1_circle_a6bf295c6a8768b43e53f37a349678d37}} 
+\index{Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}!Including\+Rectangle@{Including\+Rectangle}}
+\index{Including\+Rectangle@{Including\+Rectangle}!Tentacle\+Slicers\+::collisions\+::\+Circle@{Tentacle\+Slicers\+::collisions\+::\+Circle}}
+\subsubsection{\texorpdfstring{Including\+Rectangle()}{IncludingRectangle()}}
+{\footnotesize\ttfamily override \hyperlink{struct_tentacle_slicers_1_1collisions_1_1_shifted_rectangle}{Shifted\+Rectangle} Tentacle\+Slicers.\+collisions.\+Circle.\+Including\+Rectangle (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1general_1_1_point}{Point}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne un rectangle incluant le cercle à la position indiquée. Le rectangle a pour largeur et hauteur le diamètre du cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Le centre du cercle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le rectangle incluant le cercle et son centre 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1collisions_1_1_form_a00c94b5a1e83d9db6aa3a4cab969fd2c}{Tentacle\+Slicers.\+collisions.\+Form}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/collisions/Circle.\+cs\end{DoxyCompactItemize}

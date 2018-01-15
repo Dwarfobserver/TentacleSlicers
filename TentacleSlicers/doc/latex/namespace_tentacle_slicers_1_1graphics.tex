@@ -1,0 +1,54 @@
+\hypertarget{namespace_tentacle_slicers_1_1graphics}{}\section{Tentacle\+Slicers.\+graphics Namespace Reference}
+\label{namespace_tentacle_slicers_1_1graphics}\index{Tentacle\+Slicers.\+graphics@{Tentacle\+Slicers.\+graphics}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_actors_transparency}{Actors\+Transparency}
+\begin{DoxyCompactList}\small\item\em Indique une opacité qui s\textquotesingle{}atténue progressivement lorsque des acteurs sont derrière l\textquotesingle{}acteur indiqué. L\textquotesingle{}opacité est minimale lorsque au moins un acteur est juste derrière l\textquotesingle{}acteur indiqué. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation}{Animation}
+\begin{DoxyCompactList}\small\item\em Charge les images d\textquotesingle{}un dossier et les associe à un type d\textquotesingle{}animation. Les images du dossier doivent être nommées par leur ordre (de 0 au nombre d\textquotesingle{}images -\/ 1) et au format png. De plus, le dossier doit contenir les sous-\/dossiers top, bottom, left et right (avec le même nombre d\textquotesingle{}images) si l\textquotesingle{}animation dépend d\textquotesingle{}une orientation. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_handler}{Animation\+Handler}
+\begin{DoxyCompactList}\small\item\em Etend la classe \hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler}{Sprite\+Handler} pour associer plusieurs animations à un acteur. Met à disposition de nouvelles fonctions pour forcer le lancement d\textquotesingle{}un nouvelle animation, et pour indiquer le type d\textquotesingle{}animation à jouer lorsque l\textquotesingle{}animation prioritaire courante est terminée. Le paramètre Animation\+Type définit le type d\textquotesingle{}animation non prioritaire. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_animation_pack}{Animation\+Pack}
+\begin{DoxyCompactList}\small\item\em Stocke et organise une ou plusieurs animations, en ne gardant qu\textquotesingle{}une animation par type d\textquotesingle{}animation. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite}{Basic\+Sprite}
+\begin{DoxyCompactList}\small\item\em Correspond au Bitmap de System.\+Drawing, dessiné au milieu de la position passée en paramètre de Draw. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}{Custom\+Sprite}
+\begin{DoxyCompactList}\small\item\em Encapsule les images a dessiner pour centraliser l\textquotesingle{}affichage de tous les sprites dans la fonction Draw\+Bitmap. La taille relative et l\textquotesingle{}opacité de ces sprites peuvent être modifiés de l\textquotesingle{}extérieur. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_fading_transparency}{Fading\+Transparency}
+\begin{DoxyCompactList}\small\item\em Indique une opacité qui diminue progressivement. La fonction Actualise remet l\textquotesingle{}opacité au maximum. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite}{Progressing\+Sprite}
+\begin{DoxyCompactList}\small\item\em Dessine un sprite d\textquotesingle{}un de ses côtés vers le côté opposé, selon un pourcentage de progression \+: à 0, le sprite n\textquotesingle{}est pas dessiné et à 1, le sprite est totalement dessiné. Il peut être associé à un sprite dessiné derrière lui et qui est toujours dessiné en entier. Les booléens Vertical et Inverted permettent de changer les côtés de départ et fin pour dessiner le sprite. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_sprite_handler}{Sprite\+Handler}
+\begin{DoxyCompactList}\small\item\em Affiche un unique sprite qui peut avoir un comportement pour être transparent. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_text}{Text}
+\begin{DoxyCompactList}\small\item\em Dessine du texte en police Arial centré sur la position indiquée. \end{DoxyCompactList}\item 
+class \hyperlink{class_tentacle_slicers_1_1graphics_1_1_transparency_handler}{Transparency\+Handler}
+\begin{DoxyCompactList}\small\item\em Met à disposition un paramètre d\textquotesingle{}opacité actualisé par la fonction Tick, dont le comprtement est décrit dans les classes filles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Animation\+Type} \{ \newline
+{\bfseries Stand}, 
+{\bfseries Birth}, 
+{\bfseries Run}, 
+{\bfseries Attack}, 
+\newline
+{\bfseries Cast}, 
+{\bfseries Explodes}, 
+{\bfseries Death}
+ \}\begin{DoxyCompactList}\small\item\em Les différentes sortes d\textquotesingle{}animations \+: Stand est l\textquotesingle{}animation par défaut (en première postion), Birth est l\textquotesingle{}animation lancée (si existante) lors de la création, Run est l\textquotesingle{}animation des controlled\+Actor si leur vecteur de vitesse n\textquotesingle{}est pas nul, Attack est l\textquotesingle{}animation lancée par les sorts crées via Attack\+Spell\+Data (au corps-\/à-\/corps), Cast est l\textquotesingle{}animation lancée par les sorts crées via Missile\+Spell\+Data (lancement d\textquotesingle{}un projectile), Explodes est l\textquotesingle{}animation lancée lors de la collision d\textquotesingle{}un projectile crée via Missile\+Data, Death est l\textquotesingle{}animation généralement lancée lors de la mort d\textquotesingle{}un acteur via son Residu\+Data. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}\label{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}} 
+\index{Tentacle\+Slicers\+::graphics@{Tentacle\+Slicers\+::graphics}!Animation\+Type@{Animation\+Type}}
+\index{Animation\+Type@{Animation\+Type}!Tentacle\+Slicers\+::graphics@{Tentacle\+Slicers\+::graphics}}
+\subsubsection{\texorpdfstring{Animation\+Type}{AnimationType}}
+{\footnotesize\ttfamily enum \hyperlink{namespace_tentacle_slicers_1_1graphics_a9c92bd633d714099730f10897a01950b}{Tentacle\+Slicers.\+graphics.\+Animation\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Les différentes sortes d\textquotesingle{}animations \+: Stand est l\textquotesingle{}animation par défaut (en première postion), Birth est l\textquotesingle{}animation lancée (si existante) lors de la création, Run est l\textquotesingle{}animation des controlled\+Actor si leur vecteur de vitesse n\textquotesingle{}est pas nul, Attack est l\textquotesingle{}animation lancée par les sorts crées via Attack\+Spell\+Data (au corps-\/à-\/corps), Cast est l\textquotesingle{}animation lancée par les sorts crées via Missile\+Spell\+Data (lancement d\textquotesingle{}un projectile), Explodes est l\textquotesingle{}animation lancée lors de la collision d\textquotesingle{}un projectile crée via Missile\+Data, Death est l\textquotesingle{}animation généralement lancée lors de la mort d\textquotesingle{}un acteur via son Residu\+Data. 
+

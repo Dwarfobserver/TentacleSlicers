@@ -1,0 +1,94 @@
+\hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_tomb}{}\section{Tentacle\+Slicers.\+customs.\+Knight\+Tomb Class Reference}
+\label{class_tentacle_slicers_1_1customs_1_1_knight_tomb}\index{Tentacle\+Slicers.\+customs.\+Knight\+Tomb@{Tentacle\+Slicers.\+customs.\+Knight\+Tomb}}
+
+
+Définit la tombe d\textquotesingle{}un joueur. Elle possède une barre de vie qui se vide lorsqu\textquotesingle{}un joueur vivant se situe à proxitimté. Lorsqu\textquotesingle{}elle est vidée, la tombe fait revivre le joueur mort. Si aucun joueur n\textquotesingle{}est près de la tombe, elle se régénère.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+customs.\+Knight\+Tomb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.905160cm]{class_tentacle_slicers_1_1customs_1_1_knight_tomb}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a6a12111b657c9fcba696204f19c6fb76}{Knight\+Tomb} (\hyperlink{class_tentacle_slicers_1_1customs_1_1_knight}{Knight} owner, int num)
+\begin{DoxyCompactList}\small\item\em Crée la tombe du joueur mort, sans hitbox et de faction neutre, avec son animation. Par défaut, la vie de la tombe se régénère. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a5a34249a8265891f3c3eb6d469f11b93}{Damages} (double value)
+\begin{DoxyCompactList}\small\item\em Si la barre de vie de la tombe est écoulée, alors le joueur mort est ressuscité. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Vérifie si des joueurs vivants sont à proximité de la tombe et la régénère si c\textquotesingle{}est le cas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Définit la tombe d\textquotesingle{}un joueur. Elle possède une barre de vie qui se vide lorsqu\textquotesingle{}un joueur vivant se situe à proxitimté. Lorsqu\textquotesingle{}elle est vidée, la tombe fait revivre le joueur mort. Si aucun joueur n\textquotesingle{}est près de la tombe, elle se régénère. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a6a12111b657c9fcba696204f19c6fb76}\label{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a6a12111b657c9fcba696204f19c6fb76}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}!Knight\+Tomb@{Knight\+Tomb}}
+\index{Knight\+Tomb@{Knight\+Tomb}!Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}}
+\subsubsection{\texorpdfstring{Knight\+Tomb()}{KnightTomb()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+customs.\+Knight\+Tomb.\+Knight\+Tomb (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1customs_1_1_knight}{Knight}}]{owner,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Crée la tombe du joueur mort, sans hitbox et de faction neutre, avec son animation. Par défaut, la vie de la tombe se régénère. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & Le joueur mort \\
+\hline
+{\em num} & Le numéro du joueur, pour établir sa couleur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a5a34249a8265891f3c3eb6d469f11b93}\label{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a5a34249a8265891f3c3eb6d469f11b93}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}!Damages@{Damages}}
+\index{Damages@{Damages}!Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}}
+\subsubsection{\texorpdfstring{Damages()}{Damages()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+customs.\+Knight\+Tomb.\+Damages (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Si la barre de vie de la tombe est écoulée, alors le joueur mort est ressuscité. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & les point sde vie enlevés à la tombe \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a14c215128afe9c82bb57237501f41640}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}\label{class_tentacle_slicers_1_1customs_1_1_knight_tomb_a2494934e67c63f70623b7ff47a4248f8}} 
+\index{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb@{Tentacle\+Slicers\+::customs\+::\+Knight\+Tomb}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+customs.\+Knight\+Tomb.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Vérifie si des joueurs vivants sont à proximité de la tombe et la régénère si c\textquotesingle{}est le cas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_tentacle_slicers_1_1actors_1_1_living_actor_a1697e3d67782b4df99e48a333a138935}{Tentacle\+Slicers.\+actors.\+Living\+Actor}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/customs/Knight\+Tomb.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}{}\section{Tentacle\+Slicers.\+graphics.\+Custom\+Sprite Class Reference}
+\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}\index{Tentacle\+Slicers.\+graphics.\+Custom\+Sprite@{Tentacle\+Slicers.\+graphics.\+Custom\+Sprite}}
+
+
+Encapsule les images a dessiner pour centraliser l\textquotesingle{}affichage de tous les sprites dans la fonction Draw\+Bitmap. La taille relative et l\textquotesingle{}opacité de ces sprites peuvent être modifiés de l\textquotesingle{}extérieur.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+graphics.\+Custom\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1graphics_1_1_custom_sprite}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2a673911c8438b95e4f1f50f06ccaa41}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Dessine le sprite en appelant dans les classes filles la fonction Draw\+Bitmap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a885493229a16bd9ac1d2d68f4c4b489a}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a885493229a16bd9ac1d2d68f4c4b489a}} 
+float {\bfseries Opacity}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_ab188ab3a762a0c4c54077726f9bf4ed4}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_ab188ab3a762a0c4c54077726f9bf4ed4}} 
+double {\bfseries Width\+Ratio}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_af23e4f4f04967ca55ad8162fbd69f4c1}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_af23e4f4f04967ca55ad8162fbd69f4c1}} 
+double {\bfseries Height\+Ratio}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_aa82214d79a4a4a6b1ca3cd08f23e3f0d}{Custom\+Sprite} (int height\+Shift)
+\begin{DoxyCompactList}\small\item\em Initialise les paramètres du sprite avec la hauteur supplémentaire indiquée. Par défaut, son opacité est maximale et sa taille n\textquotesingle{}est pas modifiée. \end{DoxyCompactList}\item 
+void \hyperlink{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2d46de1204cc9618ae7f8c93342975dc}{Draw\+Bitmap} (Bitmap bitmap, Point shift, Graphics g, Rectangle r)
+\begin{DoxyCompactList}\small\item\em Si l\textquotesingle{}opacité n\textquotesingle{}est pas nulle, dessine le sprite dans le rectangle indiqué, modifié par la taille relative et l\textquotesingle{}opacité courante. Le sprite est dessiné au-\/dessus du point donné. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a03bd6e9fdc71437b3fb3d9690ffc9bd2}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a03bd6e9fdc71437b3fb3d9690ffc9bd2}} 
+int {\bfseries Height\+Shift}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsule les images a dessiner pour centraliser l\textquotesingle{}affichage de tous les sprites dans la fonction Draw\+Bitmap. La taille relative et l\textquotesingle{}opacité de ces sprites peuvent être modifiés de l\textquotesingle{}extérieur. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_aa82214d79a4a4a6b1ca3cd08f23e3f0d}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_aa82214d79a4a4a6b1ca3cd08f23e3f0d}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}!Custom\+Sprite@{Custom\+Sprite}}
+\index{Custom\+Sprite@{Custom\+Sprite}!Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}}
+\subsubsection{\texorpdfstring{Custom\+Sprite()}{CustomSprite()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+graphics.\+Custom\+Sprite.\+Custom\+Sprite (\begin{DoxyParamCaption}\item[{int}]{height\+Shift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initialise les paramètres du sprite avec la hauteur supplémentaire indiquée. Par défaut, son opacité est maximale et sa taille n\textquotesingle{}est pas modifiée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height\+Shift} & Le décalage en pixels vers le haut \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2a673911c8438b95e4f1f50f06ccaa41}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2a673911c8438b95e4f1f50f06ccaa41}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily abstract void Tentacle\+Slicers.\+graphics.\+Custom\+Sprite.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Dessine le sprite en appelant dans les classes filles la fonction Draw\+Bitmap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position du sprite \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_drawable}{Tentacle\+Slicers.\+interfaces.\+I\+Drawable}.
+
+
+
+Implemented in \hyperlink{class_tentacle_slicers_1_1graphics_1_1_progressing_sprite_acee169ba719f33614174a7f5e245192d}{Tentacle\+Slicers.\+graphics.\+Progressing\+Sprite}, and \hyperlink{class_tentacle_slicers_1_1graphics_1_1_basic_sprite_aca1918e67a22a98d4953d74f4e90a2f7}{Tentacle\+Slicers.\+graphics.\+Basic\+Sprite}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2d46de1204cc9618ae7f8c93342975dc}\label{class_tentacle_slicers_1_1graphics_1_1_custom_sprite_a2d46de1204cc9618ae7f8c93342975dc}} 
+\index{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}!Draw\+Bitmap@{Draw\+Bitmap}}
+\index{Draw\+Bitmap@{Draw\+Bitmap}!Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite@{Tentacle\+Slicers\+::graphics\+::\+Custom\+Sprite}}
+\subsubsection{\texorpdfstring{Draw\+Bitmap()}{DrawBitmap()}}
+{\footnotesize\ttfamily void Tentacle\+Slicers.\+graphics.\+Custom\+Sprite.\+Draw\+Bitmap (\begin{DoxyParamCaption}\item[{Bitmap}]{bitmap,  }\item[{Point}]{shift,  }\item[{Graphics}]{g,  }\item[{Rectangle}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Si l\textquotesingle{}opacité n\textquotesingle{}est pas nulle, dessine le sprite dans le rectangle indiqué, modifié par la taille relative et l\textquotesingle{}opacité courante. Le sprite est dessiné au-\/dessus du point donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bitmap} & Le sprite à dessiner \\
+\hline
+{\em shift} & La position du sprite \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+{\em r} & Le rectangle dans lequel est dessiné le sprite \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/graphics/Custom\+Sprite.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{class_tentacle_slicers_1_1hud_1_1_level_observer}{}\section{Tentacle\+Slicers.\+hud.\+Level\+Observer Class Reference}
+\label{class_tentacle_slicers_1_1hud_1_1_level_observer}\index{Tentacle\+Slicers.\+hud.\+Level\+Observer@{Tentacle\+Slicers.\+hud.\+Level\+Observer}}
+
+
+Indique le numéro du niveau actuel, de la vague courante et le temps restant avant la prochaine vague.  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+hud.\+Level\+Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1hud_1_1_level_observer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer_a8e419210f3d16e19d0a1860c46c74863}{Level\+Observer} (Point position, \hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script}{Level\+Script} level)
+\begin{DoxyCompactList}\small\item\em Crée le composant en lui donnnant le Level\+Script à observer pour récupérer la vague courante et le temps restant. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer_a1acbdfbdd3aa51344506ebaf2460832e}{Need\+To\+Be\+Changed} ()
+\begin{DoxyCompactList}\small\item\em Indique si ce Level\+Obsever est devenu obsolète, c\textquotesingle{}est-\/à-\/dire si un novueau niveau a débuté. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer_aa079c1eabd3ca45dbbd1d8b2b1d977f0}{Draw} (Point shift, Graphics g)
+\begin{DoxyCompactList}\small\item\em Affiche le numéro de la vague courante, et écrit en-\/dessous le temps restant avant la prochaine. \end{DoxyCompactList}\item 
+override void \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer_a5dab8038fd2cf8a3ec165aaef11cfd73}{Tick} (int ms)
+\begin{DoxyCompactList}\small\item\em Actualise les données du composant d\textquotesingle{}après le Level\+Script fourni. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Indique le numéro du niveau actuel, de la vague courante et le temps restant avant la prochaine vague. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_level_observer_a8e419210f3d16e19d0a1860c46c74863}\label{class_tentacle_slicers_1_1hud_1_1_level_observer_a8e419210f3d16e19d0a1860c46c74863}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}!Level\+Observer@{Level\+Observer}}
+\index{Level\+Observer@{Level\+Observer}!Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}}
+\subsubsection{\texorpdfstring{Level\+Observer()}{LevelObserver()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+hud.\+Level\+Observer.\+Level\+Observer (\begin{DoxyParamCaption}\item[{Point}]{position,  }\item[{\hyperlink{class_tentacle_slicers_1_1levels_1_1_level_script}{Level\+Script}}]{level }\end{DoxyParamCaption})}
+
+
+
+Crée le composant en lui donnnant le Level\+Script à observer pour récupérer la vague courante et le temps restant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Le centre du composant \\
+\hline
+{\em level} & Le Level\+Script observé \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_level_observer_aa079c1eabd3ca45dbbd1d8b2b1d977f0}\label{class_tentacle_slicers_1_1hud_1_1_level_observer_aa079c1eabd3ca45dbbd1d8b2b1d977f0}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}!Draw@{Draw}}
+\index{Draw@{Draw}!Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+hud.\+Level\+Observer.\+Draw (\begin{DoxyParamCaption}\item[{Point}]{shift,  }\item[{Graphics}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Affiche le numéro de la vague courante, et écrit en-\/dessous le temps restant avant la prochaine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shift} & La position de décalage, inutilisée \\
+\hline
+{\em g} & L\textquotesingle{}objet permettant de dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_component}{Tentacle\+Slicers.\+hud.\+Hud\+Component}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_level_observer_a1acbdfbdd3aa51344506ebaf2460832e}\label{class_tentacle_slicers_1_1hud_1_1_level_observer_a1acbdfbdd3aa51344506ebaf2460832e}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}!Need\+To\+Be\+Changed@{Need\+To\+Be\+Changed}}
+\index{Need\+To\+Be\+Changed@{Need\+To\+Be\+Changed}!Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}}
+\subsubsection{\texorpdfstring{Need\+To\+Be\+Changed()}{NeedToBeChanged()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+hud.\+Level\+Observer.\+Need\+To\+Be\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indique si ce Level\+Obsever est devenu obsolète, c\textquotesingle{}est-\/à-\/dire si un novueau niveau a débuté. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si il faut changer de \hyperlink{class_tentacle_slicers_1_1hud_1_1_level_observer}{Level\+Observer} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1hud_1_1_level_observer_a5dab8038fd2cf8a3ec165aaef11cfd73}\label{class_tentacle_slicers_1_1hud_1_1_level_observer_a5dab8038fd2cf8a3ec165aaef11cfd73}} 
+\index{Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}!Tick@{Tick}}
+\index{Tick@{Tick}!Tentacle\+Slicers\+::hud\+::\+Level\+Observer@{Tentacle\+Slicers\+::hud\+::\+Level\+Observer}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Tentacle\+Slicers.\+hud.\+Level\+Observer.\+Tick (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actualise les données du composant d\textquotesingle{}après le Level\+Script fourni. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & Le temps écoulé en millisecondes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_tentacle_slicers_1_1hud_1_1_hud_component}{Tentacle\+Slicers.\+hud.\+Hud\+Component}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/hud/Level\+Observer.\+cs\end{DoxyCompactItemize}

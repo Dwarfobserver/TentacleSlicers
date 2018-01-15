@@ -1,0 +1,123 @@
+\hypertarget{class_tentacle_slicers_1_1inputs_1_1_player_controller}{}\section{Tentacle\+Slicers.\+inputs.\+Player\+Controller Class Reference}
+\label{class_tentacle_slicers_1_1inputs_1_1_player_controller}\index{Tentacle\+Slicers.\+inputs.\+Player\+Controller@{Tentacle\+Slicers.\+inputs.\+Player\+Controller}}
+
+
+Associe les touches du clavier aux actions du personnage d\textquotesingle{}un joueur (de déplacement et de sort).  
+
+
+Inheritance diagram for Tentacle\+Slicers.\+inputs.\+Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tentacle_slicers_1_1inputs_1_1_player_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller_ad39c39196dc661b2c486d078bc5e6663}{Player\+Controller} (\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character} character, int num\+Player)
+\begin{DoxyCompactList}\small\item\em Associe à chaque joueur quatres touches de déplacement et trois touches de sort. Les touches associées dépendent de son numéro. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller_ade49d82ab4e91f4450ed1adc5ab7e0b3}{Key\+Down} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueur est vivant et si la touche enfoncée correspond à une de ses touches de déplacement. Puis, déclenche l\textquotesingle{}action associée à l\textquotesingle{}appui de la touche de déplacement du joueur. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller_ab3e8efcf656fbebf2dfdc4d370029827}{Key\+Pressed} (Key\+Press\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueur est vivant et si la touche pressée correspond à une de ses touches de sort. Puis, appelle la fonction qui demande à lancer le sort avec l\textquotesingle{}indice du sort correspondant. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tentacle_slicers_1_1inputs_1_1_player_controller_aada78cf0829623ebf94cbaa681759bbf}{Key\+Up} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueur est vivant et si la touche relâchée correspond à une de ses touches de déplacement. Puis, déclenche l\textquotesingle{}action associée au relâchement de la touche de déplacement du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Associe les touches du clavier aux actions du personnage d\textquotesingle{}un joueur (de déplacement et de sort). 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_player_controller_ad39c39196dc661b2c486d078bc5e6663}\label{class_tentacle_slicers_1_1inputs_1_1_player_controller_ad39c39196dc661b2c486d078bc5e6663}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}!Player\+Controller@{Player\+Controller}}
+\index{Player\+Controller@{Player\+Controller}!Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}}
+\subsubsection{\texorpdfstring{Player\+Controller()}{PlayerController()}}
+{\footnotesize\ttfamily Tentacle\+Slicers.\+inputs.\+Player\+Controller.\+Player\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{class_tentacle_slicers_1_1actors_1_1_player_character}{Player\+Character}}]{character,  }\item[{int}]{num\+Player }\end{DoxyParamCaption})}
+
+
+
+Associe à chaque joueur quatres touches de déplacement et trois touches de sort. Les touches associées dépendent de son numéro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Le joueur associé \\
+\hline
+{\em num\+Player} & Le numéro du joueur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_player_controller_ade49d82ab4e91f4450ed1adc5ab7e0b3}\label{class_tentacle_slicers_1_1inputs_1_1_player_controller_ade49d82ab4e91f4450ed1adc5ab7e0b3}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}!Key\+Down@{Key\+Down}}
+\index{Key\+Down@{Key\+Down}!Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Down()}{KeyDown()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Player\+Controller.\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueur est vivant et si la touche enfoncée correspond à une de ses touches de déplacement. Puis, déclenche l\textquotesingle{}action associée à l\textquotesingle{}appui de la touche de déplacement du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a eté déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_player_controller_ab3e8efcf656fbebf2dfdc4d370029827}\label{class_tentacle_slicers_1_1inputs_1_1_player_controller_ab3e8efcf656fbebf2dfdc4d370029827}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}!Key\+Pressed@{Key\+Pressed}}
+\index{Key\+Pressed@{Key\+Pressed}!Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Pressed()}{KeyPressed()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Player\+Controller.\+Key\+Pressed (\begin{DoxyParamCaption}\item[{Key\+Press\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueur est vivant et si la touche pressée correspond à une de ses touches de sort. Puis, appelle la fonction qui demande à lancer le sort avec l\textquotesingle{}indice du sort correspondant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a eté déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_key_pressed}{Tentacle\+Slicers.\+interfaces.\+I\+Key\+Pressed}.
+
+\mbox{\Hypertarget{class_tentacle_slicers_1_1inputs_1_1_player_controller_aada78cf0829623ebf94cbaa681759bbf}\label{class_tentacle_slicers_1_1inputs_1_1_player_controller_aada78cf0829623ebf94cbaa681759bbf}} 
+\index{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}!Key\+Up@{Key\+Up}}
+\index{Key\+Up@{Key\+Up}!Tentacle\+Slicers\+::inputs\+::\+Player\+Controller@{Tentacle\+Slicers\+::inputs\+::\+Player\+Controller}}
+\subsubsection{\texorpdfstring{Key\+Up()}{KeyUp()}}
+{\footnotesize\ttfamily bool Tentacle\+Slicers.\+inputs.\+Player\+Controller.\+Key\+Up (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueur est vivant et si la touche relâchée correspond à une de ses touches de déplacement. Puis, déclenche l\textquotesingle{}action associée au relâchement de la touche de déplacement du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}objet détaillant l\textquotesingle{}évènement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai si aucune action n\textquotesingle{}a eté déclenchée 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interface_tentacle_slicers_1_1interfaces_1_1_i_controller}{Tentacle\+Slicers.\+interfaces.\+I\+Controller}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sidne/\+Documents/\+Git\+Hub/\+Projet 4\+A/\+Tentacle\+Slicers/\+Tentacle\+Slicers/\+Tentacle\+Slicers/src/inputs/Player\+Controller.\+cs\end{DoxyCompactItemize}
